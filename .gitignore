@@ -22,4 +22,5 @@
 hs_err_pid*
 
 # IntelliJ workdirectory
-.idea/
+server/.idea/
+receiver/.idea/
