@@ -75,6 +75,7 @@ input {
   background: transparent;
   border: 0 solid;
     background-color: #343434;
+ 
   border-bottom: 1px solid rgba(white, .5);
   color: white;
   display: block;
@@ -134,7 +135,7 @@ input {
   top: 0;
 }
 .underlay-photo {
-  background-color: #92a8d1;
+  background-image: url("img/bg-login.jpg");
   background-size: cover;
   -webkit-filter: grayscale(30%);
   z-index: -1;
