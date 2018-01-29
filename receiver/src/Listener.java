@@ -1,6 +1,10 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import org.xml.sax.InputSource;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import java.io.*;
+
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
@@ -11,33 +15,54 @@ import java.net.SocketTimeoutException;
 public class Listener extends Thread {
     private ServerSocket serverSocket;
     private int num_of_messages = 0;
+    private boolean running = true;
 
-    public Server(int port) throws IOException {
+    public Listener(int port) throws IOException {
         serverSocket = new ServerSocket(port);
-        serverSocket.setSoTimeout(10000);
+        serverSocket.setSoTimeout(1000);
     }
 
     public void run() {
-        while (true) {
+        try {
+            File file = new File("data/output.xml");
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            XMLParser xmlParser = new XMLParser();
+            saxParser.parse(file, xmlParser);
+        } catch (Exception e) {
+            // TODO: Error logging
+            e.printStackTrace();
+        }
+        /*while (running) {
             // Accept a connection
             try {
                 System.out.println("Waiting for client on port " + serverSocket.getLocalPort() + "...");
                 Socket connectionSocket = serverSocket.accept();
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
+                String inputLine;
+                try {
+                    while((inputLine = reader.readLine()) != null) {
+                        try {
+                            SAXParserFactory factory = SAXParserFactory.newInstance();
+                            SAXParser saxParser = factory.newSAXParser();
+                            XMLParser xmlParser = new XMLParser();
+                            saxParser.parse(new InputSource(new StringReader(inputLine)), xmlParser);
+                        } catch (Exception e) {
+                            // TODO: Error logging
+                            e.printStackTrace();
+                        }
 
-                new DataHandler(reader).start();
-                //connectionSocket.close();
-                // Deal with the connection (do this in a different thread)
-
-                /*System.out.println("Just connected to " + server.getRemoteSocketAddress());
-                DataInputStream in = new DataInputStream(server.getInputStream());
-
-                System.out.println(in.readUTF());
-                DataOutputStream out = new DataOutputStream(server.getOutputStream());
-                out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
-                        + "\nGoodbye!");
-                server.close();*/
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
 
             } catch (SocketTimeoutException e) {
                 System.out.println("Time out!");
@@ -45,6 +70,6 @@ public class Listener extends Thread {
                 e.printStackTrace();
             }
 
-        }
+        }*/
     }
 }
