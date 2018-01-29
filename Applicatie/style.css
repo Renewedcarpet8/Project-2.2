@@ -10,22 +10,34 @@
 
 img.schoollogo {
     position: absolute;
+      -webkit-filter: grayscale(50%);
     height: 10%;
 }
 
-.hanzelogo {
-  position: fixed;
-  Top: 3%;
-  -webkit-filter: grayscale(50%);
-  Right: 0%;
+img.hanzelogo {
+   position: fixed;
+    bottom: 10;
+      -webkit-filter: grayscale(50%);
+    left: 0%;
+}
+
+img.questionmark {
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -100px;
+}
+
+.questionmarkTooltip {
+    position: absolute;
+    top: 100px;
 }
 
 body, html {
   height: 100%;
 }
-body {
+body, a {
   font-family: 'Open Sans';
-  font-weight: 100;
+  font-weight: 10;
   display: flex;
   overflow: hidden;
 }
@@ -56,18 +68,26 @@ input {
 .login-form {
         float: right;
   background: #222;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+  box-shadow: 0 0 1rem rgba(10,0,0,0.3);
   min-height: 10rem;
   margin: auto;
   max-width: 50%;
   padding: .40rem;
-  color: white;
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+.login-form:hover {
+   -webkit-transition: border-radius 20px;
 }
 
 .login-text {
   background: hsl(40,30,60);
-  border-bottom: .5rem solid white;
-  color: white;
+  border-bottom: .5rem solid #646464;
+  color: #646464;
   font-size: 1.5rem;
   margin: 0 auto;
   max-width: 50%;
@@ -75,61 +95,51 @@ input {
   text-align: center;
   text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
   .fa-stack-1x {
-    color: black
+    color: black;
   }
-
-.login-check-text {
-  background: hsl(40,30,60);
-  border-bottom: .5rem solid white;
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 auto;
-  max-width: 50%;
-  padding: .5rem;
-  text-align: center;
-  text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
-  .fa-stack-1x {
-    color: white;
-  }
-
 }
 
 .login-username, .login-password {
   background: transparent;
   border: 0 solid;
-    background-color: #343434;
- 
-  border-bottom: 1px solid rgba(white, .5);
+  background-color: #343434;
+  border-bottom: 12px solid rgba(white, .5);
   color: white;
   display: block;
   margin: 1rem;
   padding: .5rem;
   transition: 250ms background ease-in;
-  width: calc(100% - 3rem);
+  width: calc(100% - 2.5rem);
   &:focus {
-    background: white;
+  background-color: #343434;
     color: black;
-    transition: 250ms background ease-in;
+    transition: 150ms background ease-in;
   }
 }
 
+.login-username:hover, .login-password:hover { 
+  background-color: #454545;
+}
+
 .login-forgot-pass {
-  border-bottom: 1px solid white;
+  font-weight: 10;
+  font-size: 50px;
   bottom: 0;
   color: white;
   cursor: pointer;
   display: block;
-  font-size: 75%;
+  font-family: 'Calibri';
+  font-size: 80%;
   left: 0;
   opacity: 0.6;
   padding: .5rem;
-  position: absolute;
   text-align: center;
   text-decoration: none;
-  width: 100%;
+  width: 92%;
   &:hover {
     opacity: 1;
   }
+ 
 }
 .login-submit {
   border: 1px solid white;
@@ -160,19 +170,40 @@ input {
 .underlay-photo {
   background-image: url("img/bg-login.jpg");
   background-size: cover;
-  -webkit-filter: grayscale(30%);
+  -webkit-filter: grayscale(50%);
   z-index: -1;
+            animation: fadein 2s;
 }
 .underlay-black {
   background: rgba(0,0,0,0.7);
   z-index: -1;
 }
 
-@keyframes hue-rotate {
-  from {
-    -webkit-filter: grayscale(30%) hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: grayscale(30%) hue-rotate(360deg);
-  }
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

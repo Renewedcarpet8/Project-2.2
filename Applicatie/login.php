@@ -24,7 +24,7 @@
           <input type="password" class="login-password" required="true" placeholder="Password" name="password" />
           <input type="submit" name="Login" value="Login" class="login-submit" />
           
-          <a href="#" class="login-forgot-pass">forgot password?</a>
+          <a href="mailto:service@ictopia.com" class="login-forgot-pass">forgot password?</a>
         </form>
         <div class="underlay-photo"></div>
         <div class="underlay-black"></div> 

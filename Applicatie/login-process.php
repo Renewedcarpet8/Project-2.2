@@ -35,7 +35,6 @@
 		}
 
 		fclose($handle);
-
       ?>
       <form class="login-form" method="POST" action="login-process.php">
             <center><img src="img/gear.gif"></center>
@@ -48,13 +47,13 @@
 			<?php
 		      if ($succes) {
 		        echo "Succesfull logon"; 
-		        //header( "refresh:5;url=index.php" );
+		        header( "refresh:5;url=index.php" );
 		      } elseif ($usersucces) {
 		      	echo "Login unsuccesfull, you have entered a wrong password, you are begin redirected"; 
-			    //header( "refresh:5;url=login.php" );
+			    header( "refresh:5;url=login.php" );
 		      } else {
 		        echo "Login unsuccesfull, username unknown, you are being redirected"; 
-		        //header( "refresh:5;url=login.php" );
+		        header( "refresh:5;url=login.php" );
 		      }
 		      ?>
 	     </p>
