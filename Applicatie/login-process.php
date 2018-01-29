@@ -36,7 +36,7 @@
 
 		fclose($handle);
       ?>
-      <form class="login-form" method="POST" action="login-process.php">
+      <form class="login-check-form" method="POST" action="login-process.php">
             <center><img src="img/gear.gif"></center>
           <p class="login-check-text">
             <span class="fa-stack fa-lg">
