@@ -16,9 +16,9 @@ img.schoollogo {
 
 img.hanzelogo {
    position: fixed;
-    bottom: 10;
+    Top: 3%;
       -webkit-filter: grayscale(50%);
-    left: 0%;
+    Right: 0%;
 }
 
 img.questionmark {
