@@ -11,8 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+    	
         <img class="schoollogo" src="img/schoollogo.png">
-        <form class="login-form" method="POST" action="login-process.php">
+        <form class="login-form" method="POST" action="index.php">
             <center><img src="img/lockicon.png"></center>
           <p class="login-text">
             <span class="fa-stack fa-lg">
