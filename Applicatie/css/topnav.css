@@ -10,7 +10,7 @@
     background-color: #111; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     bottom: 0px;
-    opacity: 0.8;
+    opacity: 0.9;
     list-style-type: none;
 }
 ul {
@@ -43,6 +43,14 @@ img.SettingsIcon:hover {
     left: 0px;
     padding: 30px;
     background-color: #555;
+}
+
+img.schoollogographmode {
+    position: absolute;
+      -webkit-filter: grayscale(20%);
+    height: 10%;
+    top: 90%;
+    right: 90%;
 }
 
 
