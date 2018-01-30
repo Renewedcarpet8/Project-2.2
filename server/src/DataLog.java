@@ -51,6 +51,7 @@ public class DataLog {
     }
 
     private Measurement parseMeassurement(String line) {
+        // TODO: Error logging
         String[] parts = line.split(",");
         // Split the date by "-" and parse the results to integers in a LocalDate
         String[] dateString = parts[0].split("-");
