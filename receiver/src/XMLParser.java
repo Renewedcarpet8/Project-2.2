@@ -2,6 +2,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 public class XMLParser extends DefaultHandler {
@@ -64,10 +66,12 @@ public class XMLParser extends DefaultHandler {
     @Override
     public void characters(char ch[], int start, int length) throws SAXException {
         if (date) {
-            System.out.println(date);
+            String[] dateString = new String(ch, start, length).split("-");
+            measurement.setDate(LocalDate.of(Integer.parseInt(dateString[0]), Integer.parseInt(dateString[1]), Integer.parseInt(dateString[2])));
             date = false;
         } if (time) {
-            System.out.println(time);
+            String[] timeString = new String(ch, start, length).split(":");
+            measurement.setTime(LocalTime.of(Integer.parseInt(timeString[0]), Integer.parseInt(timeString[1]), Integer.parseInt(timeString[2])));
             time = false;
         } if (station) {
             measurement.setStation(Integer.parseInt(new String(ch, start, length)));

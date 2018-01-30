@@ -1,9 +1,12 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Measurement {
-    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm:ss");
-    private LocalDateTime datetime;
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private LocalTime time;
+    private LocalDate date;
     private int station;
     private float temperature;
     private float dewpoint;
@@ -23,8 +26,9 @@ public class Measurement {
     private float cloud_cover;
     private int wind_direction;
 
-    public Measurement(LocalDateTime datetime, int station, float temperature, float dewpoint, float pressure_station, float pressure_sea, float visibility, float wind, float rainfall, float snowfall, String flags, float cloud_cover, int wind_direction) {
-        this.datetime = datetime;
+    public Measurement(LocalDate date, LocalTime time, int station, float temperature, float dewpoint, float pressure_station, float pressure_sea, float visibility, float wind, float rainfall, float snowfall, String flags, float cloud_cover, int wind_direction) {
+        this.date = date;
+        this.time = time;
         this.station = station;
         this.temperature = temperature;
         this.dewpoint = dewpoint;
@@ -47,8 +51,12 @@ public class Measurement {
 
     public Measurement(){}
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public String getDate() {
+        return date.format(dateFormatter);
+    }
+
+    public String getTime() {
+        return time.format(timeFormatter);
     }
 
     public int getStation() {
@@ -123,12 +131,12 @@ public class Measurement {
         return wind_direction;
     }
 
-    public void setDatetime(LocalDateTime datetime) {
-        this.datetime = datetime;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
-    public void setDatetime(String date, String time) {
-        this.datetime = LocalDateTime.parse(date  + "-" + time, dateTimeFormatter);
+    public void setTime(LocalTime time) {
+        this.time = time;
     }
 
     public void setStation(int station) {

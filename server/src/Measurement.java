@@ -1,7 +1,12 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Measurement {
-    private LocalDateTime datetime;
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private LocalTime time;
+    private LocalDate date;
     private int station;
     private float temperature;
     private float dewpoint;
@@ -21,8 +26,9 @@ public class Measurement {
     private float cloud_cover;
     private int wind_direction;
 
-    public Measurement(LocalDateTime datetime, int station, float temperature, float dewpoint, float pressure_station, float pressure_sea, float visibility, float wind, float rainfall, float snowfall, String flags, float cloud_cover, int wind_direction) {
-        this.datetime = datetime;
+    public Measurement(LocalDate date, LocalTime time, int station, float temperature, float dewpoint, float pressure_station, float pressure_sea, float visibility, float wind, float rainfall, float snowfall, String flags, float cloud_cover, int wind_direction) {
+        this.date = date;
+        this.time = time;
         this.station = station;
         this.temperature = temperature;
         this.dewpoint = dewpoint;
@@ -43,8 +49,14 @@ public class Measurement {
         this.wind_direction = wind_direction;
     }
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public Measurement(){}
+
+    public String getDate() {
+        return date.format(dateFormatter);
+    }
+
+    public String getTime() {
+        return time.format(timeFormatter);
     }
 
     public int getStation() {
@@ -117,5 +129,61 @@ public class Measurement {
 
     public int getWind_direction() {
         return wind_direction;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+
+    public void setStation(int station) {
+        this.station = station;
+    }
+
+    public void setTemperature(float temperature) {
+        this.temperature = temperature;
+    }
+
+    public void setDewpoint(float dewpoint) {
+        this.dewpoint = dewpoint;
+    }
+
+    public void setPressure_station(float pressure_station) {
+        this.pressure_station = pressure_station;
+    }
+
+    public void setPressure_sea(float pressure_sea) {
+        this.pressure_sea = pressure_sea;
+    }
+
+    public void setVisibility(float visibility) {
+        this.visibility = visibility;
+    }
+
+    public void setWind(float wind) {
+        this.wind = wind;
+    }
+
+    public void setRainfall(float rainfall) {
+        this.rainfall = rainfall;
+    }
+
+    public void setSnowfall(float snowfall) {
+        this.snowfall = snowfall;
+    }
+
+    public void setFlags(String flags) {
+        this.flags = flags;
+    }
+
+    public void setCloud_cover(float cloud_cover) {
+        this.cloud_cover = cloud_cover;
+    }
+
+    public void setWind_direction(int wind_direction) {
+        this.wind_direction = wind_direction;
     }
 }
