@@ -13,6 +13,17 @@ img.schoollogo {
     height: 10%;
 }
 
+a.login-warning {
+
+  font-family: 'Open Sans';
+
+  font-size: 25;
+  text-align: center;
+  color:white
+
+  overflow: hidden;
+
+}
 
 img.hanzelogo {
    position: fixed;

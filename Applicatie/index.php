@@ -87,7 +87,7 @@
                       } else {
                           if (!isset($_POST['Login'])){
                               echo "<h1>Please login first";
-                              echo "<a href='login.php'>Click here to log in</a></h1>";
+                              echo "<a class='login-warning' href='login.php'>Click here to log in</a></h1>";
                           } else {
                               echo "<h1> login failed</h1>";
                           }
@@ -99,7 +99,7 @@
                   </div>
                   <div class="underlay-photo"></div>
                   <div class="underlay-black"></div>
-                  <img class="hanzelogo" src="img/hanzelogo.png">
+                  <img class="hanzelogo" src="img/schoollogo-small.png">
               </body>
                 <script type="text/javascript">
             $("#cssmenu").menumaker();
