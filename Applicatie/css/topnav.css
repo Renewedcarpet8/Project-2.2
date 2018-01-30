@@ -78,3 +78,16 @@ img.SettingsIcon:hover {
     .topnav  {padding-top: 15px;}
     .topnav  a {font-size: 18px;}
 }
+
+.underlay-photo {
+  background-image: url("../img/bg-login.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(80%);
+  -webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(05px);
+filter: blur(10px);
+  z-index: -1;
+            animation: fadein 2s;
+}

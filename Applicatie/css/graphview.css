@@ -1,0 +1,46 @@
+.container{
+  float: center;
+  background: #111;
+  background-color: #111;
+  box-shadow: 0 0 1rem rgba(10,0,0,0.3);
+  min-height: 1rem;
+  margin: auto;
+  max-width: 100%;
+  padding: .40rem;
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+.dashboard {
+  position: absolute;
+  float: center;
+  background: #222;
+  text-align: center;
+  color:white;
+  top: 15%;
+  box-shadow: 0 0 1rem rgba(10,0,0,0.3);
+  height: 67%;
+  width: 70%;
+  right: 10%;
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+.underlay-photo {
+  background-image: url("../img/bg-login.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(10%);
+  z-index: -1;
+            animation: fadein 2s;
+}
+
+img.graphplaceholder {
+    height: 80%;
+    width: 80%;
+}

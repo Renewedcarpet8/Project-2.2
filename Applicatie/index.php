@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
         <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
+        <link rel="stylesheet" href="css/graphview.css" type="text/css"/>
         <script type="text/javascript" src="js/menumaker.js"></script>
         <title>Weather Pressure Application</title>
         <meta charset="UTF-8">
@@ -37,14 +38,13 @@
 <div class="container"><div class="menu-icon"><span></span></div></div>
         
         <div class="dashboard" method="POST" action="login-process.php">
-          <H1>Bla bla bla</H1>
-          <p class="login-text">
+            <H1>Bla bla bla </br> </br></H1>
             <span class="fa-stack fa-lg">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-lock fa-stack-1x"></i>
             </span>
           </p>
-          <img src="img/placeholdergraph.png">
+          <img class="graphplaceholder" src="img/placeholdergraph.png">
         </div>
         <div class="underlay-photo"></div>
         <div class="underlay-black"></div> 
