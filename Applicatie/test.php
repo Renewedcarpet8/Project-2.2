@@ -15,10 +15,8 @@
     <body>
     <?php
         if (!isset($_POST['Login'])) {
-          echo "Please login first<br>";
-          echo "<a href='login.php'>Click here to log in<a>";
-        } elseif (isset($_POST['login'])) {
-          echo "Hallo";
+          echo "Log in first please <br>";
+          echo "<a href='login.php'></a>";
         } else {
         function checkUser(){
           $username = trim($_POST['username']);
@@ -72,7 +70,7 @@
           <div class="container"><div class="menu-icon"><span></span></div></div>
                   
                   <div class="dashboard" method="POST" action="login-process.php">
-                      <H1>Bla bla bla</br> </br></H1>
+                      <H1>Bla bla bla </br> </br></H1>
                       <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-lock fa-stack-1x"></i>
