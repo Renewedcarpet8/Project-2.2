@@ -7,7 +7,7 @@
     z-index: 1; /* Stay on top */
     bottom: 0; /* Stay at the bottom */
     left: 160px;
-    background-color: #111; /* Black */
+    background-color: #122; /* GREEN */
     overflow-x: hidden; /* Disable horizontal scroll */
     bottom: 0px;
     opacity: 0.9;
@@ -46,11 +46,11 @@ img.SettingsIcon:hover {
 }
 
 img.schoollogographmode {
-    background-color: #000;
-    position: absolute;
+    position: fixed;
+      -webkit-filter: grayscale(20%);
     height: 10%;
     top: 90%;
-    right: 0%;
+    right: 2%;
 }
 
 
