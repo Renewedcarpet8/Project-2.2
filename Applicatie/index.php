@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="sidenav">
-            <a href='#'>OPTIE 1</a>";
+            <a href='query1.php'>OPTIE 1</a>";
             <a href='#'>OPTIE 2</a>";
             <a href='#'>OPTIE 3</a>";
             <a href='#'>BLA BLA BLA  </a>

@@ -51,6 +51,12 @@ body, a {
   display: flex;
   overflow: hidden;
 }
+
+table, td, tr {
+  border:1px solid white;
+  text-align:center;
+  color:white;
+}
 input {
   ::-webkit-input-placeholder {
      color: rgba(255,255,255,0.7);
