@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+          <img class="schoollogographmode" src="img/schoollogo-small.png">
   <?php
     function readData(){
         $readData = [];
@@ -29,7 +30,7 @@
         }
         $i = 0;
         while($i < count($readData)){
-            echo "<tr>";
+            echo "<tr class='values'>";
             echo "<td style='text-align: center'>" . $readData[$i][1] . "</td>";
             echo "<td style='text-align: center'>" . $readData[$i][2] . "</td>";
             echo "</tr>";
@@ -47,10 +48,10 @@
   </div>
 
   <div class="topnav">
-      <li><a href='#' class='t' >WEERGAVE 1</a></li>
-      <li><a href='#' class='t' >WEERGAVE 1</a></li>
-      <li><a href='#' class='t' >WEERGAVE 1</a></li>
-      <li><a href='#' class='t' >WEERGAVE 1</a></li>
+      <li><img href='#' class="iconVisual" src="img/graph.png"></li>
+      <li><img href='#' class="iconVisual" src="img/line-chart-icon.png"></li>
+      <li><img href='#' class="iconVisual" src="img/pie-chart-icon.png"></li>
+      <li><img href='#' class="iconVisual" src="img/map.png"></li>
   </div>
 
   <!-- Page content -->
@@ -61,7 +62,7 @@
   <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
   <div class="dashboard-graph" method="POST">
-      <H1>GRAFIEK HIER</br> </br></H1>
+      <H1>Graph Viewer</br> </br></H1>
       <span class='fa-stack fa-lg'>
                             <i class='fa fa=circle fa-stack-2x'></i>
                             <i class='fa fa-lock fa-stack-1x'</i>
@@ -80,7 +81,7 @@
     // Global Options
     Chart.defaults.global.defaultFontFamily = 'Lato';
     Chart.defaults.global.defaultFontSize = 18;
-    Chart.defaults.global.defaultFontColor = '#777';
+    Chart.defaults.global.defaultFontColor = '#FFF';
 
     let massPopChart = new Chart(myChart, {
       type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -108,9 +109,9 @@
             'rgba(255, 99, 132, 0.6)'
           ],
           borderWidth:1,
-          borderColor:'#777',
+          borderColor:'#FFF',
           hoverBorderWidth:3,
-          hoverBorderColor:'#000'
+          hoverBorderColor:'#FFF'
         }]
       },
       options:{
@@ -142,7 +143,7 @@
   </script>
   <div class ="container-control">
       <div class="dashboard-control" method="POST">
-          <H1>EXTRA BEDIENING <br> HIER</br> </br></H1>
+          <H1>Graph Control</br> </br></H1>
           <span class='fa-stack fa-lg'>
                             <i class='fa fa=circle fa-stack-2x'></i>
                             <i class='fa fa-lock fa-stack-1x'</i>
@@ -151,7 +152,7 @@
       </div>
       <div class ="container-values">
           <div class="dashboard-values" method="POST">
-              <H1>DATA VALUES HIER</br> </br></H1>
+              <H1>Values</br> </br></H1>
               <span class='fa-stack fa-lg'>
                             <i class='fa fa=circle fa-stack-2x'></i>
                             <i class='fa fa-lock fa-stack-1x'</i>
@@ -168,7 +169,6 @@
 
       <div class="underlay-photo"></div>
       <div class="underlay-black"></div>
-      <img class="schoollogographmode" src="img/schoollogo-small.png">
   </div>
 </body>
 <script type="text/javascript">
