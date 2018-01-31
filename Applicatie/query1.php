@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
     <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
-    <?php //<link rel="stylesheet" href="css/graphview.css" type="text/css"/>?>
+    <link rel="stylesheet" href="css/graphview.css" type="text/css"/>
     <script type="text/javascript" src="js/menumaker.js"></script>
     <title>Weather Pressure Application</title>
     <meta charset="UTF-8">
