@@ -1,16 +1,16 @@
 /* The sidebar menu */
 .topnav {
-    height: 12%; /* Full-height: remove this if you want "auto" height */
+    height: 10%; /* Full-height: remove this if you want "auto" height */
     width: 34%; /* Set the width of the sidebar */
     display: inline;
     position: absolute; /* Fixed Sidebar (stay in place on scroll) */
     bottom: 0; /* Stay at the bottom */
     left: 160px;
-    background-color: #111; /* GREEN */
+    background-color: #121; /* GREEN */
     overflow-y:hidden;
-    border-color: #555;
     border-right: 10px solid;
     border-top: 10px solid;
+    border-color: #343;
     bottom: 0px;
     opacity: 0.9;
     list-style-type: none;

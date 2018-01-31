@@ -2,7 +2,9 @@
 .dashboard-graph {
   position: absolute;
   float: center;
-  background: rgb(40, 90, 80);
+  border: 5px solid;
+  border-color: #666;
+  background: rgb(50, 50, 50);
   text-align: center;
   color:white;
   top: 6%;
@@ -16,11 +18,12 @@
 .dashboard-values {
   position: absolute;
   float: center;
-  background: rgb(0, 89, 65);
   text-align: center;
   color:white;
   top: 6%;
-  background: rgb(40, 90, 60);
+  background: rgb(70, 70, 70);
+  border: 5px solid;
+  border-color: #666;
   box-shadow: 10px 10px 5px #111;
   height: 39%;
   width: 20%;
@@ -39,7 +42,9 @@ tr.values {
 .dashboard-control {
   position: absolute;
   float: center;
-  background: rgb(40, 90, 60);
+  background: rgb(70, 70, 70);
+  border: 5px solid;
+  border-color: #666;
   box-shadow: 10px 10px 5px #111;
   text-align: center;
   color:white;
