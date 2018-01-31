@@ -4,10 +4,10 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
+import java.util.ArrayList;
 
 public class XMLParser extends DefaultHandler {
-    private List<Measurement> measurements;
+    private ArrayList<Measurement> measurements = new ArrayList();
     private Measurement measurement;
     private boolean date = false;
     private boolean time = false;
@@ -23,6 +23,10 @@ public class XMLParser extends DefaultHandler {
     private boolean flags = false;
     private boolean cloud_cover = false;
     private boolean wind_direction = false;
+
+    public ArrayList<Measurement> getMeasurements() {
+        return measurements;
+    }
 
     public void startElement(String uri, String localName, String tag, Attributes attributes) throws SAXException {
         if (tag.equalsIgnoreCase("MEASUREMENT"))
@@ -60,7 +64,7 @@ public class XMLParser extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String tag) throws SAXException {
         if (tag.equalsIgnoreCase("MEASUREMENT"))
-            System.out.println(measurement);
+            measurements.add(measurement);
     }
 
     @Override
@@ -95,7 +99,8 @@ public class XMLParser extends DefaultHandler {
             measurement.setWind(Float.parseFloat(new String(ch, start, length)));
             wind = false;
         } if (rainfall) {
-            measurement.setRainfall(Float.parseFloat(new String(ch, start, length)));
+            System.out.println(new String(ch, start, length));
+            // measurement.setRainfall(Float.parseFloat(new String(ch, start, length)));
             rainfall = false;
         } if (snowfall) {
             measurement.setSnowfall(Float.parseFloat(new String(ch, start, length)));
