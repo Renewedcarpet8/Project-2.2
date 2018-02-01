@@ -1,10 +1,8 @@
+
 <html>
     <head>
-        <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
-        <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
-        <link rel="stylesheet" href="css/graphview.css" type="text/css"/>
-        <script type="text/javascript" src="js/menumaker.js"></script>
+
         <title>Weather Pressure Application</title>
         <meta charset="UTF-8">
         <link rel="icon" 
@@ -13,67 +11,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="sidenav">
-            <a href='query1.php'>OPTIE 1</a>";
-            <a href='#'>OPTIE 2</a>";
-            <a href='#'>OPTIE 3</a>";
-            <a href='#'>BLA BLA BLA  </a>
-            <img class="SettingsIcon" src="img/settings.png"></a>
-
-          </div>
-
-          <div class="topnav">
-                <li><a href='#' class='t' >WEERGAVE 1</a></li>
-                <li><a href='#' class='t' >WEERGAVE 1</a></li>
-                <li><a href='#' class='t' >WEERGAVE 1</a></li>
-                <li><a href='#' class='t' >WEERGAVE 1</a></li>
-          </div>
-
-          <!-- Page content -->
-          <div id="main">
-            ...
-          </div>
-
-          <div class="container-graph"><div class="menu-icon"><span></span></div></div>
-                  
-                  <div class="dashboard-graph" method="POST">
-                        <H1>GRAFIEK HIER</br> </br></H1>
-                        <span class='fa-stack fa-lg'>
-                            <i class='fa fa=circle fa-stack-2x'></i>
-                            <i class='fa fa-lock fa-stack-1x'</i>
-                        </span>
-                        </p>
-                        <img class='graphplaceholder' src='img/placeholdergraph.png'>
-
-
-          </div>
-          <div class ="container-control">
-                  <div class="dashboard-control" method="POST">
-                        <H1>EXTRA BEDIENING <br> HIER</br> </br></H1>
-                        <span class='fa-stack fa-lg'>
-                            <i class='fa fa=circle fa-stack-2x'></i>
-                            <i class='fa fa-lock fa-stack-1x'</i>
-                        </span>
-                        </p>
-        </div>
-          <div class ="container-values">
-                  <div class="dashboard-values" method="POST">
-                        <H1>DATA VALUES HIER</br> </br></H1>
-                        <span class='fa-stack fa-lg'>
-                            <i class='fa fa=circle fa-stack-2x'></i>
-                            <i class='fa fa-lock fa-stack-1x'</i>
-                        </span>
-                        </p>
-        </div>
-              
-          <div class="underlay-photo"></div>
-          <div class="underlay-black"></div>
-          <img class="schoollogographmode" src="img/schoollogo-small.png">
-              </body>
-                <script type="text/javascript">
-            $("#cssmenu").menumaker();
-          </script>
-          </html><?php
-
-
-      ?>
+    	
+        <img class="schoollogo" src="img/schoollogo.png">
+        <form class="login-form" method="POST" action="login-process.php">
+            <center><img src="img/lockicon.png"></center>
+          <p class="login-text">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-lock fa-stack-1x"></i>
+            </span>
+          </p>
+          <input type="UserID" class="login-username" autofocus="true" required="true" placeholder="User ID" name="username" />
+          <input type="password" class="login-password" required="true" placeholder="Password" name="password" />
+          <input type="submit" name="Login" value="Login" class="login-submit" />
+          
+          <a href="mailto:service@ictopia.com" class="login-forgot-pass">forgot password?</a>
+        </form>
+        <div class="underlay-photo"></div>
+        <div class="underlay-black"></div> 
+        <img class="hanzelogo" src="img/hanzelogo.png">
+    </body>
+      
+    </body>
+</html>

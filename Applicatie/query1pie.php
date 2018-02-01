@@ -43,7 +43,7 @@
   <div class="sidenav">
       <a href='query1.php'>BAR CHART</a>";
       <a href='query1line.php'>LINE CHART</a>";
-      <a href='query1pie.php'>PIE CHART</a>";
+      <a href='query1pie.php'>PIE CHARTS</a>";
 
       <img id="SettingsIcon" src="img/settings.png"></a>
   </div>
@@ -88,7 +88,7 @@
     Chart.defaults.global.defaultFontColor = '#FFF';
 
     let massPopChart = new Chart(myChart, {
-      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
         labels:['01-01-2018', '02-01-2018', '03-01-2018', '04-01-2018', '05-01-2018', '06-01-2018'],
         datasets:[{

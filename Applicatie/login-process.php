@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-        <title>Prosessing login...</title>
+    <head>
+        <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
+        <link rel="stylesheet" href="css/main.css" type="text/css"/>
+        <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
+        <link rel="stylesheet" href="css/graphview.css" type="text/css"/>
+        <script type="text/javascript" src="js/menumaker.js"></script>
+        <title>Weather Pressure Application</title>
         <meta charset="UTF-8">
         <link rel="icon" 
         type="image/png" 
         href="img/tab_icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    </head>
 <body>
 	<img class="schoollogo" src="img/schoollogo.png">
 	<?php
@@ -47,13 +51,13 @@
 			<?php
 		      if ($succes) {
 		        echo "Succesfull logon"; 
-		        header( "refresh:5;url=index.php" );
+		        header( "refresh:2;url=query1.php" );
 		      } elseif ($usersucces) {
 		      	echo "Login unsuccesfull, you have entered a wrong password, you are begin redirected"; 
-			    header( "refresh:5;url=login.php" );
+			    header( "refresh:1;url=index.php" );
 		      } else {
 		        echo "Login unsuccesfull, username unknown, you are being redirected"; 
-		        header( "refresh:5;url=login.php" );
+		        header( "refresh:1;url=index.php" );
 		      }
 		      ?>
 	     </p>
