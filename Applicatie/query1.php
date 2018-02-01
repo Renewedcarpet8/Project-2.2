@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
     <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
@@ -30,7 +31,7 @@
         }
         $i = 0;
         while($i < count($readData)){
-            echo "<tr class='values'>";
+            echo "<tr class='values' style=''>";
             echo "<td style='text-align: center'>" . $readData[$i][1] . "</td>";
             echo "<td style='text-align: center'>" . $readData[$i][2] . "</td>";
             echo "</tr>";
@@ -44,14 +45,17 @@
       <a href='#'>OPTIE 2</a>";
       <a href='#'>OPTIE 3</a>";
       <a href='#'>BLA BLA BLA  </a>
-      <img class="SettingsIcon" src="img/settings.png"></a>
+      <img id="SettingsIcon" src="img/settings.png"></a>
   </div>
-
+  
+  <div id="Tooltips">
+      <p id="Tooltip-text">Bar Chart</p>
+  </div>
   <div class="topnav">
-      <li><img href='#' class="iconVisual" src="img/graph.png"></li>
-      <li><img href='#' class="iconVisual" src="img/line-chart-icon.png"></li>
-      <li><img href='#' class="iconVisual" src="img/pie-chart-icon.png"></li>
-      <li><img href='#' class="iconVisual" src="img/map.png"></li>
+      <li><img href='#' id="iconVisual" src="img/graph.png"></li>
+      <li><img href='#' id="iconVisual" src="img/line-chart-icon.png"></li>
+      <li><img href='#' id="iconVisual" src="img/pie-chart-icon.png"></li>
+      <li><img href='#' id="iconVisual" src="img/map.png"></li>
   </div>
 
   <!-- Page content -->
@@ -145,9 +149,15 @@
       <div class="dashboard-control" method="POST">
           <H1>Graph Control</br> </br></H1>
           <span class='fa-stack fa-lg'>
-                            <i class='fa fa=circle fa-stack-2x'></i>
-                            <i class='fa fa-lock fa-stack-1x'</i>
-                        </span>
+              
+              <img href='#' id="pdf" src="img/adobe-pdf-icon.png">
+                <div id="pdfoverlay">
+                    <div class="text">Download to PDF</div>
+                </div>
+                <i class='fa fa=circle fa-stack-2x'></i>
+                <i class='fa fa-lock fa-stack-1x'</i>
+                            
+             </span>
           </p>
       </div>
       <div class ="container-values">
@@ -158,7 +168,7 @@
                             <i class='fa fa-lock fa-stack-1x'</i>
                         </span>
               </p>
-              <table>
+              <table class ='values'>
                   <th> Date </th>
                   <th> Value</th>
                   <?php
@@ -167,6 +177,8 @@
           </div>
       </div>
 
+      
+      
       <div class="underlay-photo"></div>
       <div class="underlay-black"></div>
   </div>

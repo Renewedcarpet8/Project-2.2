@@ -4,15 +4,16 @@
   float: center;
   border: 5px solid;
   border-color: #666;
-  background: rgb(50, 50, 50);
+  background-color: #283655;
   text-align: center;
   color:white;
   top: 6%;
   border-radius: 15px; 
   box-shadow: 10px 10px 5px #111;
- height: 80%;
+  height: 80%;
   width: 65%;
   left: 10%;
+  Opacity: 0.8;
 }
 
 .dashboard-values {
@@ -21,7 +22,7 @@
   text-align: center;
   color:white;
   top: 6%;
-  background: rgb(70, 70, 70);
+  background: #1E1F26;
   border: 5px solid;
   border-color: #666;
   box-shadow: 10px 10px 5px #111;
@@ -30,19 +31,23 @@
   right: 3%;
 }
 
-tr.values {
-    text-align: center;
-    width: 10px;
+table.values {
+    position: absolute;
+    width: 80%;
+    height: 30%;
     float: center;
-    font-size: 25px;
-    top: 47%;
+    background-color: #11l;
+    font-size: 1.2vw;
+    bottom: 10%;
+    left: 10%;
     font-family: 'calibri'
 }
 
 .dashboard-control {
   position: absolute;
+  OPACITY: 0.8;
   float: center;
-  background: rgb(70, 70, 70);
+  background: #1E1F26;
   border: 5px solid;
   border-color: #666;
   box-shadow: 10px 10px 5px #111;
@@ -67,3 +72,22 @@ img.graphplaceholder {
     width: 80%;
 }
 
+#pdf {
+    position: Absolute;
+    width: 30%;
+    top: 20%;
+    left: 15%;
+}
+
+#pdfoverlay {
+    position: Absolute;
+    background-color: #111;
+    width: 30%;
+    top: 31%;
+    left: 15%;
+}
+
+#pdf:hover {
+    transition-duration: 0.5s;
+    background-color: #fff
+}

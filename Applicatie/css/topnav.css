@@ -1,18 +1,14 @@
 /* The sidebar menu */
 .topnav {
-    height: 10%; /* Full-height: remove this if you want "auto" height */
-    width: 34%; /* Set the width of the sidebar */
+    height: 12%; /* Full-height: remove this if you want "auto" height */
+    width: 33%; /* Set the width of the sidebar */
     display: inline;
     position: absolute; /* Fixed Sidebar (stay in place on scroll) */
     bottom: 0; /* Stay at the bottom */
-    left: 160px;
-    background-color: #121; /* GREEN */
+    left: 8%;
+    background-color: #111; /* GREEN */
     overflow-y:hidden;
-    border-right: 10px solid;
-    border-top: 10px solid;
-    border-color: #343;
     bottom: 0px;
-    opacity: 0.9;
     list-style-type: none;
 }
 ul {
@@ -22,19 +18,45 @@ ul {
     width: 60px;
 } 
 
-img.iconVisual {
-    overflow-y:hidden;
+#iconVisual{
     position: relative;
-    bottom: 30px;
+    overflow-y:hidden;
+    bottom: 17px;
     height: 98px;
 }
 
-img.iconVisual:hover {
+#iconVisual:hover{
+    .Tooltips {display: block;}
+    display: block;
+    transition-duration: 0.5s;
+    overflow:hidden;
+    height: 98px;
+    background-color: #444;
+    border-radius: 90px;
+}
+
+#Tooltips {
+    display: none;
+    overflow-x:hidden;
+    z-index: 9;
+    height: 3%; /* Full-height: remove this if you want "auto" height */
+    width: 6%; /* Set the width of the sidebar */
+    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+    bottom: 13%; /* Stay at the bottom */
+    left: 180px;
+    background-color: #111; /* GREEN */
+    border-radius: 20px;
+    overflow-y:hidden;
+    list-style-type: none;
+}
+
+#iconVisual:active {
+    transition-duration: 0.1s;
     overflow:hidden;
     position: relative;
-    bottom: 30px;
     height: 98px;
-    background-color: #555
+    background-color: #fff;
+    border-radius: 90px;
 }
 
 li {
@@ -47,14 +69,14 @@ t.a {
     padding: 30px;
     background-color: #dddddd;
 }
-img.SettingsIcon {
+#SettingsIcon {
     position: fixed;
     bottom: 0%;
     left: 0px;
     padding: 30px;
 }
 
-img.SettingsIcon:hover {
+#SettingsIcon:hover{
     position: fixed;
     bottom: 0%;
     left: 0px;
@@ -66,8 +88,8 @@ img.schoollogographmode {
     position: fixed;
       -webkit-filter: grayscale(20%);
     height: 10%;
-    top: 90%;
-    right: 2%;
+    top: 89%;
+    right: 5%;
 }
 
 
