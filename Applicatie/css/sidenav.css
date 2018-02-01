@@ -19,6 +19,13 @@ img.SettingsIcon {
     padding: 1%;
 }
 
+.welcomeName{
+  position: fixed;
+  bottom: 20%;
+  left: 15px;
+text-align: center;
+}
+
 /* The navigation menu links */
 .sidenav a {
     padding: 6px 8px 6px 16px;

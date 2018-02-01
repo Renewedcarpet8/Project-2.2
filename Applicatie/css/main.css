@@ -87,6 +87,8 @@ input {
   box-shadow: 0 0 1rem rgba(10,0,0,0.3);
   min-height: 1rem;
   margin: auto;
+  text-align:center;
+  color: #646464;
   max-width: 90%;
   padding: .40rem;
         -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */

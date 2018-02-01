@@ -16,6 +16,7 @@
 <body>
 	<img class="schoollogo" src="img/schoollogo.png">
 	<?php
+    session_start();
 		$username = trim($_POST['username']);
         $password = trim($_POST['password']);
         $csv = array();
@@ -32,6 +33,8 @@
 		while ($j < count($csv)) {
 			if ($username == $csv[$j][1] && $password == $csv[$j][2]) {
 				$succes = true;
+				$userNumber = $csv[$j];
+				$_SESSION['usernr'] = $userNumber;
 			} elseif ($username == $csv[$j][1] && $password !== $csv[$j][2]) {
 				$usersucces = true;
 			}
@@ -49,15 +52,21 @@
             </span>
           </p>
 			<?php
+            $errormessage = [];
 		      if ($succes) {
-		        echo "Succesfull logon"; 
+		        echo "<h1>Welcome" . $userNumber[3] . "</h1><br>";
+		        echo "<h3>Loading data..</h3>";
 		        header( "refresh:2;url=query1.php" );
 		      } elseif ($usersucces) {
+		        $errormessage = "Wrong password";
+		        $_SESSION['errormsg'] = $errormessage;
 		      	echo "Login unsuccesfull, you have entered a wrong password, you are begin redirected"; 
-			    header( "refresh:1;url=index.php" );
+			    header( "refresh:0;url=index.php" );
 		      } else {
-		        echo "Login unsuccesfull, username unknown, you are being redirected"; 
-		        header( "refresh:1;url=index.php" );
+		        echo "Login unsuccesfull, username unknown, you are being redirected";
+		        $errormessage = "Username unknown";
+                $_SESSION['errormsg'] = $errormessage;
+		        header( "refresh:0;url=index.php" );
 		      }
 		      ?>
 	     </p>

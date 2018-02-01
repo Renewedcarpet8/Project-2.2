@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
@@ -40,29 +39,10 @@
         fclose($handle);
     }
     ?>
-  <div class="sidenav">
-      <a href='query1.php'>BAR CHART</a>";
-      <a href='query1line.php'>LINE CHART</a>";
-      <a href='query1pie.php'>PIE CHART</a>";
 
-      <img id="SettingsIcon" src="img/settings.png"></a>
-  </div>
-  
-  <div id="Tooltips">
-      <p id="Tooltip-text">Bar Chart</p>
-  </div>
-  <div class="topnav">
-      <li><img href='#' id="iconVisual" src="img/graph.png"></li>
-      <li><img href='#' id="iconVisual" src="img/line-chart-icon.png"></li>
-      <li><img href='#' id="iconVisual" src="img/pie-chart-icon.png"></li>
-      <li><img href='#' id="iconVisual" src="img/map.png"></li>
-  </div>
-
-  <!-- Page content -->
-  <div id="main">
-      ...
-  </div>
-
+          <?php
+          require 'requirebars.php'
+          ?>
   <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
   <div class="dashboard-graph" method="POST">
@@ -149,14 +129,14 @@
       <div class="dashboard-control" method="POST">
           <H1>Graph Control</br> </br></H1>
           <span class='fa-stack fa-lg'>
-              
+
               <img href='#' id="pdf" src="img/adobe-pdf-icon.png">
                 <div id="pdfoverlay">
                     <div class="text">Download to PDF</div>
                 </div>
                 <i class='fa fa=circle fa-stack-2x'></i>
                 <i class='fa fa-lock fa-stack-1x'</i>
-                            
+
              </span>
           </p>
       </div>
@@ -177,13 +157,10 @@
           </div>
       </div>
 
-      
-      
+
+
       <div class="underlay-photo"></div>
       <div class="underlay-black"></div>
   </div>
 </body>
-<script type="text/javascript">
-    $("#cssmenu").menumaker();
-</script>
 </html>
