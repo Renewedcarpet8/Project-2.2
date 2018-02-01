@@ -72,7 +72,7 @@
                             <i class='fa fa-lock fa-stack-1x'</i>
                         </span>
       </p>
-      <div class="container">
+      <div class="cont">
           <canvas id="myChart"></canvas>
       </div>
   </div>

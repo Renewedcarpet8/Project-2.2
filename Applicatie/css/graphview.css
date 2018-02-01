@@ -91,3 +91,8 @@ img.graphplaceholder {
     transition-duration: 0.5s;
     background-color: #fff
 }
+
+.cont {
+  position: relative;
+  margin: auto;
+}
