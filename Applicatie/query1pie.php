@@ -53,7 +53,7 @@ require 'requirebars.php'
                         </span>
     </p>
     <div class="cont">
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart" style="height:1%"></canvas>
     </div>
 </div>
 
@@ -68,18 +68,13 @@ require 'requirebars.php'
     Chart.defaults.global.defaultFontColor = '#FFF';
 
     let massPopChart = new Chart(myChart, {
-        type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
         data:{
             labels:['01-01-2018', '02-01-2018', '03-01-2018', '04-01-2018', '05-01-2018', '06-01-2018'],
             datasets:[{
                 label:'Numbers per date',
                 data:[
-                    24,
-                    25,
-                    27,
-                    35,
-                    23,
-                    26
+                    <?php readValue() ?>
 
                 ],
                 //backgroundColor:'green',

@@ -74,13 +74,7 @@
         datasets:[{
           label:'Numbers per date',
           data:[
-            24,
-            25,
-            27,
-            35,
-            23,
-            26
-
+            <?php readValue(); ?>
           ],
           //backgroundColor:'green',
           backgroundColor:[

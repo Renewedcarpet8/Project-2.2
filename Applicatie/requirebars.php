@@ -32,12 +32,27 @@ session_start();
          }
          print_r($userNumber[3]);
      }
+
+function readValue(){
+    $readValue = [];
+    if ($handle = fopen("data.csv", "r")){
+        while (($data = fgetcsv($handle, 1000,",")) !==FALSE){
+            $readValue[] = $data;
+        }
+    }
+    $j = 0;
+    while ($j < count($readValue)) {
+        echo $readValue[$j][2];
+        echo ",";
+        $j++;
+    }
+    fclose($handle);
+}
 ?>
     <div class="sidenav">
         <a href='query1.php'>BAR CHART</a>
         <a href='query1line.php'>LINE CHART</a>
         <a href='query1pie.php'>PIE CHART</a>
-        <a href="testpage.php">TEST PAGE</a>
         <p class="welcomeName">Welcome <?php
                 getUsername();
             ?>

@@ -38,22 +38,6 @@ function readData(){
     }
     fclose($handle);
 }
-
-function readValue(){
-    $readValue = [];
-    if ($handle = fopen("data.csv", "r")){
-        while (($data = fgetcsv($handle, 1000,",")) !==FALSE){
-            $readValue[] = $data;
-        }
-    }
-    $j = 0;
-    while ($j < count($readValue)) {
-        echo $readValue[$j][2];
-        echo ",";
-        $j++;
-    }
-    fclose($handle);
-}
 ?>
 
 <?php

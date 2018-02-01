@@ -22,8 +22,8 @@ img.SettingsIcon {
 .welcomeName{
   position: fixed;
   bottom: 20%;
-  left: 15px;
-text-align: center;
+  width:8%;
+  text-align: center;
 }
 
 /* The navigation menu links */

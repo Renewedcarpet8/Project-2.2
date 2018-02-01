@@ -56,6 +56,7 @@
 		      if ($succes) {
 		        echo "<h1>Welcome" . $userNumber[3] . "</h1><br>";
 		        echo "<h3>Loading data..</h3>";
+		        $_SESSION['errormsg'] = "";
 		        header( "refresh:2;url=query1.php" );
 		      } elseif ($usersucces) {
 		        $errormessage = "Wrong password";
