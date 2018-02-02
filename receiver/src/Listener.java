@@ -23,6 +23,8 @@ public class Listener extends Thread{
     }
 
     public void run() {
+        MeasurementLogger log = new MeasurementLogger();
+        
         while (running) {
             // Accept a connection
             try {
