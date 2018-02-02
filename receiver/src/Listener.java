@@ -28,10 +28,9 @@ public class Listener extends Thread{
             try {
                 System.out.println("Waiting for client on port " + serverSocket.getLocalPort() + "...");
                 Socket connectionSocket = serverSocket.accept();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
-                Message message = new Message(reader, num_of_messages);
-                num_of_messages++;
+                MeasurementParser message = new MeasurementParser(new BufferedReader(new InputStreamReader(connectionSocket.getInputStream())), num_of_messages);
                 message.start();
+                num_of_messages++;
             } catch (SocketTimeoutException e) {
                 System.out.println("Time out!");
             } catch (IOException e) {
