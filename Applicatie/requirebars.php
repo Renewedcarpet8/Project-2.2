@@ -33,9 +33,25 @@ session_start();
          print_r($userNumber[3]);
      }
 
-function readValue(){
+function readValueQ1(){
     $readValue = [];
-    if ($handle = fopen("data.csv", "r")){
+    if ($handle = fopen("data1.csv", "r")){
+        while (($data = fgetcsv($handle, 1000,",")) !==FALSE){
+            $readValue[] = $data;
+        }
+    }
+    $j = 0;
+    while ($j < count($readValue)) {
+        echo $readValue[$j][2];
+        echo ",";
+        $j++;
+    }
+    fclose($handle);
+}
+
+function readValueQ2(){
+    $readValue = [];
+    if ($handle = fopen("data2.csv", "r")){
         while (($data = fgetcsv($handle, 1000,",")) !==FALSE){
             $readValue[] = $data;
         }
@@ -50,9 +66,8 @@ function readValue(){
 }
 ?>
     <div class="sidenav">
-        <a href='query1.php'>BAR CHART</a>
-        <a href='query1line.php'>LINE CHART</a>
-        <a href='query1pie.php'>PIE CHART</a>
+        <a href='query1.php'>Query 1</a>
+        <a href='query2.php'>Query 2</a>
         <p class="welcomeName">Welcome <?php
                 getUsername();
             ?>

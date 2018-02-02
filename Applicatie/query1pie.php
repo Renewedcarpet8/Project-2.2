@@ -23,7 +23,7 @@
 function readData(){
     $readData = [];
 
-    if ($handle = fopen("data.csv", "r")) {
+    if ($handle = fopen("data1.csv", "r")) {
         while (($data = fgetcsv($handle, 1000, ",")) !==FALSE) {
             $readData[] = $data;
         }
@@ -74,7 +74,7 @@ require 'requirebars.php'
             datasets:[{
                 label:'Numbers per date',
                 data:[
-                    <?php readValue() ?>
+                    <?php readValueQ1() ?>
 
                 ],
                 //backgroundColor:'green',
