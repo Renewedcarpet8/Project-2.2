@@ -33,34 +33,37 @@ session_start();
          print_r($userNumber[3]);
      }
 
-function readValueQ1(){
+function readValue($filename, $sort){
     $readValue = [];
-    if ($handle = fopen("data1.csv", "r")){
+    if ($handle = fopen($filename, "r")){
         while (($data = fgetcsv($handle, 1000,",")) !==FALSE){
             $readValue[] = $data;
         }
     }
     $j = 0;
     while ($j < count($readValue)) {
-        echo $readValue[$j][2];
+        echo $readValue[$j][$sort];
         echo ",";
         $j++;
     }
     fclose($handle);
 }
 
-function readValueQ2(){
-    $readValue = [];
-    if ($handle = fopen("data2.csv", "r")){
-        while (($data = fgetcsv($handle, 1000,",")) !==FALSE){
-            $readValue[] = $data;
+function readData($filename){
+    $readData = [];
+
+    if ($handle = fopen($filename, "r")) {
+        while (($data = fgetcsv($handle, 1000, ",")) !==FALSE) {
+            $readData[] = $data;
         }
     }
-    $j = 0;
-    while ($j < count($readValue)) {
-        echo $readValue[$j][2];
-        echo ",";
-        $j++;
+    $i = 0;
+    while($i < count($readData)){
+        echo "<tr class='values' style=''>";
+        echo "<td style='text-align: center'>" . $readData[$i][1] . "</td>";
+        echo "<td style='text-align: center'>" . $readData[$i][2] . "</td>";
+        echo "</tr>";
+        $i++;
     }
     fclose($handle);
 }
@@ -79,10 +82,10 @@ function readValueQ2(){
         <p id="Tooltip-text">Bar Chart</p>
     </div>
     <div class="topnav">
-        <li><a href="query1.php"><img id="iconVisual" src="img/graph.png"></a></li>
-        <li><a href="query1line.php"><img id="iconVisual" src="img/line-chart-icon.png"></a></li>
-        <li><a href="query1pie.php"><img id="iconVisual" src="img/pie-chart-icon.png"></a></li>
-        <li><a href="#"><img id="iconVisual" src="img/map.png"></a></li>
+        <li><button id="bar"><img id="iconVisual" src="img/graph.png"></button></li>
+        <li><button id="line"><img id="iconVisual" src="img/line-chart-icon.png"></button></li>
+        <li><button id="pie"><img id="iconVisual" src="img/pie-chart-icon.png"></button></li>
+        <li><button id="map"><img id="iconVisual" src="img/map.png"></button></li>
     </div>
     <!-- Page content -->
     <div id="main">
