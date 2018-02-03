@@ -28,6 +28,14 @@ import java.util.Stack;
             }
         }
 
+        public synchronized void addToQueue(Measurement measurement) {
+            queue.push(measurement);
+        }
+
+        private synchronized Stack<Measurement> getQueue() {
+            return queue;
+        }
+
         public synchronized void writeToLog(Measurement measurement) {
             //String location = "data/" + measurement.getYear() + "/" + measurement.getMonth() + "/" + measurement.getDay() + measurement.getHour() + ".csv";
             //File file = new File(location);
