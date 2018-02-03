@@ -51,11 +51,46 @@ public class Measurement {
 
     public Measurement(){}
 
+    public String getDataString() {
+        //System.out.println(date);
+        return date.format(dateFormatter) + ","
+                + time.format(timeFormatter) + ","
+                + station + ","
+                + temperature + ","
+                + dewpoint + ","
+                + pressure_station + ","
+                + pressure_sea + ","
+                + visibility + ","
+                + wind + ","
+                + rainfall + ","
+                + snowfall + ","
+                + flags + ","
+                + cloud_cover + ","
+                + wind_direction;
+    }
+
+    public int getYear() {
+        return date.getYear();
+    }
+
+    public int getMonth() {
+        return date.getMonthValue();
+    }
+
+    public int getDay() {
+        return date.getDayOfMonth();
+    }
+
+    public int getHour() {
+        return time.getHour();
+    }
+
     public String getDate() {
         return date.format(dateFormatter);
     }
 
     public String getTime() {
+        System.out.println(time.format(timeFormatter));
         return time.format(timeFormatter);
     }
 

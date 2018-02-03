@@ -1,50 +1,45 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by Jan Hendrik Haanstra on 1/28/2018.
  */
-public class Listener extends Thread {
+public class Listener extends Thread{
     private ServerSocket serverSocket;
     private int num_of_messages = 0;
+    private boolean running = true;
+    private ExecutorService executor;
+    private MeasurementLogger logger = new MeasurementLogger();
 
-    public Server(int port) throws IOException {
+    public Listener(int port, int threads) throws IOException {
         serverSocket = new ServerSocket(port);
-        serverSocket.setSoTimeout(10000);
+        // Create a thread pool of n threads
+        executor = Executors.newFixedThreadPool(threads);
     }
 
     public void run() {
-        while (true) {
-            // Accept a connection
+        while (running) {
             try {
+                // Listen on the port for incoming messages
                 System.out.println("Waiting for client on port " + serverSocket.getLocalPort() + "...");
-                Socket connectionSocket = serverSocket.accept();
+                Socket client = serverSocket.accept();
+                num_of_messages++;
 
-                BufferedReader reader = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
+                // Get the incoming data and create a thread using it
+                Thread parser = new MeasurementParser(client, num_of_messages, logger);
 
-                new DataHandler(reader).start();
-                //connectionSocket.close();
-                // Deal with the connection (do this in a different thread)
-
-                /*System.out.println("Just connected to " + server.getRemoteSocketAddress());
-                DataInputStream in = new DataInputStream(server.getInputStream());
-
-                System.out.println(in.readUTF());
-                DataOutputStream out = new DataOutputStream(server.getOutputStream());
-                out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
-                        + "\nGoodbye!");
-                server.close();*/
-
-            } catch (SocketTimeoutException e) {
-                System.out.println("Time out!");
+                // Pass the thread over to the executor
+                executor.execute(parser);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
+
+        executor.shutdown();
+        System.out.println("Socket on port " + serverSocket.getLocalPort() + " closed");
     }
 }
