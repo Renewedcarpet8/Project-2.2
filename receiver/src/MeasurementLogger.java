@@ -10,19 +10,12 @@ import java.util.Stack;
 /**
      * Created by Jan Hendrik Haanstra on 1/28/2018.
      */
-    public class MeasurementLogger extends Thread {
+    public class MeasurementLogger {
         private Charset charset = Charset.forName("US-ASCII");
         private Path file = Paths.get("data/testdata.csv");
         private Stack<Measurement> queue = new Stack<>();
 
         public MeasurementLogger() {}
-
-        @Override
-        public void run() {
-            while (true) {
-                writeToLog(queue.pop());
-            }
-        }
 
         public void readLog() {
             try (BufferedReader reader = Files.newBufferedReader(file, charset)){
@@ -35,12 +28,13 @@ import java.util.Stack;
             }
         }
 
-        public void writeToLog(Measurement measurement) {
-            String location = "data/" + measurement.getYear() + "/" + measurement.getMonth() + "/" + measurement.getDay() + measurement.getHour() + ".csv";
-            File file = new File(location);
-            file.mkdirs();
+        public synchronized void writeToLog(Measurement measurement) {
+            //String location = "data/" + measurement.getYear() + "/" + measurement.getMonth() + "/" + measurement.getDay() + measurement.getHour() + ".csv";
+            //File file = new File(location);
+            //file.mkdirs();
 
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(location, true))) {
+            //try (BufferedWriter writer = new BufferedWriter(new FileWriter(location, true))) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter("data/testdata.csv", true))) {
                 writer.write(measurement.getDataString() + "\n");
             } catch (IOException e) {
                 // TODO: Error logging
