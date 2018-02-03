@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -9,46 +11,43 @@ import java.util.regex.Pattern;
 public class MeasurementParser extends Thread {
     private BufferedReader reader;
     private int thread_number;
-    ArrayList<Measurement> measurements = new ArrayList<>();
-    Measurement measurement;
-    Pattern pattern;
-    Boolean parsing = false;
+    private ArrayList<Measurement> measurements = new ArrayList<>();
+    private Measurement measurement;
+    private Socket client;
+    private Pattern pattern = Pattern.compile("^\\<([a-zA-Z_]*)\\>(.+)\\<\\/([a-zA-Z_]*)\\>$");
+    private Boolean parsing = false;
     private String currentLine;
+    private MeasurementLogger logger;
 
-    public MeasurementParser(BufferedReader reader, int thread_number) {
-        this.reader= reader;
+    public MeasurementParser(Socket client, int thread_number, MeasurementLogger logger) {
+        this.client = client;
         this.thread_number = thread_number;
-        pattern = Pattern.compile("^\\<([a-zA-Z_]*)\\>(.+)\\<\\/([a-zA-Z_]*)\\>$");
+        this.logger = logger;
     }
 
     @Override
     public void run() {
         System.out.println("Thread" + thread_number + " starting");
-        try {
-            while((currentLine = reader.readLine()) != null) {
-                if (parsing)
-                    readTag();
-                else if (currentLine.trim().equalsIgnoreCase("<MEASUREMENT>"))
+        BufferedReader in;
+        try{
+            in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            while((currentLine = in.readLine()) != null) {
+                if (currentLine.trim().equalsIgnoreCase("<MEASUREMENT>")) {
                     measurement = new Measurement();
-                else if (currentLine.trim().equalsIgnoreCase("</MEASUREMENT>")) {
+                    parsing = true;
+                } else if (currentLine.trim().equalsIgnoreCase("</MEASUREMENT>")) {
                     System.out.println(measurement);
+                    logger.writeToLog(measurement);
                     measurements.add(measurement);
-                }
-
+                } else if (parsing)
+                    readTag();
             }
         } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            // TODO: error logging
         }
 
-        // Update CSV here
-
         System.out.println("Thread " +  thread_number + " exiting.");
+
     }
 
     private void readTag() {
