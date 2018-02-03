@@ -1,0 +1,98 @@
+
+.dashboard-graph {
+  position: absolute;
+  float: center;
+  border: 5px solid;
+  border-color: #666;
+  background-color: #283655;
+  text-align: center;
+  color:white;
+  top: 6%;
+  border-radius: 15px; 
+  box-shadow: 10px 10px 5px #111;
+  height: 80%;
+  width: 65%;
+  left: 10%;
+  Opacity: 0.8;
+}
+
+.dashboard-values {
+  position: absolute;
+  float: center;
+  text-align: center;
+  color:white;
+  top: 6%;
+  background: #1E1F26;
+  border: 5px solid;
+  border-color: #666;
+  box-shadow: 10px 10px 5px #111;
+  height: 39%;
+  width: 20%;
+  right: 3%;
+}
+
+table.values {
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    float: center;
+    background-color: #11l;
+    font-size: 1.2vw;
+    bottom: 10%;
+    left: 10%;
+    font-family: 'calibri'
+}
+
+.dashboard-control {
+  position: absolute;
+  OPACITY: 0.8;
+  float: center;
+  background: #1E1F26;
+  border: 5px solid;
+  border-color: #666;
+  box-shadow: 10px 10px 5px #111;
+  text-align: center;
+  color:white;
+  top: 47%;
+  height: 39%;
+  width: 20%;
+  right: 3%;
+}
+
+.underlay-photo {
+  background-image: url("../img/bg-login.jpg");
+  background-size: cover;
+filter: blur(10px);
+  z-index: -1;
+            animation: fadein 2s;
+}
+
+img.graphplaceholder {
+    height: 80%;
+    width: 80%;
+}
+
+#pdf {
+    position: Absolute;
+    width: 30%;
+    top: 20%;
+    left: 15%;
+}
+
+#pdfoverlay {
+    position: Absolute;
+    background-color: #111;
+    width: 30%;
+    top: 31%;
+    left: 15%;
+}
+
+#pdf:hover {
+    transition-duration: 0.5s;
+    background-color: #fff
+}
+
+.cont {
+  position: relative;
+  margin: auto;
+}
