@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="offlineAvailable.appcache">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
