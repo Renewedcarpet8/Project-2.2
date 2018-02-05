@@ -3,8 +3,12 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Date;
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
@@ -14,8 +18,14 @@ import java.util.Stack;
         private Charset charset = Charset.forName("US-ASCII");
         private Path file = Paths.get("data/testdata.csv");
         private Stack<Measurement> queue = new Stack<>();
+        private boolean running;
+        private BufferedWriter writer;
+        String currentPath;
 
-        public MeasurementLogger() {}
+        public MeasurementLogger() {
+            this.currentPath = "data/" + new SimpleDateFormat("yyyy/MM/dd/HH").format(new Date()) + ".csv";
+            updateBufferedWriter();
+        }
 
         public void readLog() {
             try (BufferedReader reader = Files.newBufferedReader(file, charset)){
@@ -37,24 +47,33 @@ import java.util.Stack;
         }
 
         public synchronized void writeToLog(Measurement measurement) {
-            //String location = "data/" + measurement.getYear() + "/" + measurement.getMonth() + "/" + measurement.getDay() + measurement.getHour() + ".csv";
-            //File file = new File(location);
-            //file.mkdirs();
-
-            //try (BufferedWriter writer = new BufferedWriter(new FileWriter(location, true))) {
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter("data/testdata.csv", true))) {
+            String location = "data/" + measurement.getYear() + "/" + measurement.getMonth() + "/" + measurement.getDay() + "/" + measurement.getHour() + ".csv";
+            try {
+                if (!location.equals(currentPath)) {
+                    this.currentPath = location;
+                    updateBufferedWriter();
+                }
+                //System.out.println(measurement.getDataString());
                 writer.write(measurement.getDataString() + "\n");
             } catch (IOException e) {
-                // TODO: Error logging
+                // TODO Error Logging
                 e.printStackTrace();
             }
         }
 
-        private String parseDataString(Measurement measurement) {
-            return measurement.getDate() + "," + measurement.getTime() + "," + measurement.getStation() + "," + measurement.getTemperature()
-                    + "," + measurement.getDewpoint() + "," + measurement.getPressure_station() + "," + measurement.getPressure_sea()
-                    + "," + measurement.getVisibility() + "," + measurement.getWind() + "," + measurement.getRainfall() + "," +
-                    measurement.getSnowfall() + "," + measurement.getFlags() + "," + measurement.getCloud_cover() + "," + measurement.getWind_direction();
+        private void updateBufferedWriter() {
+            try {
+                File file = new File(currentPath);
+                file.getParentFile().mkdirs();
+                file.createNewFile();
+            } catch (IOException e) {
+                // TODO Error Logging
+            }
+            try  {
+                writer = new BufferedWriter(new FileWriter(currentPath, true));
+            } catch (IOException e) {
+                // TODO Error Logging
+            }
         }
 
         private Measurement parseMeassurement(String line) {
