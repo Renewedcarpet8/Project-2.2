@@ -36,7 +36,7 @@ public class MeasurementParser extends Thread {
                     measurement = new Measurement();
                     parsing = true;
                 } else if (currentLine.trim().equalsIgnoreCase("</MEASUREMENT>")) {
-                    System.out.println(measurement);
+                    //System.out.println(measurement);
                     logger.writeToLog(measurement);
                     measurements.add(measurement);
                 } else if (parsing)

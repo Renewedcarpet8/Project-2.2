@@ -73,16 +73,22 @@ public class Measurement {
         return date.getYear();
     }
 
-    public int getMonth() {
-        return date.getMonthValue();
+    public String getMonth() {
+        if (date.getMonthValue() < 10)
+            return "0" + String.valueOf(date.getMonthValue());
+        return "" + String.valueOf(date.getMonthValue());
     }
 
-    public int getDay() {
-        return date.getDayOfMonth();
+    public String getDay() {
+        if (date.getDayOfMonth() < 10)
+            return "0" + String.valueOf(date.getDayOfMonth());
+        return String.valueOf(date.getDayOfMonth());
     }
 
-    public int getHour() {
-        return time.getHour();
+    public String getHour() {
+        if (time.getHour() < 10)
+            return "0" + String.valueOf(time.getHour());
+        return String.valueOf(time.getHour());
     }
 
     public String getDate() {
