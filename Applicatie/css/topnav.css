@@ -20,19 +20,26 @@ ul {
 
 #iconVisual{
     position: relative;
+    background-color: #111;
     overflow-y:hidden;
     bottom: 17px;
     height: 98px;
 }
 
-#iconVisual:hover{
-    .Tooltips {display: block;}
+#iconVisual:hover{  
     display: block;
     transition-duration: 0.5s;
     overflow:hidden;
     height: 98px;
     background-color: #444;
     border-radius: 90px;
+}
+
+#bar, #line, #pie, #map {
+    position: relative;
+    border: 0;
+    background-color: #111;
+    width: 25%;
 }
 
 #Tooltips {
@@ -55,19 +62,19 @@ ul {
     overflow:hidden;
     position: relative;
     height: 98px;
-    background-color: #fff;
     border-radius: 90px;
 }
 
 li {
     float: left;
     padding: 30px;
+    opacity: 1;
+        background-color: #111;
 }
 
 t.a {
     display: block;
     padding: 30px;
-    background-color: #dddddd;
 }
 #SettingsIcon {
     position: fixed;

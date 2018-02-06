@@ -78,18 +78,12 @@ function readData($filename){
         </p>
         <a href="index.php"><img id="SettingsIcon" src="img/logout.png"></a>
     </div>
-    <div id="Tooltips">
-        <p id="Tooltip-text">Bar Chart</p>
     </div>
     <div class="topnav">
         <li><button id="bar"><img id="iconVisual" src="img/graph.png"></button></li>
         <li><button id="line"><img id="iconVisual" src="img/lineChartIcon.png"></button></li>
         <li><button id="pie"><img id="iconVisual" src="img/pieChartIcon.png"></button></li>
         <li><button id="map"><img id="iconVisual" src="img/map.png"></button></li>
-    </div>
-    <!-- Page content -->
-    <div id="main">
-        ...
     </div>
 </body>
 <script type="text/javascript">
