@@ -13,7 +13,7 @@
   height: 80%;
   width: 65%;
   left: 10%;
-  Opacity: 0.8;
+  opacity: 0.9;
 }
 
 h1.stayFront { 
@@ -22,21 +22,23 @@ h1.stayFront {
 }
 
 #googleMap {
-    bottom: 14%;
-        -webkit-transition: width 0.5s; /* Safari */
-    transition: width 0.5s;
-    height: 0px;
-    width: 0px;
-    left: 1%;
+    position: absolute;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    opacity: 0;
+    height: 98%;
+    width: 98%;
+    bottom: 1%;
 }
 
 #googleMap.fullscreen {
-    position: absolute;
         -webkit-transition: width 0.5s; /* Safari */
-    transition: width 0.5s;
+    transition: opacity 0.5s;
     height: 98%;
     width: 98%;
     left: 1%;
+    opacity: 1;
+    pointer-events: all;
 }
 
 .dashboard-values {
@@ -67,8 +69,7 @@ table.values {
 }
 
 .dashboard-control {
-  position: absolute;
-  OPACITY: 0.8;
+  position: absolute;   
   float: center;
   background: #1E1F26;
   border: 5px solid;
@@ -82,17 +83,13 @@ table.values {
   right: 3%;
 }
 
-.underlay-photo {
-  background-image: url("../img/bg-login.jpg");
-  background-size: cover;
-  z-index: -1;
-            animation: fadein 2s;
-}
 
 img.graphplaceholder {
     height: 80%;
     width: 80%;
 }
+
+
 
 #pdf {
     position: Absolute;
@@ -117,4 +114,13 @@ img.graphplaceholder {
 .cont {
   position: relative;
   margin: auto;
+}
+
+.underlay-photo {
+  background-image: url("../img/bg-graph.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(90%);
+
+  z-index: -1;
+            animation: fadein 2s;
 }

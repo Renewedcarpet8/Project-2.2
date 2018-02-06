@@ -6,22 +6,62 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* GREEN */
+    background-color: #111  ; /* GREEN */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     bottom: 520px;
 }
 
-img.SettingsIcon {
+.sidenav.icons {
+    display: block;
+    height: 1%;
+}
+
+li {
+    list-style-type: none;
+    position:relative;
+    float: top;
+    left: 15%;
+    top: 2%;
+    padding: 5%;
+    opacity: 1;
+    vertical-align: middle;
+    background-color: #111;
+    z-align: -1;
+}    
+
+p.category {
+    position: relative;
+    color: #888 ;
+    font-size: 25px;
+    background-color: #222;
+    padding: 10px;
+}
+
+
+hr.divider {
+    height: 1x;
+    color: #333;
+    border-color: #444;
+}
+
+#SettingsIcon {
     position: fixed;
-    bottom: 0%;
-    left: 13px;
+    bottom: 1%;
+    left: 0%;
     padding: 1%;
+}
+
+#SettingsIcon:hover{
+    position: fixed;
+    bottom: 1%;
+    left: 0%;
+    background-color: #555;
 }
 
 .welcomeName{
   position: fixed;
-  bottom: 20%;
+  bottom: 18%;
   width:8%;
   color: white;
   text-align: center;

@@ -1,20 +1,10 @@
 /* The sidebar menu */
-.topnav {
-    height: 12%; /* Full-height: remove this if you want "auto" height */
-    width: 37%; /* Set the width of the sidebar */
-    display: inline;
-    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-    bottom: 0; /* Stay at the bottom */
-    left: 8%;
-    background-color: #111; /* GREEN */
-    overflow-y:hidden;
-    bottom: 0px;
-    list-style-type: none;
-}
+
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding: 3px;
+    background-color: #333;
     width: 60px;
 } 
 
@@ -27,7 +17,6 @@ ul {
 }
 
 #iconVisual:hover{  
-    display: block;
     transition-duration: 0.5s;
     overflow:hidden;
     height: 98px;
@@ -66,30 +55,9 @@ ul {
     border-radius: 90px;
 }
 
-li {
-    float: left;
-    padding: 30px;
-    opacity: 1;
-        background-color: #111;
-}
-
 t.a {
     display: block;
     padding: 30px;
-}
-#SettingsIcon {
-    position: fixed;
-    bottom: 0%;
-    left: 0px;
-    padding: 30px;
-}
-
-#SettingsIcon:hover{
-    position: fixed;
-    bottom: 0%;
-    left: 0px;
-    padding: 30px;
-    background-color: #555;
 }
 
 img.schoollogographmode {
@@ -132,17 +100,4 @@ img.schoollogographmode {
 @media screen and (max-height: 450px) {
     .topnav  {padding-top: 15px;}
     .topnav  a {font-size: 18px;}
-}
-
-.underlay-photo {
-  background-image: url("../img/bg-login.jpg");
-  background-size: cover;
-  -webkit-filter: grayscale(80%);
-  -webkit-filter: blur(5px);
--moz-filter: blur(5px);
--o-filter: blur(5px);
--ms-filter: blur(05px);
-filter: blur(10px);
-  z-index: -1;
-            animation: fadein 2s;
 }

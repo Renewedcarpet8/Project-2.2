@@ -27,7 +27,7 @@ session_start();
             $getUser = [];
             print("Welcome, " . $userNumber[3] . "<br> Click below to log out");
         } else {
-            print_r("There has been a login error. [TODO: ZORG ERVOOR DAT FEATURES NU NIET WERKEN.");
+            print_r("There has been a login error. [TODO: ZORG ERVOOR DAT FEATURES NU NIET WERKEN. Doe ik later omdat anderes testen vervelend word.");
         }
          if ($handle = fopen("users.csv", "r")) {
              while (($data = fgetcsv($handle, 1000, ",")) !==FALSE) {
@@ -73,8 +73,20 @@ function readData($filename){
 }
 ?>
     <div class="sidenav">
-        <a href='query1.php'>Query 1</a>
-        <a href='query2.php'>Query 2</a>
+        <center>
+        <p class = "category">Query Select</p>
+            <a href='query1.php'>Query 1</a>
+            <a href='query2.php'>Query 2</a>
+            <br><br>
+        </center>
+        <center><p class = "category">Graph Select</p></center>
+        <li><button id="bar"><img id="iconVisual" src="img/graph.png"></button></li>
+        <li><button id="line"><img id="iconVisual" src="img/lineChartIcon.png"></button></li>
+        <li><button id="pie"><img id="iconVisual" src="img/pieChartIcon.png"></button></li>
+        <li><button id="map"><img id="iconVisual" src="img/map.png"></button></li>
+        <BR>
+        <hr class="divider">
+        <br><br>
         <p class="welcomeName"><?php
              
                     getUsername();
@@ -84,11 +96,7 @@ function readData($filename){
         <a href="index.php"><img id="SettingsIcon" src="img/logout.png"></a>
     </div>
     </div>
-    <div class="topnav">
-        <li><button id="bar"><img id="iconVisual" src="img/graph.png"></button></li>
-        <li><button id="line"><img id="iconVisual" src="img/lineChartIcon.png"></button></li>
-        <li><button id="pie"><img id="iconVisual" src="img/pieChartIcon.png"></button></li>
-        <li><button id="map"><img id="iconVisual" src="img/map.png"></button></li>
+    <div class="sidenav.icons">
     </div>
 </body>
 <script type="text/javascript">

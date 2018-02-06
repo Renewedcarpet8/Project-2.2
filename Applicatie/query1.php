@@ -30,7 +30,7 @@
 
 
   <div id="dashboard-graph" method="POST">
-      <H1 class="stayFront">Graph Viewer</br> </br></H1>
+      <H1 class="">Graph Viewer</br> </br></H1>
 <div id="googleMap"> </div>
 
 <script>
@@ -131,6 +131,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
       });
       $("#pie").click(function() { 
           $("#googleMap").removeClass("fullscreen");
+        google.maps.event.trigger(map, 'resize');
           change('pie');
       });
       
