@@ -77,16 +77,15 @@ function readData($filename){
         <p class = "category">Query Select</p>
             <a href='query1.php'>Query 1</a>
             <a href='query2.php'>Query 2</a>
-            <br><br>
+            <br>
         </center>
         <center><p class = "category">Graph Select</p></center>
         <li><button id="bar"><img id="iconVisual" src="img/graph.png"></button></li>
         <li><button id="line"><img id="iconVisual" src="img/lineChartIcon.png"></button></li>
         <li><button id="pie"><img id="iconVisual" src="img/pieChartIcon.png"></button></li>
         <li><button id="map"><img id="iconVisual" src="img/map.png"></button></li>
-        <BR>
-        <hr class="divider">
-        <br><br>
+        <center> <p class ="category"> User Control</p> </center>
+        <div id="WelcomeSection">
         <p class="welcomeName"><?php
              
                     getUsername();
@@ -94,6 +93,7 @@ function readData($filename){
             ?>
         </p>
         <a href="index.php"><img id="SettingsIcon" src="img/logout.png"></a>
+        </div>
     </div>
     </div>
     <div class="sidenav.icons">

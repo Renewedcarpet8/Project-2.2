@@ -175,7 +175,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
       </div>
       <div class ="container-values">
           <div class="dashboard-values" method="POST">
-              <H1>Values</br> </br></H1>
+              <H1>Values</br> </H1>
               <span class='fa-stack fa-lg'>
                             <i class='fa fa=circle fa-stack-2x'></i>
                             <i class='fa fa-lock fa-stack-1x'</i>

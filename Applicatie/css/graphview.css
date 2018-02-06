@@ -10,9 +10,9 @@
   top: 6%;
   border-radius: 15px; 
   box-shadow: 10px 10px 5px #111;
-  height: 80%;
+  height: 90%;
   width: 65%;
-  left: 10%;
+  left: 220px;
   opacity: 0.9;
 }
 
@@ -53,16 +53,16 @@ h1.stayFront {
   box-shadow: 10px 10px 5px #111;
   height: 39%;
   width: 20%;
-  right: 3%;
+  right: 20px;
 }
 
 table.values {
     position: absolute;
     width: 80%;
-    height: 30%;
+    height: 70%;
     float: center;
     background-color: #11l;
-    font-size: 1.2vw;
+    font-size: 100%;
     bottom: 10%;
     left: 10%;
     font-family: 'calibri'
@@ -80,9 +80,16 @@ table.values {
   top: 47%;
   height: 39%;
   width: 20%;
-  right: 3%;
+  right: 20px;
 }
 
+img.schoollogographmode {
+    position: fixed;
+      -webkit-filter: grayscale(20%);
+    height: 10%;
+    top: 87%;
+    right: 5%;
+}
 
 img.graphplaceholder {
     height: 80%;

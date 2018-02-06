@@ -1,7 +1,9 @@
 /* The sidebar menu */
 .sidenav {
-    height: 190%; /* Full-height: remove this if you want "auto" height */
-    width: 8%; /* Set the width of the sidebar */
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    border-right: solid 10px;
+    border-color: #222;
     position: absolute; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -21,8 +23,8 @@ li {
     list-style-type: none;
     position:relative;
     float: top;
-    left: 15%;
-    top: 2%;
+    left: 17%;
+    top: 1%;
     padding: 5%;
     opacity: 1;
     vertical-align: middle;
@@ -33,38 +35,73 @@ li {
 p.category {
     position: relative;
     color: #888 ;
-    font-size: 25px;
+    font-size: 15px;
     background-color: #222;
-    padding: 10px;
+    padding: 5px;
 }
 
 
 hr.divider {
-    height: 1x;
+    height: 1px;
     color: #333;
     border-color: #444;
+    z-index: -1;
 }
 
 #SettingsIcon {
-    position: fixed;
-    bottom: 1%;
-    left: 0%;
-    padding: 1%;
+    position: relative;
+    bottom: 0%;
+    left: 12%;
 }
 
 #SettingsIcon:hover{
-    position: fixed;
-    bottom: 1%;
-    left: 0%;
     background-color: #555;
 }
 
+
+#iconVisual{
+    max-width: 100%;
+    position: relative;
+    background-color: #111;
+    overflow-y:hidden;
+    bottom: 17px;
+    height: 50%;
+    max-width: 100px; 
+    max-height: 300px
+}
+
+#iconVisual:hover{  
+    transition-duration: 0.5s;
+    overflow:hidden;
+    background-color: #444;
+    border-radius: 90px;
+}
+
+#iconVisual:active {
+    transition-duration: 0.1s;
+    overflow:hidden;
+    position: relative;
+    border-radius: 90px;
+}
+
+#bar, #line, #pie, #map {
+    position: relative;
+    border: 0;
+    background-color: #111;
+    width: 25%;
+    height: 10%;
+    text-decoration: none;
+}
+
 .welcomeName{
-  position: fixed;
+  position: relative;
+  height: 36%;
   bottom: 18%;
-  width:8%;
+  left: 6%;
   color: white;
-  text-align: center;
+}
+
+#WelcomeSection {
 }
 
 /* The navigation menu links */
