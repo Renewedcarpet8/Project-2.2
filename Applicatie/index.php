@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
-
+    <link rel="stylesheet" href="./css/main.css" type="text/css"/>
+	<link rel="stylesheet" href="./css/graphview.css" type="text/css"/>
+	<link rel="stylesheet" href="./css/sidenav.css" type="text/css"/>
+	<link rel="stylesheet" href="./css/topnav.css" type="text/css"/>
     <title>Weather Pressure Application</title>
     <meta charset="UTF-8">
     <link rel="icon"
@@ -66,10 +68,10 @@
                         <form class="login-form" method="POST" action="index.php">
                             <center><img src="img/lockicon.png"></center>
                             <p class="login-text">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-lock fa-stack-1x"></i>
-            </span>
+                            <span class="fa-stack fa-lg">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-lock fa-stack-1x"></i>
+                            </span>
                                 <?php
                                     if (!empty($_SESSION['errormsg'])){
                                         print_r($_SESSION['errormsg']);

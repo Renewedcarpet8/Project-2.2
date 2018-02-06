@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" manifest="offlineAvailable.appcache">
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
-    <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
-    <link rel="stylesheet" href="css/graphview.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/sidenav.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/topnav.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/graphview.css" type="text/css"/>
     <script type="text/javascript" src="js/menumaker.js"></script>
     <title>Weather Pressure Application</title>
     <meta charset="UTF-8">
@@ -20,20 +20,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-      <?php
-        session_start();
-        require 'requirebars.php';
-        if (isset($_SESSION['username'])){
+    <?php
+    session_start();
+    require 'requirebars.php';
+    if (isset($_SESSION['username'])){
+    ?>
+    <img class="schoollogographmode" src="img/schoollogo-small.png">
 
-      ?>
-          <img class="schoollogographmode" src="img/schoollogo-small.png">
-
-  <div class="container-graph"><div class="menu-icon"><span></span></div></div>
+    <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
 
-  <div class="dashboard-graph" method="POST">
-      <H1>Graph Viewer</br> </br></H1>
+    <div id="dashboard-graph" method="POST">
+      <H1 class="">Graph Viewer</br> </br></H1>
+    <div id="googleMap"> </div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6S_YXL2ge22s_tfI1o43iIEQur5bEoCo&callback=myMap"></script>
       <span class='fa-stack fa-lg'>
+
+
                             <i class='fa fa=circle fa-stack-2x'></i>
                             <i class='fa fa-lock fa-stack-1x'</i>
                         </span>
@@ -108,15 +122,26 @@
       var myChart;
 
       $("#line").click(function() {
+      $("#googleMap").removeClass("fullscreen");
           change('line');
       });
 
       $("#bar").click(function() {
+          $("#googleMap").removeClass("fullscreen");
           change('bar');
       });
-      $("#pie").click(function() {
+      $("#pie").click(function() { 
+          $("#googleMap").removeClass("fullscreen");
+        google.maps.event.trigger(map, 'resize');
           change('pie');
       });
+      
+      $("#map").click(function() {
+        $("#googleMap").toggleClass("fullscreen");
+        google.maps.event.trigger(map, 'resize');
+        change('');
+        }
+      );
 
       function change(newType) {
           var ctx = document.getElementById("myChart").getContext("2d");
@@ -151,7 +176,7 @@
       </div>
       <div class ="container-values">
           <div class="dashboard-values" method="POST">
-              <H1>Values</br> </br></H1>
+              <H1>Values</br> </H1>
               <span class='fa-stack fa-lg'>
                             <i class='fa fa=circle fa-stack-2x'></i>
                             <i class='fa fa-lock fa-stack-1x'</i>
@@ -162,7 +187,7 @@
                   <th> Date </th>
                   <th> Value</th>
                   <?php
-                  echo readData("data2.csv");
+                  echo readData("data1.csv");
                   ?>
           </div>
       </div>
