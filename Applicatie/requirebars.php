@@ -83,8 +83,8 @@ function readData($filename){
     </div>
     <div class="topnav">
         <li><button id="bar"><img id="iconVisual" src="img/graph.png"></button></li>
-        <li><button id="line"><img id="iconVisual" src="img/line-chart-icon.png"></button></li>
-        <li><button id="pie"><img id="iconVisual" src="img/pie-chart-icon.png"></button></li>
+        <li><button id="line"><img id="iconVisual" src="img/lineChartIcon.png"></button></li>
+        <li><button id="pie"><img id="iconVisual" src="img/pieChartIcon.png"></button></li>
         <li><button id="map"><img id="iconVisual" src="img/map.png"></button></li>
     </div>
     <!-- Page content -->
