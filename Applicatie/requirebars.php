@@ -22,16 +22,20 @@
 session_start();
 
  function getUsername(){
-         $userNumber = $_SESSION['usernr'];
-         $getUser = [];
-
+        if (isset($_SESSION['usernr'])) {
+            $userNumber = $_SESSION['usernr'];
+            $getUser = [];
+            print("Welcome, " . $userNumber[3] . "<br> Click below to log out");
+        } else {
+            print_r("There has been a login error. [TODO: ZORG ERVOOR DAT FEATURES NU NIET WERKEN.");
+        }
          if ($handle = fopen("users.csv", "r")) {
              while (($data = fgetcsv($handle, 1000, ",")) !==FALSE) {
                  $getUser[] = $data;
              }
          }
-         print_r($userNumber[3]);
-     }
+
+ }
 
 function readValue($filename, $sort){
     $readValue = [];
@@ -71,10 +75,11 @@ function readData($filename){
     <div class="sidenav">
         <a href='query1.php'>Query 1</a>
         <a href='query2.php'>Query 2</a>
-        <p class="welcomeName">Welcome <?php
-                getUsername();
+        <p class="welcomeName"><?php
+             
+                    getUsername();
+
             ?>
-            <br>Click here to log out
         </p>
         <a href="index.php"><img id="SettingsIcon" src="img/logout.png"></a>
     </div>

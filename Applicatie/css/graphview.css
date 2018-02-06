@@ -85,7 +85,6 @@ table.values {
 .underlay-photo {
   background-image: url("../img/bg-login.jpg");
   background-size: cover;
-filter: blur(10px);
   z-index: -1;
             animation: fadein 2s;
 }
