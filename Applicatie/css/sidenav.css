@@ -79,9 +79,7 @@ hr.divider {
 
 #iconVisual:active {
     transition-duration: 0.1s;
-    overflow:hidden;
-    position: relative;
-    border-radius: 90px;
+    background-color: #777;
 }
 
 #bar, #line, #pie, #map {

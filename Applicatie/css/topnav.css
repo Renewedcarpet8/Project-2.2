@@ -24,13 +24,6 @@ ul {
     list-style-type: none;
 }
 
-#iconVisual:active {
-    transition-duration: 0.1s;
-    overflow:hidden;
-    position: relative;
-    height: 98px;
-    border-radius: 90px;
-}
 
 t.a {
     display: block;
