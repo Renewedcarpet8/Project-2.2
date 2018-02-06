@@ -19,7 +19,7 @@
 </head>
 <body>
 <?php
-session_start();
+//session_start();
 
  function getUsername(){
         if (isset($_SESSION['usernr'])) {
