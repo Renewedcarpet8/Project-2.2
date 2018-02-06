@@ -29,9 +29,24 @@
   <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
 
-  <div class="dashboard-graph" method="POST">
-      <H1>Graph Viewer</br> </br></H1>
+  <div id="dashboard-graph" method="POST">
+      <H1 class="stayFront">Graph Viewer</br> </br></H1>
+<div id="googleMap"> </div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6S_YXL2ge22s_tfI1o43iIEQur5bEoCo&callback=myMap"></script>
       <span class='fa-stack fa-lg'>
+
+
                             <i class='fa fa=circle fa-stack-2x'></i>
                             <i class='fa fa-lock fa-stack-1x'</i>
                         </span>
@@ -106,15 +121,25 @@
       var myChart;
 
       $("#line").click(function() {
+      $("#googleMap").removeClass("fullscreen");
           change('line');
       });
 
       $("#bar").click(function() {
+          $("#googleMap").removeClass("fullscreen");
           change('bar');
       });
-      $("#pie").click(function() {
+      $("#pie").click(function() { 
+          $("#googleMap").removeClass("fullscreen");
           change('pie');
       });
+      
+      $("#map").click(function() {
+        $("#googleMap").toggleClass("fullscreen");
+        google.maps.event.trigger(map, 'resize');
+        change('');
+        }
+      );
 
       function change(newType) {
           var ctx = document.getElementById("myChart").getContext("2d");
