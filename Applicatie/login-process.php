@@ -65,7 +65,7 @@
 			    header( "refresh:0;url=index.php" );
 		      } else {
 		        echo "Login unsuccesfull, username unknown, you are being redirected";
-		        $errormessage = "Username unknown";
+		        //$errormessage = "Username unknown";
                 $_SESSION['errormsg'] = $errormessage;
 		        header( "refresh:0;url=index.php" );
 		      }

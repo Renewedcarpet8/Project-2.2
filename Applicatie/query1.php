@@ -20,18 +20,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-          <img class="schoollogographmode" src="img/schoollogo-small.png">
+    <?php
+    session_start();
+    require 'requirebars.php';
+    if (isset($_SESSION['username'])){
+    ?>
+    <img class="schoollogographmode" src="img/schoollogo-small.png">
+
+    <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
 
-          <?php
-          require 'requirebars.php'
-          ?>
-  <div class="container-graph"><div class="menu-icon"><span></span></div></div>
-
-
-  <div id="dashboard-graph" method="POST">
+    <div id="dashboard-graph" method="POST">
       <H1 class="">Graph Viewer</br> </br></H1>
-<div id="googleMap"> </div>
+    <div id="googleMap"> </div>
 
 <script>
 function myMap() {
@@ -190,9 +191,12 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
                   ?>
           </div>
       </div>
-
-
-
+        <?php
+        } else{
+            header('location:index.php');
+            exit;
+        }
+      ?>
       <div class="underlay-photo"></div>
       <div class="underlay-black"></div>
 </body>

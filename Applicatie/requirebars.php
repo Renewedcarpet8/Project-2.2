@@ -19,7 +19,7 @@
 </head>
 <body>
 <?php
-session_start();
+//session_start();
 
  function getUsername(){
         if (isset($_SESSION['usernr'])) {
@@ -93,7 +93,7 @@ function readData($filename){
 
             ?>
         </p>
-        <a href="index.php"><img id="SettingsIcon" src="img/logout.png"></a>
+        <a href="logout.php?logout=true"><img id="SettingsIcon" src="img/logout.png"></a>
     </div>
     </div>
     <div class="sidenav.icons">
