@@ -164,17 +164,6 @@ function getValues($id) {
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        /* Optional: Makes the sample page fill the window. */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -407,10 +396,17 @@ function getValues($id) {
                 <div id="pdfoverlay">
                     <div class="text">Download to PDF</div>
                 </div>
-                <img href='#' id="excel" src="img/excel.png"> 
+
+                <img href='#' id="excel" src="img/excel.png" onclick="myFunction()" />
                 <div id="exceloverlay">
                     <div class="text">Download to CSV</div>
-
+                    <script>
+                        function myFunction()
+                        {
+                            document.getElementById("googleMap").classList.add("disabled");
+                            document.getElementById('formId').submit();
+                        }
+                    </script>
                 </div>
                 <i class='fa fa=circle fa-stack-2x'></i>
                 <i class='fa fa-lock fa-stack-1x'</i>
@@ -420,7 +416,8 @@ function getValues($id) {
         </div>
         <div class ="container-values">
             <div class="dashboard-values" method="POST">
-                <H1>Values</br> </H1>
+                <H1>
+                    Values </br> </H1 >
                 <span class='fa-stack fa-lg'>
                     <i class='fa fa=circle fa-stack-2x'></i>
                     <i class='fa fa-lock fa-stack-1x'</i>
@@ -448,7 +445,7 @@ function getValues($id) {
         exit;
     }
     ?>
-    <div class="underlay-photo"></div>
+    <div class="underlay-photo"> </div>
     <div class="underlay-black"></div>
 </body>
 </html>

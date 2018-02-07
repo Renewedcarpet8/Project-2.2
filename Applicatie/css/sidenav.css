@@ -51,31 +51,13 @@ hr.divider {
 #SettingsIcon {
     position: relative;
     bottom: 0%;
-    left: 20%;
+    left: 12%;
 }
 
 #SettingsIcon:hover{
     background-color: #555;
 }
 
-#querySelector {
-    text-decoration: none;
-}
-
-#querySelector:hover{
-    transition: 0.5s;
-    background-color: #999;
-    border: solid 2px;
-        
-}
-
-#querySelector:active{
-    background-color: #999;
-    border: solid 5px;
-    font-size: 30px;
-    font-color: #FFFFFF;
-        
-}
 
 #iconVisual{
     max-width: 100%;
@@ -97,8 +79,7 @@ hr.divider {
 
 #iconVisual:active {
     transition-duration: 0.1s;
-    background-color: #999;
-    border-color: #FFFFFF;
+    background-color: #777;
 }
 
 #bar, #line, #pie, #map {
@@ -114,8 +95,8 @@ hr.divider {
   position: relative;
   height: 36%;
   bottom: 18%;
-  left: 15%;
-  color: #888;
+  left: 6%;
+  color: white;
 }
 
 #WelcomeSection {

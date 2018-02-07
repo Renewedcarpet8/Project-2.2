@@ -46,9 +46,11 @@
             }
             $j = 0;
             while ($j < count($readValue)) {
-                echo $readValue[$j][$sort];
-                echo ",";
-                $j++;
+                //if ($id == $readValue[$j][2]) {
+                    echo $readValue[$j][$sort];
+                    echo ",";
+                    $j++;
+                //}
             }
             fclose($handle);
         }
@@ -75,8 +77,8 @@
         <div class="sidenav">
             <center>
                 <p class = "category">Query Select</p>
-                <a id="querySelector" href='query1.php'>Query 1</a>
-                <a id="querySelector" href='query2.php'>Query 2</a>
+                <a href='timetest.php'>Query 1</a>
+                <a href='query2.php'>Query 2</a>
                 <br>
             </center>
             <center><p class = "category">Graph Select</p></center>
