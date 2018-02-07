@@ -445,4 +445,37 @@
 	<marker id="346090" place="KYRYLIVKA" country="UKRAINE" lat="47.333" lng="36.333" elevation="221"/>
 	<marker id="347120" place="MARIUPOL" country="UKRAINE" lat="47.033" lng="37.5" elevation="70"/>
 	<marker id="347170" place="BERDYANSK" country="UKRAINE" lat="46.75" lng="36.783" elevation="2"/>
+	<marker id="130670" place="PALIC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="46.1" lng="19.767" elevation="105"/>
+	<marker id="131600" place="SOMBOR" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.767" lng="19.15" elevation="89"/>
+	<marker id="131680" place="NOVI SAD RIMSKI SAN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.333" lng="19.85" elevation="87"/>
+	<marker id="131730" place="ZRENJANIN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.367" lng="20.417" elevation="82"/>
+	<marker id="131740" place="KIKINDA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.85" lng="20.467" elevation="82"/>
+	<marker id="131800" place="BANATSKI KARLOVAC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.05" lng="21.03" elevation="91"/>
+	<marker id="131825" place="CAMP BONDSTEEL AHP" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.35" lng="21.25" elevation="595"/>
+	<marker id="131830" place="VRSAC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.15" lng="21.317" elevation="85"/>
+	<marker id="132660" place="SREMSKA MITROVICA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.1" lng="19.55" elevation="83"/>
+	<marker id="132690" place="VALJEVO" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.317" lng="19.917" elevation="177"/>
+	<marker id="132720" place="BEOGRAD/SURCIN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.817" lng="20.283" elevation="99"/>
+	<marker id="132740" place="BEOGRAD" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.8" lng="20.467" elevation="132"/>
+	<marker id="132790" place="SMEDEREVSKA PALANKA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.367" lng="20.95" elevation="122"/>
+	<marker id="132850" place="VELIKO GRADISTE" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.75" lng="21.517" elevation="84"/>
+	<marker id="132890" place="CRNI VRH" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.117" lng="21.95" elevation="1039"/>
+	<marker id="132950" place="NEGOTIN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.233" lng="22.55" elevation="44"/>
+	<marker id="133670" place="ZLATIBOR" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.733" lng="19.717" elevation="1029"/>
+	<marker id="133760" place="KRALJEVO" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.7" lng="20.7" elevation="217"/>
+	<marker id="133780" place="KOPAONIK" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.283" lng="20.8" elevation="1713"/>
+	<marker id="133840" place="CUPRIJA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.933" lng="21.383" elevation="125"/>
+	<marker id="133880" place="NIS" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.333" lng="21.9" elevation="202"/>
+	<marker id="133890" place="LESKOVAC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.983" lng="21.95" elevation="232"/>
+	<marker id="133970" place="DIMITROVGRAD" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.017" lng="22.75" elevation="450"/>
+	<marker id="134570" place="TIVAT" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.4" lng="18.733" elevation="5"/>
+	<marker id="134590" place="NIKSIC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.767" lng="18.95" elevation="647"/>
+	<marker id="134620" place="PODGORICA/GOLUBOVCI" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.367" lng="19.25" elevation="33"/>
+	<marker id="134624" place="PODGORICA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.35" lng="19.25" elevation="44"/>
+	<marker id="134770" place="PRIZREN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.217" lng="20.733" elevation="403"/>
+	<marker id="134810" place="PRISTINA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.65" lng="21.15" elevation="576"/>
+	<marker id="134811" place="PRISTINA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.567" lng="21.033" elevation="559"/>
+	<marker id="134890" place="VRANJE" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.55" lng="21.917" elevation="434"/>
+	<marker id="135620" place="ULCINJ" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="41.917" lng="19.217" elevation="29"/>
+	<marker id="135790" place="OHRID-AERODROME" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="41.1" lng="20.817" elevation="700"/>
 </markers>
