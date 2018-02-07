@@ -74,7 +74,7 @@ function getInfo($id) {
         if ($line[2] == $id) {
             $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
             echo "<tr class='values' style=''>";
-            echo "<td style='text-align: center;'>" . $line[0] . "</td>";
+            echo "<td style='text-align: center;'>" . $line[1] . "</td>";
             echo "<td style='text-align: center;'>" . $humidity . "</td>";
             echo "</tr>";
         }
