@@ -152,6 +152,10 @@ function getInfo($id) {
         <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
         <div id="dashboard-graph" method="POST">
+                     <div id="cont">
+            <canvas id="myChart"></canvas>
+
+        </div>
             <H1 class="">Graph Viewer</br> </br></H1>
             <div id="googleMap"></div>
         </div>
@@ -240,10 +244,6 @@ function getInfo($id) {
 
             function doNothing() {}
         </script>
-        <div class="cont">
-            <canvas id="myChart"></canvas>
-
-        </div>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6S_YXL2ge22s_tfI1o43iIEQur5bEoCo&callback=initMap">
 
@@ -292,7 +292,6 @@ function getInfo($id) {
                         }]
                 },
                 options: {
-                    //responsive: true
                     title: {
                         display: true,
                         text: 'Random numbers',
@@ -324,28 +323,24 @@ function getInfo($id) {
 
             $("#line").click(function () {
                 document.getElementById("googleMap").classList.add("disabled");
-                $("#myChart").removeClass("disabled");
                 $("#myChart").addClass("enabled");
                 change('line');
             });
 
             $("#bar").click(function () {
                 document.getElementById("googleMap").classList.add("disabled");
-                $("#myChart").removeClass("disabled");
                 $("#myChart").addClass("enabled");
                 change('bar');
             });
             $("#pie").click(function () {
+                $("#myChart").removeClass("noPointerEvents");
                 document.getElementById("googleMap").classList.add("disabled");
-                $("#myChart").removeClass("disabled");
                 $("#myChart").addClass("enabled");
-                google.maps.event.trigger(map, 'resize');
                 change('pie');
             });
 
             $("#map").click(function () {
                 document.getElementById("googleMap").classList.remove("disabled");
-                $("#myChart").addClass("disabled");
                 google.maps.event.trigger(map, 'resize');
                 change('');
             }
