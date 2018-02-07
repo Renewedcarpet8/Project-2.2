@@ -101,6 +101,48 @@ function getInfo($id){
     fclose($csv_data);
 
 }
+
+function getTitle($id){
+    $stations = fopen("stations.csv", 'r');
+    //$csv_data = fopen(date("G") . '.csv', 'r');
+    $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
+    $data = array();
+
+
+    while (($line = fgetcsv($csv_data)) !== FALSE) {
+        if ($line[2] == $id) {
+            $humidity = round(100*(EXP((17.625*$line[4])/(243.04+$line[4]))/EXP((17.625*$line[3])/(243.04+$line[3]))),2);
+            array_push($data, $line[0]);
+        }
+    }
+    //echo count($data);
+    for ($i=0; $i < count($data); $i++){
+        echo $data[$i].",";
+    }
+    fclose($stations);
+    fclose($csv_data);
+}
+
+function getValues($id){
+    $stations = fopen("stations.csv", 'r');
+    //$csv_data = fopen(date("G") . '.csv', 'r');
+    $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
+    $data = array();
+
+
+    while (($line = fgetcsv($csv_data)) !== FALSE) {
+        if ($line[2] == $id) {
+            $humidity = round(100*(EXP((17.625*$line[4])/(243.04+$line[4]))/EXP((17.625*$line[3])/(243.04+$line[3]))),5);
+            array_push($data, $humidity);
+        }
+    }
+    //echo count($data);
+    for ($i=0; $i < count($data); $i++){
+        echo $data[$i].",";
+    }
+    fclose($stations);
+    fclose($csv_data);
+}
 ?>
 <!DOCTYPE html >
 <html>
@@ -155,11 +197,12 @@ function getInfo($id){
             <div id="googleMap"></div>
         </div>
 
-        <div id="test">
+        <div id="test" style="width: 100%; text-align: center; color:white;">
             <?php
-            if (isset($_GET['id'])) {
-                getInfo($_GET['id']);
-            }
+                if (isset($_GET['id'])) {
+                    getTitle($_GET['id']);
+                }
+
             ?>
         </div>
 
@@ -265,10 +308,10 @@ function getInfo($id){
             var config = {
                 type: 'line',
                 data: {
-                    labels: [<?php readValue("data1.csv", 1) ?>],
+                    labels: [<?php getTitle($_GET['id']) ?>],
                     datasets: [{
                             label: "Numbers per date",
-                            data: [<?php readValue("data1.csv", 2) ?>],
+                            data: [<?php getValues($_GET['id']) ?>],
                             fill: true,
                             borderColor: "purple",
                             backgroundColor: [

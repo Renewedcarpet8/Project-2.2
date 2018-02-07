@@ -46,9 +46,11 @@
             }
             $j = 0;
             while ($j < count($readValue)) {
-                echo $readValue[$j][$sort];
-                echo ",";
-                $j++;
+                //if ($id == $readValue[$j][2]) {
+                    echo $readValue[$j][$sort];
+                    echo ",";
+                    $j++;
+                //}
             }
             fclose($handle);
         }
