@@ -140,6 +140,26 @@ img.graphplaceholder {
     background-color: #fff
 }
 
+#excel {
+    position: Absolute;
+    width: 30%;
+    top: 20%;
+    right: 15%;
+}
+
+#exceloverlay {
+    position: Absolute;
+    background-color: #111;
+    width: 30%;
+    top: 31%;
+    right: 15%;
+}
+
+#excel:hover {
+    transition-duration: 0.5s;
+    background-color: #fff
+}
+
 .cont {
   position: relative;
   margin: auto;

@@ -64,12 +64,12 @@ function getLangLong() {
     fclose($csv_data);
 }
 
-function getInfo($id){
+function getInfo($id) {
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     $nations = array("ROMANIA", "MOLDOVA", "UKRAINE", "BULGARIA", "HUNGARY", "POLAND", "SLOVAKIA", "CZECH REPUBLIC", "ALBANIA", "BOSNIA AND HERZEGOVINA", "CROATIA", "ESTONIA", "LATVIA", "LITHUANIA", "MACEDONIA", "MONTENEGRO", "SERBIA", "SLOVENIA", "");
-    $directions = array("N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW");
+    $directions = array("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW");
     $data = array();
     $line2 = fgetcsv($stations);
     $test = "hallo";
@@ -78,31 +78,30 @@ function getInfo($id){
     echo "<th> Value</th>";
     while (($line = fgetcsv($csv_data)) !== FALSE) {
         if ($line[2] == $id) {
-            $humidity = round(100*(EXP((17.625*$line[4])/(243.04+$line[4]))/EXP((17.625*$line[3])/(243.04+$line[3]))),2);
+            $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
             echo "<tr class='values' style=''>";
             echo "<td style='text-align: center;'>" . $line[0] . "</td>";
             echo "<td style='text-align: center;'>" . $humidity . "</td>";
             echo "</tr>";
         }
-        /*while (($line = fgetcsv($stations)) !== FALSE) {
-            for ($i = 0; $i < count($nations) - 1; $i++)
-                if ($line[0] == $nations[$i]) {
-                    echo $line[2];
-                //echo $line[2] . " ";
-                    //echo $line[3] . "," .$line[4]."<br>";
-                   // echo  'id="'. $line[0] . '"' . ' place="'. $line[1] . '"' . ' country="'. $line[2] . '"' . ' lat="'. $line[3] . '"' . ' lng="'. $line[4] . '"' . ' elevation="'. $line[5] . '"/>' . '<br>';
+        /* while (($line = fgetcsv($stations)) !== FALSE) {
+          for ($i = 0; $i < count($nations) - 1; $i++)
+          if ($line[0] == $nations[$i]) {
+          echo $line[2];
+          //echo $line[2] . " ";
+          //echo $line[3] . "," .$line[4]."<br>";
+          // echo  'id="'. $line[0] . '"' . ' place="'. $line[1] . '"' . ' country="'. $line[2] . '"' . ' lat="'. $line[3] . '"' . ' lng="'. $line[4] . '"' . ' elevation="'. $line[5] . '"/>' . '<br>';
 
 
-                } else {
-                var_dump($line);
-                }*/
+          } else {
+          var_dump($line);
+          } */
     }
     fclose($stations);
     fclose($csv_data);
-
 }
 
-function getTitle($id){
+function getTitle($id) {
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
@@ -111,19 +110,19 @@ function getTitle($id){
 
     while (($line = fgetcsv($csv_data)) !== FALSE) {
         if ($line[2] == $id) {
-            $humidity = round(100*(EXP((17.625*$line[4])/(243.04+$line[4]))/EXP((17.625*$line[3])/(243.04+$line[3]))),2);
+            $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
             array_push($data, $line[0]);
         }
     }
     //echo count($data);
-    for ($i=0; $i < count($data); $i++){
-        echo $data[$i].",";
+    for ($i = 0; $i < count($data); $i++) {
+        echo $data[$i] . ",";
     }
     fclose($stations);
     fclose($csv_data);
 }
 
-function getValues($id){
+function getValues($id) {
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
@@ -132,13 +131,13 @@ function getValues($id){
 
     while (($line = fgetcsv($csv_data)) !== FALSE) {
         if ($line[2] == $id) {
-            $humidity = round(100*(EXP((17.625*$line[4])/(243.04+$line[4]))/EXP((17.625*$line[3])/(243.04+$line[3]))),5);
+            $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 5);
             array_push($data, $humidity);
         }
     }
     //echo count($data);
-    for ($i=0; $i < count($data); $i++){
-        echo $data[$i].",";
+    for ($i = 0; $i < count($data); $i++) {
+        echo $data[$i] . ",";
     }
     fclose($stations);
     fclose($csv_data);
@@ -189,20 +188,19 @@ function getValues($id){
         <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
         <div id="dashboard-graph" method="POST">
-                     <div id="cont">
-            <canvas id="myChart"></canvas>
+            <div id="cont">
+                <canvas id="myChart"></canvas>
 
-        </div>
+            </div>
             <H1 class="">Graph Viewer</br> </br></H1>
             <div id="googleMap"></div>
         </div>
 
         <div id="test" style="width: 100%; text-align: center; color:white;">
             <?php
-                if (isset($_GET['id'])) {
-                    getTitle($_GET['id']);
-                }
-
+            if (isset($_GET['id'])) {
+                getTitle($_GET['id']);
+            }
             ?>
         </div>
 
@@ -408,6 +406,10 @@ function getValues($id){
                 <img href='#' id="pdf" src="img/adobe-pdf-icon.png">
                 <div id="pdfoverlay">
                     <div class="text">Download to PDF</div>
+                </div>
+                <img href='#' id="excel" src="img/excel.png"> 
+                <div id="exceloverlay">
+                    <div class="text">Download to CSV</div>
 
                 </div>
                 <i class='fa fa=circle fa-stack-2x'></i>
