@@ -68,17 +68,16 @@ function getInfo($id) {
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
-    $nations = array("ROMANIA", "MOLDOVA", "UKRAINE", "BULGARIA", "HUNGARY", "POLAND", "SLOVAKIA", "CZECH REPUBLIC", "ALBANIA", "BOSNIA AND HERZEGOVINA", "CROATIA", "ESTONIA", "LATVIA", "LITHUANIA", "MACEDONIA", "MONTENEGRO", "SERBIA", "SLOVENIA", "");
-    $directions = array("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW");
-    $data = array();
-    $line2 = fgetcsv($stations);
-    $test = "hallo";
 
-    echo "<th> Date </th>";
-    echo "<th> Value</th>";
+    echo "<th style='text-align: center;'>Date </th>";
+    echo "<th style='text-align: center;'> Value</th>";
     while (($line = fgetcsv($csv_data)) !== FALSE) {
         if ($line[2] == $id) {
             $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
+            echo "<tr class='values' style=''>";
+            echo "<td style='text-align: center;'>" . $line[0] . "</td>";
+            echo "<td style='text-align: center;'>" . $humidity . "</td>";
+            echo "</tr>";
             echo "<tr class='values' style=''>";
             echo "<td style='text-align: center;'>" . $line[0] . "</td>";
             echo "<td style='text-align: center;'>" . $humidity . "</td>";
@@ -151,6 +150,7 @@ function getValues($id) {
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
         <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
         <link rel="stylesheet" href="css/graphview.css" type="text/css"/>
+        <link rel="stylesheet" href="css/tableStyling.css" type="text/css"/>
         <script type="text/javascript" src="js/menumaker.js"></script>
         <title>Weather Pressure Application</title>
         <meta charset="UTF-8">
@@ -431,10 +431,10 @@ function getValues($id) {
                     if (isset($_GET['id'])) {
                         $place = ucwords(strtolower($_GET['place']));
                         $country = ucwords(strtolower($_GET['country']));
-                        echo $place . ", " . $country . "<br>";
+                        echo "<center> <p id='placeTitle'>Location data for <b>" . $place . ", " . $country . "</b><br></center>";
                         getInfo($_GET['id']);
                     } else {
-                        echo "Please select a weather station";
+                        echo "<div id='errors'><p id='stationError'>Please select a weather station</div>";
                     }
                     ?>
             </div>
