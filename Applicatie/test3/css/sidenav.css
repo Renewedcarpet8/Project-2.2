@@ -1,0 +1,136 @@
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    border-right: solid 10px;
+    border-color: #222;
+    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111  ; /* GREEN */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    bottom: 520px;
+}
+
+.sidenav.icons {
+    display: block;
+    height: 1%;
+}
+
+li {
+    list-style-type: none;
+    position:relative;
+    float: top;
+    left: 17%;
+    top: 1%;
+    padding: 5%;
+    opacity: 1;
+    vertical-align: middle;
+    background-color: #111;
+    z-align: -1;
+}    
+
+p.category {
+    position: relative;
+    color: #888 ;
+    font-size: 15px;
+    background-color: #222;
+    padding: 5px;
+}
+
+
+hr.divider {
+    height: 1px;
+    color: #333;
+    border-color: #444;
+    z-index: -1;
+}
+
+#SettingsIcon {
+    position: relative;
+    bottom: 0%;
+    left: 12%;
+}
+
+#SettingsIcon:hover{
+    background-color: #555;
+}
+
+
+#iconVisual{
+    max-width: 100%;
+    position: relative;
+    background-color: #111;
+    overflow-y:hidden;
+    bottom: 17px;
+    height: 50%;
+    max-width: 100px; 
+    max-height: 300px
+}
+
+#iconVisual:hover{  
+    transition-duration: 0.5s;
+    overflow:hidden;
+    background-color: #444;
+    border-radius: 90px;
+}
+
+#iconVisual:active {
+    transition-duration: 0.1s;
+    background-color: #777;
+}
+
+#bar, #line, #pie, #map {
+    position: relative;
+    border: 0;
+    background-color: #111;
+    width: 25%;
+    height: 10%;
+    text-decoration: none;
+}
+
+.welcomeName{
+  position: relative;
+  height: 36%;
+  bottom: 18%;
+  left: 6%;
+  color: white;
+}
+
+#WelcomeSection {
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #555;
+}
+
+.sidenav a {
+    padding: 10px;
+    font-family: 'Calibri';
+
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
