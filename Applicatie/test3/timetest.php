@@ -64,47 +64,42 @@ function getLangLong() {
     fclose($csv_data);
 }
 
-function getInfo($id) {
+function getInfo($id){
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     $nations = array("ROMANIA", "MOLDOVA", "UKRAINE", "BULGARIA", "HUNGARY", "POLAND", "SLOVAKIA", "CZECH REPUBLIC", "ALBANIA", "BOSNIA AND HERZEGOVINA", "CROATIA", "ESTONIA", "LATVIA", "LITHUANIA", "MACEDONIA", "MONTENEGRO", "SERBIA", "SLOVENIA", "");
-    $directions = array("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW");
+    $directions = array("N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW");
     $data = array();
     $line2 = fgetcsv($stations);
+    $test = "hallo";
+
+    echo "<th> Date </th>";
+    echo "<th> Value</th>";
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        //echo $country;
         if ($line[2] == $id) {
-            echo "Date: " . $line[0] . "<br>";
-            echo "Time: " . $line[1] . "<br>";
-            echo "Station: " . $line[2] . "<br>";
-            echo "Temp: " . $line[3] . "<br>";
-            echo "Dewpoint: " . $line[4] . "<br>";
-            echo "Pressure station: " . $line[5] . "<br>";
-            echo "Pressure sea: " . $line[6] . "<br>";
-            echo "Visibility: " . $line[7] . "<br>";
-            echo "Wind: " . $line[8] . "<br>";
-            echo "Rainfall: " . $line[9] . "<br>";
-            echo "Snowfall: " . $line[10] . "<br>";
-            echo "Flags: " . $line[11] . "<br>";
-            echo "Cloud cover: " . $line[12] . "<br>";
-            echo "Wind Direction: " . $directions[(int) (($line[13] / 22.5) + .5) % 16] . "<br><br>";
+            $humidity = round(100*(EXP((17.625*$line[4])/(243.04+$line[4]))/EXP((17.625*$line[3])/(243.04+$line[3]))),2);
+            echo "<tr class='values' style=''>";
+            echo "<td style='text-align: center;'>" . $line[0] . "</td>";
+            echo "<td style='text-align: center;'>" . $humidity . "</td>";
+            echo "</tr>";
         }
-        /* while (($line = fgetcsv($stations)) !== FALSE) {
-          for ($i = 0; $i < count($nations) - 1; $i++)
-          if ($line[0] == $nations[$i]) {
-          echo $line[2];
-          //echo $line[2] . " ";
-          //echo $line[3] . "," .$line[4]."<br>";
-          // echo  'id="'. $line[0] . '"' . ' place="'. $line[1] . '"' . ' country="'. $line[2] . '"' . ' lat="'. $line[3] . '"' . ' lng="'. $line[4] . '"' . ' elevation="'. $line[5] . '"/>' . '<br>';
+        /*while (($line = fgetcsv($stations)) !== FALSE) {
+            for ($i = 0; $i < count($nations) - 1; $i++)
+                if ($line[0] == $nations[$i]) {
+                    echo $line[2];
+                //echo $line[2] . " ";
+                    //echo $line[3] . "," .$line[4]."<br>";
+                   // echo  'id="'. $line[0] . '"' . ' place="'. $line[1] . '"' . ' country="'. $line[2] . '"' . ' lat="'. $line[3] . '"' . ' lng="'. $line[4] . '"' . ' elevation="'. $line[5] . '"/>' . '<br>';
 
 
-          } else {
-          var_dump($line);
-          } */
+                } else {
+                var_dump($line);
+                }*/
     }
     fclose($stations);
     fclose($csv_data);
+
 }
 ?>
 <!DOCTYPE html >
@@ -396,6 +391,8 @@ function getInfo($id) {
                         $country = ucwords(strtolower($_GET['country']));
                         echo $place . ", " . $country . "<br>";
                         getInfo($_GET['id']);
+                    } else {
+                        echo "Please select a weather station";
                     }
                     ?>
             </div>
