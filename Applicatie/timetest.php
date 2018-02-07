@@ -78,10 +78,6 @@ function getInfo($id) {
             echo "<td style='text-align: center;'>" . $line[0] . "</td>";
             echo "<td style='text-align: center;'>" . $humidity . "</td>";
             echo "</tr>";
-            echo "<tr class='values' style=''>";
-            echo "<td style='text-align: center;'>" . $line[0] . "</td>";
-            echo "<td style='text-align: center;'>" . $humidity . "</td>";
-            echo "</tr>";
         }
         /* while (($line = fgetcsv($stations)) !== FALSE) {
           for ($i = 0; $i < count($nations) - 1; $i++)

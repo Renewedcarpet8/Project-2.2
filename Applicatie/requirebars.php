@@ -77,7 +77,7 @@
         <div class="sidenav">
             <center>
                 <p class = "category">Query Select</p>
-                <a href='timetest.php'>Query 1</a>
+                <a href='query1.php'>Query 1</a>
                 <a href='query2.php'>Query 2</a>
                 <br>
             </center>
