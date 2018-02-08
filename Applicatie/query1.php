@@ -134,6 +134,7 @@ function getTitle($id) {
             array_push($data, $line[0]);
         }
     }
+
     for ($i = 0; $i < count($data); $i++) {
         echo $data[$i] . ",";
     }
@@ -257,7 +258,7 @@ function getValues($id) {
             var config = {
                 type: 'line',
                 data: {
-                    labels: [<?php getTitle($_GET['id']) ?>],
+                    labels: [<?php getTitle($_GET['id'])?>],
                     datasets: [{
                             label: "Humidity per time",
                             data: [<?php getValues($_GET['id']) ?>],
