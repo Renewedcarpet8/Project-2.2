@@ -29,7 +29,6 @@ function getAirPressure() {
                 echo "</tr>\n";
             }
     }
-
     fclose($stations);
     fclose($csv_data);
     echo "\n</table>";
@@ -50,7 +49,6 @@ function getLangLong() {
         }
     }
 
-
     while (($line = fgetcsv($stations)) !== FALSE) {
         for ($i = 0; $i < count($nations) - 1; $i++)
             if ($line[2] == $nations[$i]) {
@@ -59,7 +57,6 @@ function getLangLong() {
                 echo 'id="' . $line[0] . '"' . ' place="' . $line[1] . '"' . ' country="' . $line[2] . '"' . ' lat="' . $line[3] . '"' . ' lng="' . $line[4] . '"' . ' elevation="' . $line[5] . '"/>' . '<br>';
             }
     }
-
     fclose($stations);
     fclose($csv_data);
 }
@@ -70,15 +67,11 @@ function getInfo($id) {
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     echo "<th style='text-align: center;'>Time </th>";
     echo "<th style='text-align: center;'> Humidity</th>";
-    $DAY_LENGTH = 60 * 60 * 24;
+    $DAY_LENGTH = 60 * 60;
     $currentDate = date('U');
-    var_dump(date('H-i'));
-
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        $dateString = explode(":", $line[1]);
         $date = date('U', strtotime($line[1]));
-        var_dump(strtotime($line[1]));
-        if (($currentDate - $date) < $DAY_LENGTH && $line[2] == $id) {
+        if ($date >= ($currentDate-$DAY_LENGTH) && $line[2] == $id) {
             $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
             echo "<tr class='values' style=''>";
             echo "<td style='text-align: center;'>" . $line[1] . "</td>";
@@ -94,7 +87,6 @@ function getInfo($id) {
       $stations = fopen("stations.csv", 'r');
       //$csv_data = fopen(date("G") . '.csv', 'r');
       $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
-      //echo "<table>";
       echo "<tr class='values' style=''>";
       echo "<th style='text-align: center;'>ID </th>";
       echo "<th style='text-align: center;'>Place </th>";
@@ -126,7 +118,6 @@ function getInfo($id) {
               }
             }    
           }
-//echo "</table>";
 }
 
 function getTitle($id) {
@@ -134,15 +125,15 @@ function getTitle($id) {
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     $data = array();
-
+    $DAY_LENGTH = 60 * 60;
+    $currentDate = date('U');
 
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        if ($line[2] == $id) {
-            $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
+        $date = date('U', strtotime($line[1]));
+        if ($date >= ($currentDate-$DAY_LENGTH) && $line[2] == $id) {
             array_push($data, $line[0]);
         }
     }
-    //echo count($data);
     for ($i = 0; $i < count($data); $i++) {
         echo $data[$i] . ",";
     }
@@ -155,10 +146,13 @@ function getValues($id) {
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     $data = array();
-
+    $DAY_LENGTH = 60 * 60;
+    $currentDate = date('U');
 
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        if ($line[2] == $id) {
+        $date = date('U', strtotime($line[1]));
+
+        if ($date >= ($currentDate-$DAY_LENGTH) && $line[2] == $id) {
             $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 5);
             array_push($data, $humidity);
         }
@@ -170,6 +164,11 @@ function getValues($id) {
     fclose($stations);
     fclose($csv_data);
 }
+
+
+
+
+
 ?>
 <!DOCTYPE html >
 <html>
@@ -227,7 +226,7 @@ function getValues($id) {
             <?php
             if (isset($_GET['id'])) {
                 //echo date("Y/m/d/h") . "/" . $_GET['country'] . ".csv";
-                getInfo($_GET['id']);
+                getTitle($_GET['id']);
                 //echo date("i");
             }
             ?>
