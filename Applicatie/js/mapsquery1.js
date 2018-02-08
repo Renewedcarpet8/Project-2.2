@@ -8,12 +8,12 @@
             };
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('googleMap'), {
-                    center: new google.maps.LatLng(51.391423, 27.175312),
-                    zoom: 5
+                    center: new google.maps.LatLng(47.046610, 28.838554),
+                    zoom: 8
                 });
                 var infoWindow = new google.maps.InfoWindow;
                 // Change this depending on the name of your PHP or XML file
-                downloadUrl('test2.xml', function (data) {
+                downloadUrl('test.xml', function (data) {
                     var xml = data.responseXML;
                     var markers = xml.documentElement.getElementsByTagName('marker');
                     Array.prototype.forEach.call(markers, function (markerElem) {

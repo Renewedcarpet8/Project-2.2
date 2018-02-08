@@ -182,7 +182,7 @@ function getValues($id) {
         <div id="test" style="width: 100%; text-align: center; color:white;">
             <?php
             if (isset($_GET['id'])) {
-                
+                getTitle($_GET['id']);
             }
             ?>
         </div>
@@ -332,7 +332,7 @@ function getValues($id) {
                         echo "<center> <p id='placeTitle'>Location data for <b>" . $place . ", " . $country . "</b><br></center>";
                         getInfo($_GET['id']);
                     } else {
-                        echo "<div id='errors'><p id='stationError'>Please select a weather station</div>";
+                        echo "<div></div>";
                     }
                     ?>
             </div>
