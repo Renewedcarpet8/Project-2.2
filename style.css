@@ -103,7 +103,7 @@ div#container { width:984px; margin:auto; min-height:700px; padding:0px; backgro
 div#content  { width:580px;  padding:20px 10px 10px 10px; float:left; text-align:left; background:#ffffff;}
 
 div#content-ads { width:362px; float:left; padding:0px 0px 10px 15px;}
-div#content-news { width:362px; float:left; padding:0px 0px 10px 15px;}
+div#content-news { width:362px; float:left; padding:0px 0px 10px 15px; margin-left:50%;}
 
 div#content-large { width:739px; float:left; padding:0px 0px 10px 15px;}
 
