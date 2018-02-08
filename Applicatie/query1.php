@@ -176,7 +176,7 @@ function getValues($id) {
         <div id="test" style="width: 100%; text-align: center; color:white;">
             <?php
             if (isset($_GET['id'])) {
-                
+                getTitle($_GET['id']);
             }
             ?>
         </div>
@@ -192,12 +192,12 @@ function getValues($id) {
             };
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('googleMap'), {
-                    center: new google.maps.LatLng(51.391423, 27.175312),
-                    zoom: 5
+                    center: new google.maps.LatLng(47.046610, 28.838554),
+                    zoom: 8
                 });
                 var infoWindow = new google.maps.InfoWindow;
                 // Change this depending on the name of your PHP or XML file
-                downloadUrl('test2.xml', function (data) {
+                downloadUrl('test.xml', function (data) {
                     var xml = data.responseXML;
                     var markers = xml.documentElement.getElementsByTagName('marker');
                     Array.prototype.forEach.call(markers, function (markerElem) {
@@ -402,7 +402,7 @@ function getValues($id) {
                         echo "<center> <p id='placeTitle'>Location data for <b>" . $place . ", " . $country . "</b><br></center>";
                         getInfo($_GET['id']);
                     } else {
-                        echo "<div id='errors'><p id='stationError'>Please select a weather station</div>";
+                        echo "<div></div>";
                     }
                     ?>
             </div>
