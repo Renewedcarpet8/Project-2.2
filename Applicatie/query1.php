@@ -131,12 +131,12 @@ function getTitle($id) {
     while (($line = fgetcsv($csv_data)) !== FALSE) {
         $date = date('U', strtotime($line[1]));
         if ($date >= ($currentDate-$DAY_LENGTH) && $line[2] == $id) {
-            array_push($data, $line[0]);
+            array_push($data, $line[1]);
         }
     }
 
     for ($i = 0; $i < count($data); $i++) {
-        echo $data[$i] . ",";
+        echo "'" . $data[$i] . "',";
     }
     fclose($stations);
     fclose($csv_data);
