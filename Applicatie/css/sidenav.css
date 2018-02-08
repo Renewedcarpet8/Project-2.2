@@ -91,6 +91,14 @@ hr.divider {
     text-decoration: none;
 }
 
+#querySelector {
+    font-size: 25px;
+}
+
+#querySelector:hover {
+    background-color: #777;
+}
+
 .welcomeName{
   position: relative;
   height: 36%;

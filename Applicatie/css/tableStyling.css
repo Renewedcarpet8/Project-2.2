@@ -4,7 +4,13 @@
     width: 75%;
     font-size: 18px;
     left: 12%;
-    top: 14%;
+    top: 11%;
+}
+
+#valuesTitle {
+    position: absolute;
+    bottom: 85%;
+    width: 100%;
 }
 
 table.values {
@@ -15,7 +21,7 @@ table.values {
     background-color: #11l;
     border-color: #222;
     font-size: 100%;
-    bottom: 8%;
+    bottom: 4%;
     left: 10%;
     font-family: 'calibri';
       background-color: #283655;

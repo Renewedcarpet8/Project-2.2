@@ -171,7 +171,7 @@ function getValues($id) {
         <div id="test" style="width: 100%; text-align: center; color:white;">
             <?php
             if (isset($_GET['id'])) {
-
+                
             }
             ?>
         </div>
@@ -399,8 +399,7 @@ function getValues($id) {
         </div>
         <div class ="container-values">
             <div class="dashboard-values" method="POST">
-                <H1>
-                    Values </br> </H1 >
+                <h1 id="valuesTitle"> Values </h1>
                 <span class='fa-stack fa-lg'>
                     <i class='fa fa=circle fa-stack-2x'></i>
                     <i class='fa fa-lock fa-stack-1x'</i>
