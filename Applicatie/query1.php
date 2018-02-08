@@ -142,9 +142,15 @@ function getValues($id) {
               type="image/png"
               href="img/tab_icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <script type="text/javascript" src="js/graphcontrol.js"></script>
+        <script type="text/javascript" src="js/graphs.js"></script>
+        <script type="text/javascript" src="js/mapsquery1.js"></script>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
 </head>
@@ -158,7 +164,7 @@ function getValues($id) {
         <img id="goto" class="schoollogographmode" src="img/schoollogo-small.png">
         <script>
             document.getElementById("goto").onclick = function () {
-                window.location = "http://usm.md/";
+                window.location = "https://145.33.225.152";
             }
         </script>>
 
@@ -181,74 +187,6 @@ function getValues($id) {
             ?>
         </div>
 
-        <script>
-            var customLabel = {
-                restaurant: {
-                    label: 'R'
-                },
-                bar: {
-                    label: 'B'
-                }
-            };
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('googleMap'), {
-                    center: new google.maps.LatLng(51.391423, 27.175312),
-                    zoom: 5
-                });
-                var infoWindow = new google.maps.InfoWindow;
-                // Change this depending on the name of your PHP or XML file
-                downloadUrl('test2.xml', function (data) {
-                    var xml = data.responseXML;
-                    var markers = xml.documentElement.getElementsByTagName('marker');
-                    Array.prototype.forEach.call(markers, function (markerElem) {
-                        var id = markerElem.getAttribute('id');
-                        var place = markerElem.getAttribute('place');
-                        var country = markerElem.getAttribute('country');
-                        var type = markerElem.getAttribute('type');
-                        var point = new google.maps.LatLng(
-                                parseFloat(markerElem.getAttribute('lat')),
-                                parseFloat(markerElem.getAttribute('lng')));
-                        var infowincontent = document.createElement('div');
-                        var strong = document.createElement('strong');
-                        strong.textContent = id
-                        infowincontent.appendChild(strong);
-                        infowincontent.appendChild(document.createElement('br'));
-                        var text = document.createElement('text');
-                        text.textContent = place
-                        infowincontent.appendChild(text);
-                        var icon = customLabel[type] || {};
-                        var marker = new google.maps.Marker({
-                            map: map,
-                            position: point,
-                            label: icon.label
-                        });
-                        marker.addListener('click', function () {
-                            infoWindow.setContent(infowincontent);
-                            infoWindow.open(googleMap, marker);
-                            window.location.href = "query1.php?id=" + id + "&country=" + country + "&place=" + place;
-                        });
-                    });
-                });
-            }
-
-
-
-            function downloadUrl(url, callback) {
-                var request = window.ActiveXObject ?
-                        new ActiveXObject('Microsoft.XMLHTTP') :
-                        new XMLHttpRequest;
-                request.onreadystatechange = function () {
-                    if (request.readyState == 4) {
-                        request.onreadystatechange = doNothing;
-                        callback(request, request.status);
-                    }
-                };
-                request.open('GET', url, true);
-                request.send(null);
-            }
-
-            function doNothing() {}
-        </script>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6S_YXL2ge22s_tfI1o43iIEQur5bEoCo&callback=initMap">
 
@@ -268,7 +206,6 @@ function getValues($id) {
 
 
     <script>
-            // GLobal Options
             Chart.defaults.global.defaultFontFamily = 'Lato';
             Chart.defaults.global.defaultFontSize = 18;
             Chart.defaults.global.defaultFontColor = '#FFF';
@@ -369,16 +306,9 @@ function getValues($id) {
                     <div class="text">Download to PDF</div>
                 </div>
 
-                <img href='#' id="excel" src="img/excel.png" onclick="myFunction()" />
+                <img href='#' id="excel" src="img/excel.png" onclick="myFunction()" src="js/graphcontrol" />
                 <div id="exceloverlay">
                     <div class="text">Download to CSV</div>
-                    <script>
-                        function myFunction()
-                        {
-                            document.getElementById("googleMap").classList.add("disabled");
-                            document.getElementById('formId').submit();
-                        }
-                    </script>
                 </div>
                 <i class='fa fa=circle fa-stack-2x'></i>
                 <i class='fa fa-lock fa-stack-1x'</i>

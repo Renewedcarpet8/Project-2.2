@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/topnav.css" type="text/css"/>
         <link rel="stylesheet" href="css/graphview.css" type="text/css"/>
         <script type="text/javascript" src="js/menumaker.js"></script>
+        <script type="text/javascript" src="js/graphcontrol.js"></script>
         <title>Weather Pressure Application</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
