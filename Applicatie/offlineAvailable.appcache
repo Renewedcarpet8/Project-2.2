@@ -1,0 +1,34 @@
+CACHE MANIFEST
+# 2018-02-05
+
+# Explicitly cached 'master entries'.
+CACHE:
+index.php
+dashboard.php
+errorstack.php
+login-process.php
+query1.php
+query2.php
+requirebars.php
+css/graphview.css
+css/main.css
+css/sidenav.css
+css/topnav.css
+img/bg-login.jpg
+img/adobe-pdf-icon.png
+img/gear.gif
+img/graph.png
+img/hanzelogo.png
+img/lineChartIcon.png
+img/lockicon.png
+img/logout.png
+img/map.png
+img/pieChartIcon.png
+img/schoollogo.png
+img/schoollogo-small.png
+img/tab_icon.png
+
+NETWORK:
+*
+
+

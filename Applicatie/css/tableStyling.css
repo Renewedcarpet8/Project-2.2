@@ -1,0 +1,51 @@
+#placeTitle {
+    position: absolute;
+    margin: auto;
+    width: 75%;
+    font-size: 18px;
+    left: 12%;
+    top: 11%;
+}
+
+#valuesTitle {
+    position: absolute;
+    bottom: 85%;
+    width: 100%;
+}
+
+table.values {
+    position: absolute;
+    text-align: left;
+    width: 80%;
+    height: 70%;
+    background-color: #11l;
+    border-color: #222;
+    font-size: 100%;
+    bottom: 4%;
+    left: 10%;
+    font-family: 'calibri';
+      background-color: #283655;
+}
+
+th {
+    height: 30%;
+}
+
+tr {
+    text-align: left;
+    border-color: #111;
+}
+
+#errors {
+    position: absolute;
+    transition: 1s;
+    border: 1px solid;
+    border-color: red;
+    background-color: #533;
+    height: 26%;
+    width: 100%;
+    font-family: 'arial';
+    font-size: 28px;
+    top: 45%;
+    z-index: 10000;
+}

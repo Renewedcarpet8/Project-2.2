@@ -1,5 +1,5 @@
 
-.dashboard-graph {
+#dashboard-graph {
   position: absolute;
   float: center;
   border: 5px solid;
@@ -10,10 +10,61 @@
   top: 6%;
   border-radius: 15px; 
   box-shadow: 10px 10px 5px #111;
-  height: 80%;
+  height: 90%;
   width: 65%;
-  left: 10%;
-  Opacity: 0.8;
+  left: 220px;
+  opacity: 0.9;
+}
+
+h1.stayFront { 
+    font-size: 40px;
+    z-index: -1;
+}
+
+#cont {
+    position: absolute;
+    left: 0%;
+    top: 20%;
+    height: 100%;
+    width:100%;
+}
+
+#myChart.enabled {
+    pointer-events: all;
+    width: 1000px;
+    height: 400px;
+}
+
+#table {
+	margin: auto;
+}
+
+#myChart.disabled {
+    pointer-events: none;
+    width: 200px;
+    height: 200px;
+}
+
+#googleMap {
+    position: absolute;
+    -webkit-transition: width 0.5s; /* Safari */
+    transition: opacity 0.5s;
+    height: 98%;
+    width: 98%;
+    left: 1%;
+    bottom: 1%;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#googleMap.disabled {
+        -webkit-transition: width 0.5s; /* Safari */
+    transition: opacity 0.5s;
+    height: 0%;
+    width: 0%;
+    left: 1%;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .dashboard-values {
@@ -28,24 +79,11 @@
   box-shadow: 10px 10px 5px #111;
   height: 39%;
   width: 20%;
-  right: 3%;
-}
-
-table.values {
-    position: absolute;
-    width: 80%;
-    height: 30%;
-    float: center;
-    background-color: #11l;
-    font-size: 1.2vw;
-    bottom: 10%;
-    left: 10%;
-    font-family: 'calibri'
+  right: 20px;
 }
 
 .dashboard-control {
-  position: absolute;
-  OPACITY: 0.8;
+  position: absolute;   
   float: center;
   background: #1E1F26;
   border: 5px solid;
@@ -56,21 +94,37 @@ table.values {
   top: 47%;
   height: 39%;
   width: 20%;
-  right: 3%;
+  right: 20px;
 }
 
-.underlay-photo {
-  background-image: url("../img/bg-login.jpg");
-  background-size: cover;
-filter: blur(10px);
-  z-index: -1;
-            animation: fadein 2s;
+img.schoollogographmode {
+    position: fixed;
+      -webkit-filter: grayscale(20%);
+    height: 10%;
+    top: 87%;
+    right: 5%;
+}
+
+img.schoollogographmode:hover {
+    transition:0.2s;
+    border: solid 1px;
+    border-radius: 5px;
+    background-color:#555;
+}
+
+img.schoollogographmode:active {
+    transition:0.1s;
+    border: solid 2px;
+    border-radius: 15px;
+    background-color:#999;
 }
 
 img.graphplaceholder {
     height: 80%;
     width: 80%;
 }
+
+
 
 #pdf {
     position: Absolute;
@@ -92,7 +146,36 @@ img.graphplaceholder {
     background-color: #fff
 }
 
+#excel {
+    position: Absolute;
+    width: 30%;
+    top: 20%;
+    right: 15%;
+}
+
+#exceloverlay {
+    position: Absolute;
+    background-color: #111;
+    width: 30%;
+    top: 31%;
+    right: 15%;
+}
+
+#excel:hover {
+    transition-duration: 0.5s;
+    background-color: #fff
+}
+
 .cont {
   position: relative;
   margin: auto;
+}
+
+.underlay-photo {
+  background-image: url("../img/bg-graph.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(90%);
+
+  z-index: -1;
+            animation: fadein 2s;
 }

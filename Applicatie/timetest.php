@@ -29,6 +29,7 @@ function getAirPressure() {
                 echo "</tr>\n";
             }
     }
+
     fclose($stations);
     fclose($csv_data);
     echo "\n</table>";
@@ -49,6 +50,7 @@ function getLangLong() {
         }
     }
 
+
     while (($line = fgetcsv($stations)) !== FALSE) {
         for ($i = 0; $i < count($nations) - 1; $i++)
             if ($line[2] == $nations[$i]) {
@@ -57,6 +59,7 @@ function getLangLong() {
                 echo 'id="' . $line[0] . '"' . ' place="' . $line[1] . '"' . ' country="' . $line[2] . '"' . ' lat="' . $line[3] . '"' . ' lng="' . $line[4] . '"' . ' elevation="' . $line[5] . '"/>' . '<br>';
             }
     }
+
     fclose($stations);
     fclose($csv_data);
 }
@@ -65,59 +68,32 @@ function getInfo($id) {
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
-    echo "<th style='text-align: center;'>Time </th>";
-    echo "<th style='text-align: center;'> Humidity</th>";
-    $DAY_LENGTH = 60 * 60;
-    $currentDate = date('U');
+
+    echo "<th style='text-align: center;'>Date </th>";
+    echo "<th style='text-align: center;'> Value</th>";
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        $date = date('U', strtotime($line[1]));
-        if ($date >= ($currentDate-$DAY_LENGTH) && $line[2] == $id) {
+        if ($line[2] == $id) {
             $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
             echo "<tr class='values' style=''>";
-            echo "<td style='text-align: center;'>" . $line[1] . "</td>";
+            echo "<td style='text-align: center;'>" . $line[0] . "</td>";
             echo "<td style='text-align: center;'>" . $humidity . "</td>";
             echo "</tr>";
         }
-    }
-        fclose($stations);
-        fclose($csv_data);
-    }
+        /* while (($line = fgetcsv($stations)) !== FALSE) {
+          for ($i = 0; $i < count($nations) - 1; $i++)
+          if ($line[0] == $nations[$i]) {
+          echo $line[2];
+          //echo $line[2] . " ";
+          //echo $line[3] . "," .$line[4]."<br>";
+          // echo  'id="'. $line[0] . '"' . ' place="'. $line[1] . '"' . ' country="'. $line[2] . '"' . ' lat="'. $line[3] . '"' . ' lng="'. $line[4] . '"' . ' elevation="'. $line[5] . '"/>' . '<br>';
 
-  function getOverview() {
-      $stations = fopen("stations2.csv", 'r');
-      //$csv_data = fopen(date("G") . '.csv', 'r');
-      $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
-      echo "<tr class='values' style=''>";
-      echo "<th style='text-align: center;'>ID </th>";
-      echo "<th style='text-align: center;'>Place </th>";
-      echo "<th style='text-align: center;'> Humidity</th>";
-      echo "</tr>";
-      echo "<br>";
-      $array1 = array();
 
-       while (($data = fgetcsv($csv_data)) !== FALSE) {
-          $humidity = round(100 * (EXP((17.625 * $data[4]) / (243.04 + $data[4])) / EXP((17.625 * $data[3]) / (243.04 + $data[3]))), 2);
-          if ($data[2] == 337450) {
-              array_push($array1, [$data[2], $humidity]);            
-          } elseif ($data[2] == 338150) {
-              array_push($array1, [$data[2], $humidity]); 
-            } elseif ($data[2] == 338830) {
-              array_push($array1, [$data[2], $humidity]); 
-            }         
-          }
-      
-          while (($line = fgetcsv($stations)) !== FALSE) {
-            $station =  explode("%", $line[0]);
-            foreach ($array1 as $pair) {
-              if ($pair[0] == $station[0]) {
-                echo "<tr>";
-                echo "<td>" . $pair[0] . "</td>";
-                echo "<td>" . $station[1] . "</td>";
-                echo "<td>" . $pair[1] . "</td>";
-                echo "</tr>";
-              }
-            }    
-          }
+          } else {
+          var_dump($line);
+          } */
+    }
+    fclose($stations);
+    fclose($csv_data);
 }
 
 function getTitle($id) {
@@ -125,18 +101,17 @@ function getTitle($id) {
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     $data = array();
-    $DAY_LENGTH = 60 * 60;
-    $currentDate = date('U');
+
 
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        $date = date('U', strtotime($line[1]));
-        if ($date >= ($currentDate-$DAY_LENGTH) && $line[2] == $id) {
-            array_push($data, $line[1]);
+        if ($line[2] == $id) {
+            $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
+            array_push($data, $line[0]);
         }
     }
-
+    //echo count($data);
     for ($i = 0; $i < count($data); $i++) {
-        echo "'" . $data[$i] . "',";
+        echo $data[$i] . ",";
     }
     fclose($stations);
     fclose($csv_data);
@@ -147,13 +122,10 @@ function getValues($id) {
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     $data = array();
-    $DAY_LENGTH = 60 * 60;
-    $currentDate = date('U');
+
 
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        $date = date('U', strtotime($line[1]));
-
-        if ($date >= ($currentDate-$DAY_LENGTH) && $line[2] == $id) {
+        if ($line[2] == $id) {
             $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 5);
             array_push($data, $humidity);
         }
@@ -165,11 +137,6 @@ function getValues($id) {
     fclose($stations);
     fclose($csv_data);
 }
-
-
-
-
-
 ?>
 <!DOCTYPE html >
 <html>
@@ -188,13 +155,9 @@ function getValues($id) {
               type="image/png"
               href="img/tab_icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/graphcontrol.js"></script>
-        <script type="text/javascript" src="js/graphs.js"></script>
-        <script type="text/javascript" src="js/mapsquery1.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
 </head>
@@ -205,12 +168,7 @@ function getValues($id) {
     require 'requirebars.php';
     if (isset($_SESSION['username'])) {
         ?>
-        <img id="goto" class="schoollogographmode" src="img/schoollogo-small.png">
-        <script>
-            document.getElementById("goto").onclick = function () {
-                window.location = "https://145.33.225.152";
-            }
-        </script>>
+        <img class="schoollogographmode" src="img/schoollogo-small.png">
 
         <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
@@ -226,13 +184,87 @@ function getValues($id) {
         <div id="test" style="width: 100%; text-align: center; color:white;">
             <?php
             if (isset($_GET['id'])) {
-                //echo date("Y/m/d/h") . "/" . $_GET['country'] . ".csv";
                 getTitle($_GET['id']);
-                //echo date("i");
             }
             ?>
         </div>
 
+        <script>
+            var customLabel = {
+                restaurant: {
+                    label: 'R'
+                },
+                bar: {
+                    label: 'B'
+                }
+            };
+
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('googleMap'), {
+                    center: new google.maps.LatLng(51.391423, 27.175312),
+                    zoom: 5
+                });
+                var infoWindow = new google.maps.InfoWindow;
+
+                // Change this depending on the name of your PHP or XML file
+                downloadUrl('test2.xml', function (data) {
+                    var xml = data.responseXML;
+                    var markers = xml.documentElement.getElementsByTagName('marker');
+                    Array.prototype.forEach.call(markers, function (markerElem) {
+                        var id = markerElem.getAttribute('id');
+                        var place = markerElem.getAttribute('place');
+                        var country = markerElem.getAttribute('country');
+                        var type = markerElem.getAttribute('type');
+                        var point = new google.maps.LatLng(
+                                parseFloat(markerElem.getAttribute('lat')),
+                                parseFloat(markerElem.getAttribute('lng')));
+
+                        var infowincontent = document.createElement('div');
+                        var strong = document.createElement('strong');
+                        strong.textContent = id
+                        infowincontent.appendChild(strong);
+                        infowincontent.appendChild(document.createElement('br'));
+
+                        var text = document.createElement('text');
+                        text.textContent = place
+                        infowincontent.appendChild(text);
+                        var icon = customLabel[type] || {};
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: point,
+                            label: icon.label
+                        });
+                        marker.addListener('click', function () {
+                            infoWindow.setContent(infowincontent);
+                            infoWindow.open(googleMap, marker);
+                            window.location.href = "timetest.php?id=" + id + "&country=" + country + "&place=" + place;
+                        });
+
+                    });
+
+                });
+            }
+
+
+
+            function downloadUrl(url, callback) {
+                var request = window.ActiveXObject ?
+                        new ActiveXObject('Microsoft.XMLHTTP') :
+                        new XMLHttpRequest;
+
+                request.onreadystatechange = function () {
+                    if (request.readyState == 4) {
+                        request.onreadystatechange = doNothing;
+                        callback(request, request.status);
+                    }
+                };
+
+                request.open('GET', url, true);
+                request.send(null);
+            }
+
+            function doNothing() {}
+        </script>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6S_YXL2ge22s_tfI1o43iIEQur5bEoCo&callback=initMap">
 
@@ -252,15 +284,16 @@ function getValues($id) {
 
 
     <script>
+            // GLobal Options
             Chart.defaults.global.defaultFontFamily = 'Lato';
-            Chart.defaults.global.defaultFontSize = 24;
+            Chart.defaults.global.defaultFontSize = 18;
             Chart.defaults.global.defaultFontColor = '#FFF';
             var config = {
                 type: 'line',
                 data: {
-                    labels: [<?php getTitle($_GET['id'])?>],
+                    labels: [<?php getTitle($_GET['id']) ?>],
                     datasets: [{
-                            label: "Humidity per time",
+                            label: "Numbers per date",
                             data: [<?php getValues($_GET['id']) ?>],
                             fill: true,
                             borderColor: "purple",
@@ -282,7 +315,7 @@ function getValues($id) {
                 options: {
                     title: {
                         display: true,
-                        text: 'Humidity',
+                        text: 'Random numbers',
                         fontsize: 25
                     },
                     legend: {
@@ -306,12 +339,15 @@ function getValues($id) {
                     }
                 }
             };
+
             var myChart;
+
             $("#line").click(function () {
                 document.getElementById("googleMap").classList.add("disabled");
                 $("#myChart").addClass("enabled");
                 change('line');
             });
+
             $("#bar").click(function () {
                 document.getElementById("googleMap").classList.add("disabled");
                 $("#myChart").addClass("enabled");
@@ -323,14 +359,17 @@ function getValues($id) {
                 $("#myChart").addClass("enabled");
                 change('pie');
             });
+
             $("#map").click(function () {
                 document.getElementById("googleMap").classList.remove("disabled");
                 google.maps.event.trigger(map, 'resize');
                 change('');
             }
             );
+
             function change(newType) {
                 var ctx = document.getElementById("myChart").getContext("2d");
+
                 // Remove the old chart and all its event handles
                 if (myChart) {
                     myChart.destroy();
@@ -341,7 +380,9 @@ function getValues($id) {
                 temp.type = newType;
                 myChart = new Chart(ctx, temp);
             }
-            ;</script>
+            ;
+
+    </script>
     <div class ="container-control">
         <div class="dashboard-control" method="POST">
             <H1>Graph Control</br> </br></H1>
@@ -352,9 +393,16 @@ function getValues($id) {
                     <div class="text">Download to PDF</div>
                 </div>
 
-                <img href='#' id="excel" src="img/excel.png" onclick="myFunction()" src="js/graphcontrol" />
+                <img href='#' id="excel" src="img/excel.png" onclick="myFunction()" />
                 <div id="exceloverlay">
                     <div class="text">Download to CSV</div>
+                    <script>
+                        function myFunction()
+                        {
+                            document.getElementById("googleMap").classList.add("disabled");
+                            document.getElementById('formId').submit();
+                        }
+                    </script>
                 </div>
                 <i class='fa fa=circle fa-stack-2x'></i>
                 <i class='fa fa-lock fa-stack-1x'</i>
@@ -364,7 +412,8 @@ function getValues($id) {
         </div>
         <div class ="container-values">
             <div class="dashboard-values" method="POST">
-                <h1 id="valuesTitle"> Values </h1>
+                <H1>
+                    Values </br> </H1 >
                 <span class='fa-stack fa-lg'>
                     <i class='fa fa=circle fa-stack-2x'></i>
                     <i class='fa fa-lock fa-stack-1x'</i>
@@ -372,14 +421,16 @@ function getValues($id) {
                 </p>
                 <table class ='values'>
                     <?php
+                    //<th> Date </th>
+                    //<th> Value</th>
+
                     if (isset($_GET['id'])) {
                         $place = ucwords(strtolower($_GET['place']));
                         $country = ucwords(strtolower($_GET['country']));
                         echo "<center> <p id='placeTitle'>Location data for <b>" . $place . ", " . $country . "</b><br></center>";
                         getInfo($_GET['id']);
                     } else {
-                        echo "<center> <p id='placeTitle'>Current Humidity for Moldova<br></center>";
-                        getOverview();
+                        echo "<div id='errors'><p id='stationError'>Please select a weather station</div>";
                     }
                     ?>
             </div>

@@ -1,0 +1,481 @@
+<markers>	
+	<marker id="114060" place="CHEB" country="CZECH REPUBLIC" lat="50.083" lng="12.4" elevation="490"/>
+	<marker id="114140" place="KARLOVY VARY" country="CZECH REPUBLIC" lat="50.2" lng="12.917" elevation="607"/>
+	<marker id="114180" place="MARIANSKE LAZNE" country="CZECH REPUBLIC" lat="49.917" lng="12.717" elevation="541"/>
+	<marker id="114230" place="PRIMDA" country="CZECH REPUBLIC" lat="49.667" lng="12.667" elevation="748"/>
+	<marker id="114232" place="KBELY" country="CZECH REPUBLIC" lat="50.117" lng="14.533" elevation="293"/>
+	<marker id="114234" place="LIBEREC" country="CZECH REPUBLIC" lat="50.767" lng="15.017" elevation="398"/>
+	<marker id="114380" place="TUSIMICE" country="CZECH REPUBLIC" lat="50.383" lng="13.333" elevation="328"/>
+	<marker id="114480" place="PLZEN LINE" country="CZECH REPUBLIC" lat="49.683" lng="13.267" elevation="362"/>
+	<marker id="114500" place="PIZEN-MIKULKA" country="CZECH REPUBLIC" lat="49.767" lng="13.383" elevation="372"/>
+	<marker id="114570" place="CHURANOV" country="CZECH REPUBLIC" lat="49.067" lng="13.617" elevation="1122"/>
+	<marker id="114640" place="MILESOVKA" country="CZECH REPUBLIC" lat="50.55" lng="13.933" elevation="836"/>
+	<marker id="114870" place="KOCELOVICE" country="CZECH REPUBLIC" lat="49.467" lng="13.833" elevation="522"/>
+	<marker id="115020" place="USTI NAD LABEM" country="CZECH REPUBLIC" lat="50.683" lng="14.033" elevation="379"/>
+	<marker id="115090" place="DOKSANY" country="CZECH REPUBLIC" lat="50.467" lng="14.167" elevation="159"/>
+	<marker id="115180" place="PRAHA/RUZYNE" country="CZECH REPUBLIC" lat="50.1" lng="14.25" elevation="365"/>
+	<marker id="115200" place="PRAHA-LIBUS" country="CZECH REPUBLIC" lat="50.017" lng="14.45" elevation="303"/>
+	<marker id="115380" place="TEMELIN" country="CZECH REPUBLIC" lat="49.2" lng="14.333" elevation="507"/>
+	<marker id="115400" place="HOSIN" country="CZECH REPUBLIC" lat="49.033" lng="14.483" elevation="488"/>
+	<marker id="115410" place="CESKE BUDEJOVICE" country="CZECH REPUBLIC" lat="48.95" lng="14.433" elevation="436"/>
+	<marker id="115670" place="PRAHA-KBELY" country="CZECH REPUBLIC" lat="50.117" lng="14.533" elevation="287"/>
+	<marker id="116030" place="LIBEREC" country="CZECH REPUBLIC" lat="50.767" lng="15.017" elevation="401"/>
+	<marker id="116240" place="CASLAV" country="CZECH REPUBLIC" lat="49.933" lng="15.383" elevation="239"/>
+	<marker id="116280" place="KRESIN-KRAMOLIN" country="CZECH REPUBLIC" lat="49.583" lng="15.083" elevation="533"/>
+	<marker id="116360" place="KOSTELNI MYSLOVA" country="CZECH REPUBLIC" lat="49.183" lng="15.467" elevation="573"/>
+	<marker id="116430" place="PEC POD SNEZKOU" country="CZECH REPUBLIC" lat="50.667" lng="15.75" elevation="820"/>
+	<marker id="116480" place="HRADEC KRALOVE" country="CZECH REPUBLIC" lat="50.25" lng="15.85" elevation="244"/>
+	<marker id="116520" place="PARDUBICE" country="CZECH REPUBLIC" lat="50.017" lng="15.733" elevation="230"/>
+	<marker id="116590" place="PRIBYSLAV" country="CZECH REPUBLIC" lat="49.583" lng="15.767" elevation="536"/>
+	<marker id="116790" place="USTI NAD ORLICI" country="CZECH REPUBLIC" lat="49.983" lng="16.433" elevation="406"/>
+	<marker id="116830" place="SVRATOUCH" country="CZECH REPUBLIC" lat="49.733" lng="16.033" elevation="740"/>
+	<marker id="116920" place="NAMEST NAD OSLAV" country="CZECH REPUBLIC" lat="49.167" lng="16.117" elevation="479"/>
+	<marker id="116930" place="DUKOVANY" country="CZECH REPUBLIC" lat="49.1" lng="16.133" elevation="405"/>
+	<marker id="116980" place="KUCHAROVICE" country="CZECH REPUBLIC" lat="48.883" lng="16.082" elevation="339"/>
+	<marker id="117100" place="LUKA" country="CZECH REPUBLIC" lat="49.65" lng="16.95" elevation="518"/>
+	<marker id="117230" place="BRNO/TURANY" country="CZECH REPUBLIC" lat="49.15" lng="16.7" elevation="246"/>
+	<marker id="117300" place="SERAK" country="CZECH REPUBLIC" lat="50.183" lng="17.117" elevation="1327"/>
+	<marker id="117350" place="PRADED MOUNTAIN" country="CZECH REPUBLIC" lat="50.067" lng="17.233" elevation="1492"/>
+	<marker id="117480" place="PREROV" country="CZECH REPUBLIC" lat="49.417" lng="17.4" elevation="209"/>
+	<marker id="117660" place="CERVENA" country="CZECH REPUBLIC" lat="49.767" lng="17.55" elevation="753"/>
+	<marker id="117740" place="HOLESOV" country="CZECH REPUBLIC" lat="49.317" lng="17.567" elevation="224"/>
+	<marker id="117820" place="OSTRAVA/MOSNOV" country="CZECH REPUBLIC" lat="49.683" lng="18.117" elevation="260"/>
+	<marker id="117870" place="LYSA HORA" country="CZECH REPUBLIC" lat="49.55" lng="18.45" elevation="1327"/>
+	<marker id="118160" place="BRATISLAVA-LETISKO" country="SLOVAKIA" lat="48.2" lng="17.2" elevation="134"/>
+	<marker id="118260" place="PIESTANY" country="SLOVAKIA" lat="48.617" lng="17.833" elevation="164"/>
+	<marker id="118410" place="ZILINA/HRICOV" country="SLOVAKIA" lat="49.233" lng="18.617" elevation="311"/>
+	<marker id="118550" place="NITRA" country="SLOVAKIA" lat="48.283" lng="18.133" elevation="136"/>
+	<marker id="118580" place="HURBANOVO" country="SLOVAKIA" lat="47.867" lng="18.2" elevation="124"/>
+	<marker id="118670" place="PRIEVIDZA" country="SLOVAKIA" lat="48.767" lng="18.6" elevation="261"/>
+	<marker id="118800" place="DUDINCE" country="SLOVAKIA" lat="48.167" lng="18.867" elevation="140"/>
+	<marker id="119030" place="SLIAC" country="SLOVAKIA" lat="48.65" lng="19.15" elevation="315"/>
+	<marker id="119160" place="CHOPOK" country="SLOVAKIA" lat="48.983" lng="19.6" elevation="2007"/>
+	<marker id="119180" place="LIESEK" country="SLOVAKIA" lat="49.367" lng="19.683" elevation="693"/>
+	<marker id="119270" place="LUCENEC" country="SLOVAKIA" lat="48.333" lng="19.733" elevation="215"/>
+	<marker id="119271" place="KOSICE" country="SLOVAKIA" lat="48.65" lng="21.233" elevation="236"/>
+	<marker id="119272" place="NITRA" country="SLOVAKIA" lat="48.283" lng="18.133" elevation="134"/>
+	<marker id="119273" place="PRIEVIDZA" country="SLOVAKIA" lat="48.767" lng="18.583" elevation="260"/>
+	<marker id="119274" place="PIESTANY" country="SLOVAKIA" lat="48.617" lng="17.817" elevation="170"/>
+	<marker id="119275" place="SLIAC" country="SLOVAKIA" lat="48.633" lng="19.133" elevation="326"/>
+	<marker id="119276" place="ZILINA" country="SLOVAKIA" lat="49.233" lng="18.6" elevation="319"/>
+	<marker id="119300" place="LOMNICKY STIT" country="SLOVAKIA" lat="49.2" lng="20.217" elevation="2635"/>
+	<marker id="119330" place="STRBSKE PLESO" country="SLOVAKIA" lat="49.117" lng="20.083" elevation="1356"/>
+	<marker id="119340" place="POPRAD/TATRY" country="SLOVAKIA" lat="49.067" lng="20.25" elevation="696"/>
+	<marker id="119380" place="TELGART" country="SLOVAKIA" lat="48.85" lng="20.183" elevation="906"/>
+	<marker id="119680" place="KOSICE" country="SLOVAKIA" lat="48.667" lng="21.217" elevation="231"/>
+	<marker id="119760" place="STROPKOV/TISINEC" country="SLOVAKIA" lat="49.217" lng="21.65" elevation="217"/>
+	<marker id="119780" place="MILHOSTOV" country="SLOVAKIA" lat="48.667" lng="21.733" elevation="106"/>
+	<marker id="119930" place="KAMENICA NAD CIROCH" country="SLOVAKIA" lat="48.933" lng="22" elevation="178"/>
+	<marker id="121000" place="KOLOBRZEG" country="POLAND" lat="54.183" lng="15.583" elevation="5"/>
+	<marker id="121050" place="KOSZALIN" country="POLAND" lat="54.2" lng="16.149" elevation="34"/>
+	<marker id="121055" place="LUBLINEK" country="POLAND" lat="51.717" lng="19.4" elevation="184"/>
+	<marker id="121060" place="KOSZALIN ZEGRZE" country="POLAND" lat="54.033" lng="16.3" elevation="72"/>
+	<marker id="121150" place="USTKA" country="POLAND" lat="54.583" lng="16.867" elevation="11"/>
+	<marker id="121160" place="MRZEZYNO" country="POLAND" lat="54.15" lng="15.3" elevation="8"/>
+	<marker id="121200" place="LEBA" country="POLAND" lat="54.75" lng="17.533" elevation="6"/>
+	<marker id="121240" place="DARLOWEK" country="POLAND" lat="54.4" lng="16.35" elevation="5"/>
+	<marker id="121250" place="LEBORK" country="POLAND" lat="54.55" lng="17.75" elevation="41"/>
+	<marker id="121350" place="HEL" country="POLAND" lat="54.6" lng="18.817" elevation="3"/>
+	<marker id="121360" place="LEBUNIA" country="POLAND" lat="54.417" lng="17.767" elevation="151"/>
+	<marker id="121400" place="GDANSK PORT PN." country="POLAND" lat="54.4" lng="18.7" elevation="7"/>
+	<marker id="121420" place="OKSYWIE" country="POLAND" lat="54.567" lng="18.517" elevation="70"/>
+	<marker id="121460" place="GDANSKI" country="POLAND" lat="54.25" lng="18.667" elevation="100"/>
+	<marker id="121500" place="GDANSK-REBIECHOWO" country="POLAND" lat="54.383" lng="18.467" elevation="138"/>
+	<marker id="121540" place="MALBORK" country="POLAND" lat="54.033" lng="19.133" elevation="5"/>
+	<marker id="121550" place="GDANSK-SWIBNO" country="POLAND" lat="54.333" lng="18.933" elevation="7"/>
+	<marker id="121600" place="ELBLAG" country="POLAND" lat="54.167" lng="19.433" elevation="43"/>
+	<marker id="121630" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="121850" place="KETRZYN" country="POLAND" lat="54.067" lng="21.367" elevation="110"/>
+	<marker id="121860" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="121950" place="SUWALKI" country="POLAND" lat="54.133" lng="22.95" elevation="186"/>
+	<marker id="122000" place="SWINOUJSCIE" country="POLAND" lat="53.917" lng="14.233" elevation="5"/>
+	<marker id="122050" place="SZCZECIN" country="POLAND" lat="53.4" lng="14.617" elevation="7"/>
+	<marker id="122070" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="122120" place="SWIDWIN" country="POLAND" lat="53.783" lng="15.817" elevation="117"/>
+	<marker id="122150" place="SZCZECINEK" country="POLAND" lat="53.717" lng="16.683" elevation="144"/>
+	<marker id="122250" place="NADARZYCE" country="POLAND" lat="53.45" lng="16.5" elevation="129"/>
+	<marker id="122260" place="MIROSLAWIEC" country="POLAND" lat="53.383" lng="16.082" elevation="121"/>
+	<marker id="122300" place="PILA" country="POLAND" lat="53.133" lng="16.75" elevation="73"/>
+	<marker id="122320" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="122350" place="CHOJNICE" country="POLAND" lat="53.717" lng="17.55" elevation="172"/>
+	<marker id="122370" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="122380" place="BYDGOSZCZ" country="POLAND" lat="53.117" lng="17.967" elevation="72"/>
+	<marker id="122500" place="TORUN" country="POLAND" lat="53.05" lng="18.583" elevation="72"/>
+	<marker id="122700" place="MLAWA" country="POLAND" lat="53.1" lng="20.35" elevation="149"/>
+	<marker id="122720" place="OLSZTYN" country="POLAND" lat="53.767" lng="20.417" elevation="137"/>
+	<marker id="122800" place="MIKOLAJKI" country="POLAND" lat="53.783" lng="21.583" elevation="132"/>
+	<marker id="122810" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="122850" place="OSTROLEKA" country="POLAND" lat="53.083" lng="21.567" elevation="97"/>
+	<marker id="122950" place="BIALYSTOK" country="POLAND" lat="53.1" lng="23.167" elevation="151"/>
+	<marker id="123000" place="GORZOW WLKP" country="POLAND" lat="52.75" lng="15.283" elevation="73"/>
+	<marker id="123100" place="SLUBICE" country="POLAND" lat="52.35" lng="14.6" elevation="24"/>
+	<marker id="123260" place="KRZESINY" country="POLAND" lat="52.333" lng="16.967" elevation="92"/>
+	<marker id="123300" place="POZNAN" country="POLAND" lat="52.417" lng="16.85" elevation="84"/>
+	<marker id="123360" place="POWIDZ" country="POLAND" lat="52.367" lng="17.85" elevation="100"/>
+	<marker id="123450" place="KOLO" country="POLAND" lat="52.2" lng="18.667" elevation="117"/>
+	<marker id="123600" place="PLOCK" country="POLAND" lat="52.583" lng="19.733" elevation="109"/>
+	<marker id="123750" place="WARSZAWA-OKECIE" country="POLAND" lat="52.167" lng="20.967" elevation="106"/>
+	<marker id="123760" place="MAZOWIECKI" country="POLAND" lat="52.2" lng="21.65" elevation="110"/>
+	<marker id="123765" place="MALBORK" country="POLAND" lat="54.033" lng="19.133" elevation="5"/>
+	<marker id="123766" place="CEWICE" country="POLAND" lat="54.417" lng="17.767" elevation="151"/>
+	<marker id="123850" place="SIEDLCE" country="POLAND" lat="52.25" lng="22.25" elevation="155"/>
+	<marker id="123990" place="TERESPOL" country="POLAND" lat="52.067" lng="23.617" elevation="137"/>
+	<marker id="124000" place="ZIELONA GORA" country="POLAND" lat="51.933" lng="15.533" elevation="192"/>
+	<marker id="124010" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="124150" place="LEGNICA" country="POLAND" lat="51.2" lng="16.2" elevation="124"/>
+	<marker id="124180" place="LESZNO" country="POLAND" lat="51.833" lng="16.533" elevation="92"/>
+	<marker id="124240" place="WROCLAW II" country="POLAND" lat="51.1" lng="16.883" elevation="124"/>
+	<marker id="124250" place="WROCLAW I" country="POLAND" lat="51.117" lng="16.883" elevation="122"/>
+	<marker id="124280" place="WROCLAW/STRACHOWICE" country="POLAND" lat="51.1" lng="16.883" elevation="123"/>
+	<marker id="124350" place="KALISZ" country="POLAND" lat="51.783" lng="18.083" elevation="140"/>
+	<marker id="124540" place="LASK" country="POLAND" lat="51.55" lng="19.183" elevation="190"/>
+	<marker id="124550" place="WIELUN" country="POLAND" lat="51.217" lng="18.567" elevation="201"/>
+	<marker id="124650" place="LODZ" country="POLAND" lat="51.733" lng="19.4" elevation="190"/>
+	<marker id="124690" place="SULEJOW" country="POLAND" lat="51.35" lng="19.867" elevation="189"/>
+	<marker id="124850" place="RADOM" country="POLAND" lat="51.417" lng="21.117" elevation="185"/>
+	<marker id="124880" place="KOZIENICE" country="POLAND" lat="51.567" lng="21.55" elevation="126"/>
+	<marker id="124900" place="DEBLIN/IRENA" country="POLAND" lat="51.55" lng="21.85" elevation="124"/>
+	<marker id="124950" place="LUBLIN RADAWIEC" country="POLAND" lat="51.217" lng="22.4" elevation="240"/>
+	<marker id="124970" place="WLODAWA" country="POLAND" lat="51.55" lng="23.533" elevation="179"/>
+	<marker id="125000" place="JELENIA GORA" country="POLAND" lat="50.9" lng="15.8" elevation="344"/>
+	<marker id="125100" place="SNIEZKA" country="POLAND" lat="50.733" lng="15.733" elevation="1613"/>
+	<marker id="125200" place="KLODZKO" country="POLAND" lat="50.433" lng="16.617" elevation="357"/>
+	<marker id="125300" place="OPOLE" country="POLAND" lat="50.8" lng="17.967" elevation="163"/>
+	<marker id="125390" place="DATSAV3 VIRT STATION (POLAND)" country="POLAND" lat="53.117" lng="17.967" elevation="0"/>
+	<marker id="125400" place="RACIBORZ" country="POLAND" lat="50.05" lng="18.2" elevation="206"/>
+	<marker id="125500" place="CZESTOCHOWA" country="POLAND" lat="50.817" lng="19.1" elevation="295"/>
+	<marker id="125560" place="KRAKOW/BALICE" country="POLAND" lat="50.083" lng="19.783" elevation="241"/>
+	<marker id="125600" place="KATOWICE" country="POLAND" lat="50.233" lng="19.033" elevation="284"/>
+	<marker id="125660" place="KRAKOW" country="POLAND" lat="50.083" lng="19.8" elevation="237"/>
+	<marker id="125700" place="KIELCE" country="POLAND" lat="50.817" lng="20.7" elevation="261"/>
+	<marker id="125750" place="TARNOW" country="POLAND" lat="50.033" lng="20.983" elevation="209"/>
+	<marker id="125800" place="RZESZOW-JASIONKA" country="POLAND" lat="50.1" lng="22.05" elevation="201"/>
+	<marker id="125850" place="SANDOMIERZ" country="POLAND" lat="50.7" lng="21.717" elevation="218"/>
+	<marker id="125950" place="ZAMOSC" country="POLAND" lat="50.7" lng="23.25" elevation="213"/>
+	<marker id="126000" place="BIELSKO-BIALA" country="POLAND" lat="49.8" lng="19" elevation="399"/>
+	<marker id="126250" place="ZAKOPANE" country="POLAND" lat="49.3" lng="19.967" elevation="857"/>
+	<marker id="126500" place="KASPROWY WIERCH" country="POLAND" lat="49.233" lng="19.983" elevation="1989"/>
+	<marker id="126600" place="NOWY SACZ" country="POLAND" lat="49.617" lng="20.7" elevation="295"/>
+	<marker id="126700" place="KROSNO" country="POLAND" lat="49.683" lng="21.75" elevation="278"/>
+	<marker id="126900" place="LESKO" country="POLAND" lat="49.467" lng="22.35" elevation="422"/>
+	<marker id="126950" place="PRZEMYSL" country="POLAND" lat="49.8" lng="22.767" elevation="280"/>
+	<marker id="127720" place="MISKOLC" country="HUNGARY" lat="48.1" lng="20.767" elevation="236"/>
+	<marker id="128050" place="SOPRON" country="HUNGARY" lat="47.683" lng="16.6" elevation="239"/>
+	<marker id="128120" place="SZOMBATHELY" country="HUNGARY" lat="47.267" lng="16.633" elevation="221"/>
+	<marker id="128150" place="MOSONMAGYAROVAR" country="HUNGARY" lat="47.883" lng="17.283" elevation="122"/>
+	<marker id="128220" place="GYOR" country="HUNGARY" lat="47.717" lng="17.683" elevation="117"/>
+	<marker id="128250" place="PAPA" country="HUNGARY" lat="47.2" lng="17.5" elevation="146"/>
+	<marker id="128300" place="VESZPREM/SZENTKIRAL" country="HUNGARY" lat="47.067" lng="17.833" elevation="281"/>
+	<marker id="128305" place="TOKOL" country="HUNGARY" lat="47.333" lng="18.983" elevation="104"/>
+	<marker id="128380" place="BUDAORS" country="HUNGARY" lat="47.45" lng="18.967" elevation="132"/>
+	<marker id="128390" place="BUDAPEST/FERIHEGY I" country="HUNGARY" lat="47.433" lng="19.267" elevation="185"/>
+	<marker id="128430" place="BUDAPEST/PESTSZENTL" country="HUNGARY" lat="47.433" lng="19.183" elevation="139"/>
+	<marker id="128510" place="KEKESTETO" country="HUNGARY" lat="47.867" lng="20.017" elevation="1015"/>
+	<marker id="128600" place="SZOLNOK" country="HUNGARY" lat="47.117" lng="20.233" elevation="94"/>
+	<marker id="128603" place="SZENTKIRALYSZABADJA" country="HUNGARY" lat="47.067" lng="17.967" elevation="287"/>
+	<marker id="128700" place="EGER" country="HUNGARY" lat="47.9" lng="20.383" elevation="218"/>
+	<marker id="128820" place="DEBRECEN" country="HUNGARY" lat="47.483" lng="21.6" elevation="109"/>
+	<marker id="128920" place="NYIREGYHAZA/NAPKOR" country="HUNGARY" lat="47.967" lng="21.883" elevation="142"/>
+	<marker id="129100" place="SZENTGOTTHARD/FARKA" country="HUNGARY" lat="46.917" lng="16.317" elevation="313"/>
+	<marker id="129150" place="ZALAEGERSZEG/ANDRAS" country="HUNGARY" lat="46.867" lng="16.8" elevation="180"/>
+	<marker id="129200" place="KESZTHELY" country="HUNGARY" lat="46.733" lng="17.233" elevation="113"/>
+	<marker id="129220" place="SARMELLEK" country="HUNGARY" lat="46.683" lng="17.167" elevation="125"/>
+	<marker id="129250" place="NAGYKANIZSA" country="HUNGARY" lat="46.45" lng="16.967" elevation="141"/>
+	<marker id="129300" place="KAPOSVAR" country="HUNGARY" lat="46.383" lng="17.833" elevation="145"/>
+	<marker id="129320" place="TASZAR" country="HUNGARY" lat="46.4" lng="17.917" elevation="156"/>
+	<marker id="129350" place="SIOFOK" country="HUNGARY" lat="46.917" lng="18.05" elevation="109"/>
+	<marker id="129420" place="PECS/POGANY" country="HUNGARY" lat="46" lng="18.233" elevation="203"/>
+	<marker id="129500" place="PAKS" country="HUNGARY" lat="46.583" lng="18.85" elevation="98"/>
+	<marker id="129600" place="BAJA" country="HUNGARY" lat="46.183" lng="19.017" elevation="113"/>
+	<marker id="129700" place="KECSKEMET" country="HUNGARY" lat="46.917" lng="19.75" elevation="123"/>
+	<marker id="129820" place="SZEGED" country="HUNGARY" lat="46.25" lng="20.1" elevation="83"/>
+	<marker id="129920" place="BEKESCSABA" country="HUNGARY" lat="46.683" lng="21.167" elevation="90"/>
+	<marker id="130140" place="LJUBLJANA/BRNIK" country="SLOVENIA" lat="46.217" lng="14.483" elevation="385"/>
+	<marker id="130145" place="CERKLJE" country="SLOVENIA" lat="45.9" lng="15.533" elevation="155"/>
+	<marker id="130240" place="LISCA" country="SLOVENIA" lat="46.067" lng="15.283" elevation="941"/>
+	<marker id="130260" place="MARIBOR" country="SLOVENIA" lat="46.483" lng="15.683" elevation="265"/>
+	<marker id="131050" place="PORTOROZ" country="SLOVENIA" lat="45.517" lng="13.567" elevation="95"/>
+	<marker id="131160" place="RIJEKA/OMISALJ" country="CROATIA" lat="45.217" lng="14.583" elevation="85"/>
+	<marker id="131310" place="ZAGREB/PLESO" country="CROATIA" lat="45.733" lng="16.067" elevation="106"/>
+	<marker id="131570" place="OSIJEK" country="CROATIA" lat="45.533" lng="18.733" elevation="89"/>
+	<marker id="132090" place="PULA" country="CROATIA" lat="44.9" lng="13.917" elevation="67"/>
+	<marker id="132240" place="ZADAR/ZEMUNIK" country="CROATIA" lat="44.083" lng="15.35" elevation="82"/>
+	<marker id="132280" place="BIHAC" country="BOSNIA AND HERZEGOVINA" lat="44.817" lng="15.883" elevation="250"/>
+	<marker id="132420" place="BANJA LUKA" country="BOSNIA AND HERZEGOVINA" lat="44.783" lng="17.217" elevation="156"/>
+	<marker id="132570" place="TUZLA" country="BOSNIA AND HERZEGOVINA" lat="44.55" lng="18.7" elevation="306"/>
+	<marker id="133330" place="SPLIT/KASTEL STAFIL" country="CROATIA" lat="43.533" lng="16.3" elevation="24"/>
+	<marker id="133340" place="SPLIT/MARJAN" country="CROATIA" lat="43.517" lng="16.433" elevation="128"/>
+	<marker id="133480" place="MOSTAR" country="BOSNIA AND HERZEGOVINA" lat="43.333" lng="17.783" elevation="108"/>
+	<marker id="133530" place="SARAJEVO/BUTMIR" country="BOSNIA AND HERZEGOVINA" lat="43.817" lng="18.333" elevation="511"/>
+	<marker id="134520" place="DUBROVNIK-CILIPI" country="CROATIA" lat="42.567" lng="18.267" elevation="161"/>
+	<marker id="134930" place="KRIVA PALANKA" country="MACEDONIA" lat="42.2" lng="22.333" elevation="696"/>
+	<marker id="135780" place="OHRID" country="MACEDONIA" lat="41.117" lng="20.8" elevation="761"/>
+	<marker id="135830" place="BITOLA" country="MACEDONIA" lat="41.05" lng="21.367" elevation="589"/>
+	<marker id="135860" place="SKOPJE- AIRPORT" country="MACEDONIA" lat="41.967" lng="21.65" elevation="239"/>
+	<marker id="136150" place="TIRANA" country="ALBANIA" lat="41.333" lng="19.783" elevation="90"/>
+	<marker id="140080" place="KREDARICA" country="SLOVENIA" lat="46.383" lng="13.85" elevation="2515"/>
+	<marker id="140140" place="LJUBLJANA/BRNIK" country="SLOVENIA" lat="46.217" lng="14.483" elevation="385"/>
+	<marker id="140150" place="LJUBLJANA/BEZIGRAD" country="SLOVENIA" lat="46.067" lng="14.517" elevation="298"/>
+	<marker id="140240" place="LISCA" country="SLOVENIA" lat="46.067" lng="15.283" elevation="941"/>
+	<marker id="140260" place="MARIBOR/SLIVNICA" country="SLOVENIA" lat="46.483" lng="15.683" elevation="265"/>
+	<marker id="141050" place="PORTOROZ" country="SLOVENIA" lat="45.517" lng="13.567" elevation="95"/>
+	<marker id="142160" place="RIJEKA/KOZALA" country="CROATIA" lat="45.333" lng="14.45" elevation="125"/>
+	<marker id="142190" place="PARG" country="CROATIA" lat="45.6" lng="14.633" elevation="863"/>
+	<marker id="142320" place="KARLOVAC" country="CROATIA" lat="45.5" lng="15.567" elevation="111"/>
+	<marker id="142340" place="KRAPINA" country="CROATIA" lat="46.133" lng="15.883" elevation="203"/>
+	<marker id="142350" place="PUNTIJARKA" country="CROATIA" lat="45.917" lng="15.967" elevation="988"/>
+	<marker id="142360" place="ZAGREB/GRIC" country="CROATIA" lat="45.817" lng="15.983" elevation="162"/>
+	<marker id="142400" place="ZAGREB/MAKSIMIR" country="CROATIA" lat="45.817" lng="16.033" elevation="128"/>
+	<marker id="142410" place="ZAGREB/PLESO" country="CROATIA" lat="45.733" lng="16.067" elevation="107"/>
+	<marker id="142440" place="SISAK" country="CROATIA" lat="45.5" lng="16.367" elevation="106"/>
+	<marker id="142460" place="VARAZDIN" country="CROATIA" lat="46.3" lng="16.383" elevation="168"/>
+	<marker id="142480" place="KRIZEVCI" country="CROATIA" lat="46.033" lng="16.55" elevation="146"/>
+	<marker id="142530" place="BJELOVAR" country="CROATIA" lat="45.733" lng="16.85" elevation="142"/>
+	<marker id="142560" place="BILOGORA" country="CROATIA" lat="45.883" lng="17.2" elevation="263"/>
+	<marker id="142580" place="DARUVAR" country="CROATIA" lat="45.6" lng="17.233" elevation="161"/>
+	<marker id="142800" place="OSIJEK-CEPIN" country="CROATIA" lat="45.5" lng="18.567" elevation="90"/>
+	<marker id="142840" place="OSIJEK/KLISA" country="CROATIA" lat="45.467" lng="18.817" elevation="87"/>
+	<marker id="143015" place="OSIJEK" country="CROATIA" lat="45.467" lng="18.817" elevation="88"/>
+	<marker id="143030" place="ROVINJ/SV.IVAN NA P" country="CROATIA" lat="45.05" lng="13.617" elevation="8"/>
+	<marker id="143070" place="PULA AERODROME" country="CROATIA" lat="44.9" lng="13.917" elevation="63"/>
+	<marker id="143080" place="PAZIN" country="CROATIA" lat="45.233" lng="13.933" elevation="293"/>
+	<marker id="143140" place="MALI LOSINJ" country="CROATIA" lat="44.533" lng="14.483" elevation="53"/>
+	<marker id="143210" place="RAB" country="CROATIA" lat="44.75" lng="14.767" elevation="20"/>
+	<marker id="143230" place="SENJ" country="CROATIA" lat="45" lng="14.9" elevation="28"/>
+	<marker id="143240" place="ZAVIZAN" country="CROATIA" lat="44.817" lng="14.983" elevation="1597"/>
+	<marker id="143280" place="OGULIN" country="CROATIA" lat="45.267" lng="15.233" elevation="328"/>
+	<marker id="143300" place="GOSPIC" country="CROATIA" lat="44.55" lng="15.367" elevation="565"/>
+	<marker id="143700" place="SLAVONSKI BROD" country="CROATIA" lat="45.167" lng="18" elevation="89"/>
+	<marker id="143820" place="GRADISTE" country="CROATIA" lat="45.15" lng="18.7" elevation="98"/>
+	<marker id="144270" place="VELA SESTRICA" country="CROATIA" lat="43.85" lng="15.2" elevation="35"/>
+	<marker id="144280" place="ZADAR PUNTAMIKA" country="CROATIA" lat="44.133" lng="15.217" elevation="7"/>
+	<marker id="144310" place="ZADAR/ZEMUNIK" country="CROATIA" lat="44.1" lng="15.35" elevation="80"/>
+	<marker id="144380" place="SIBENIK" country="CROATIA" lat="43.733" lng="15.917" elevation="75"/>
+	<marker id="144410" place="KOMIZA" country="CROATIA" lat="43.05" lng="16.1" elevation="20"/>
+	<marker id="144420" place="KNIN" country="CROATIA" lat="44.033" lng="16.2" elevation="255"/>
+	<marker id="144440" place="SPLIT/RESNIK" country="CROATIA" lat="43.533" lng="16.3" elevation="21"/>
+	<marker id="144450" place="SPLIT/MARJAN" country="CROATIA" lat="43.517" lng="16.433" elevation="128"/>
+	<marker id="144470" place="HVAR" country="CROATIA" lat="43.167" lng="16.45" elevation="25"/>
+	<marker id="144520" place="LASTOVO" country="CROATIA" lat="42.767" lng="16.9" elevation="187"/>
+	<marker id="144540" place="MAKARSKA" country="CROATIA" lat="43.283" lng="17.017" elevation="49"/>
+	<marker id="144620" place="PLOCE" country="CROATIA" lat="43.033" lng="17.433" elevation="5"/>
+	<marker id="144720" place="DUBROVNIK/GORICA" country="CROATIA" lat="42.65" lng="18.083" elevation="53"/>
+	<marker id="144740" place="DUBROVNIK/CILIPI" country="CROATIA" lat="42.567" lng="18.267" elevation="165"/>
+	<marker id="145420" place="BANJA LUKA" country="BOSNIA AND HERZEGOVINA" lat="44.783" lng="17.217" elevation="156"/>
+	<marker id="146480" place="MOSTAR" country="BOSNIA AND HERZEGOVINA" lat="43.35" lng="17.8" elevation="108"/>
+	<marker id="146520" place="BJELASNICA" country="BOSNIA AND HERZEGOVINA" lat="43.717" lng="18.267" elevation="2070"/>
+	<marker id="146540" place="SARAJEVO-BJELAVE" country="BOSNIA AND HERZEGOVINA" lat="43.867" lng="18.433" elevation="638"/>
+	<marker id="150040" place="SIGHETUL MARMATIEI" country="ROMANIA" lat="47.933" lng="23.917" elevation="276"/>
+	<marker id="150100" place="SATU MARE" country="ROMANIA" lat="47.717" lng="22.883" elevation="124"/>
+	<marker id="150140" place="BAIA MARE" country="ROMANIA" lat="47.667" lng="23.5" elevation="218"/>
+	<marker id="150150" place="OCNA SUGATAG" country="ROMANIA" lat="47.733" lng="23.95" elevation="503"/>
+	<marker id="150200" place="BOTOSANI" country="ROMANIA" lat="47.733" lng="26.65" elevation="162"/>
+	<marker id="150230" place="SUCEAVA" country="ROMANIA" lat="47.633" lng="26.25" elevation="350"/>
+	<marker id="150800" place="ORADEA" country="ROMANIA" lat="47.033" lng="21.9" elevation="140"/>
+	<marker id="150900" place="IASI" country="ROMANIA" lat="47.167" lng="27.633" elevation="104"/>
+	<marker id="151080" place="CEAHLAU TOACA" country="ROMANIA" lat="46.983" lng="25.95" elevation="1898"/>
+	<marker id="151200" place="CLUJ-NAPOCA" country="ROMANIA" lat="46.783" lng="23.567" elevation="413"/>
+	<marker id="151450" place="TG. MURES" country="ROMANIA" lat="46.533" lng="24.533" elevation="309"/>
+	<marker id="151500" place="BACAU" country="ROMANIA" lat="46.533" lng="26.917" elevation="190"/>
+	<marker id="151700" place="MIERCUREA CIUC" country="ROMANIA" lat="46.367" lng="25.733" elevation="662"/>
+	<marker id="151970" place="BARLAD" country="ROMANIA" lat="46.233" lng="27.65" elevation="173"/>
+	<marker id="152000" place="ARAD" country="ROMANIA" lat="46.133" lng="21.35" elevation="117"/>
+	<marker id="152005" place="ARAD" country="ROMANIA" lat="46.167" lng="21.317" elevation="108"/>
+	<marker id="152300" place="DEVA" country="ROMANIA" lat="45.867" lng="22.9" elevation="231"/>
+	<marker id="152470" place="TIMISOARA" country="ROMANIA" lat="45.767" lng="21.25" elevation="88"/>
+	<marker id="152600" place="SIBIU" country="ROMANIA" lat="45.8" lng="24.15" elevation="444"/>
+	<marker id="152800" place="VARFU OMU" country="ROMANIA" lat="45.45" lng="25.45" elevation="2509"/>
+	<marker id="152920" place="CARANSEBES" country="ROMANIA" lat="45.417" lng="22.25" elevation="242"/>
+	<marker id="153100" place="GALATI" country="ROMANIA" lat="45.483" lng="28.033" elevation="72"/>
+	<marker id="153350" place="TULCEA" country="ROMANIA" lat="45.183" lng="28.817" elevation="6"/>
+	<marker id="153380" place="ORAVITA" country="ROMANIA" lat="45.033" lng="21.683" elevation="309"/>
+	<marker id="153460" place="RIMNICU VALCEA" country="ROMANIA" lat="45.1" lng="24.367" elevation="239"/>
+	<marker id="153500" place="BUZAU" country="ROMANIA" lat="45.133" lng="26.85" elevation="97"/>
+	<marker id="153600" place="SULINA" country="ROMANIA" lat="45.167" lng="29.733" elevation="9"/>
+	<marker id="153730" place="PITESTI" country="ROMANIA" lat="44.85" lng="24.817" elevation="315"/>
+	<marker id="153770" place="PLOIESTI" country="ROMANIA" lat="44.95" lng="26" elevation="178"/>
+	<marker id="153880" place="MOLDOVA VECHE" country="ROMANIA" lat="44.717" lng="21.633" elevation="84"/>
+	<marker id="154050" place="GRIVITA" country="ROMANIA" lat="44.75" lng="27.3" elevation="51"/>
+	<marker id="154090" place="JURILOVCA" country="ROMANIA" lat="44.767" lng="28.883" elevation="38"/>
+	<marker id="154100" place="DROBETA TURNU SEVER" country="ROMANIA" lat="44.633" lng="22.633" elevation="79"/>
+	<marker id="154200" place="BUCURESTI INMH-BANE" country="ROMANIA" lat="44.483" lng="26.117" elevation="91"/>
+	<marker id="154210" place="BUCURESTI AFUMATI" country="ROMANIA" lat="44.483" lng="26.183" elevation="90"/>
+	<marker id="154215" place="CAMPIA TURZII" country="ROMANIA" lat="46.5" lng="23.883" elevation="330"/>
+	<marker id="154440" place="FETESTI" country="ROMANIA" lat="44.367" lng="27.85" elevation="61"/>
+	<marker id="154500" place="CRAIOVA" country="ROMANIA" lat="44.317" lng="23.867" elevation="195"/>
+	<marker id="154600" place="CALARASI" country="ROMANIA" lat="44.2" lng="27.333" elevation="20"/>
+	<marker id="154700" place="ROSIORI DE VEDE" country="ROMANIA" lat="44.1" lng="24.983" elevation="103"/>
+	<marker id="154800" place="CONSTANTA" country="ROMANIA" lat="44.217" lng="28.65" elevation="14"/>
+	<marker id="154810" place="KOGALNICEANU" country="ROMANIA" lat="44.333" lng="28.433" elevation="102"/>
+	<marker id="154900" place="TR. MAGURELE" country="ROMANIA" lat="43.75" lng="24.883" elevation="31"/>
+	<marker id="154990" place="MANGALIA" country="ROMANIA" lat="43.817" lng="28.583" elevation="9"/>
+	<marker id="155020" place="VIDIN" country="BULGARIA" lat="43.817" lng="22.883" elevation="33"/>
+	<marker id="155050" place="VRATZA" country="BULGARIA" lat="43.2" lng="23.533" elevation="310"/>
+	<marker id="155110" place="LOM" country="BULGARIA" lat="43.817" lng="23.25" elevation="33"/>
+	<marker id="155250" place="LOVETCH" country="BULGARIA" lat="43.133" lng="24.717" elevation="221"/>
+	<marker id="155253" place="GORNA ORYAHOVITSA" country="BULGARIA" lat="43.15" lng="25.7" elevation="89"/>
+	<marker id="155260" place="PLEVEN" country="BULGARIA" lat="43.417" lng="24.6" elevation="71"/>
+	<marker id="155280" place="PLEVEN" country="BULGARIA" lat="43.4" lng="24.6" elevation="160"/>
+	<marker id="155300" place="VELIKO TARNOVO" country="BULGARIA" lat="43.083" lng="25.65" elevation="218"/>
+	<marker id="155350" place="ROUSSE" country="BULGARIA" lat="43.85" lng="25.95" elevation="45"/>
+	<marker id="155490" place="RAZGRAD" country="BULGARIA" lat="43.517" lng="26.533" elevation="347"/>
+	<marker id="155500" place="SILISTRA" country="BULGARIA" lat="44.117" lng="27.267" elevation="16"/>
+	<marker id="155520" place="VARNA" country="BULGARIA" lat="43.2" lng="27.917" elevation="43"/>
+	<marker id="155560" place="DATSAV3 VIRT STATION (BULGARIA)" country="BULGARIA" lat="42.667" lng="26.317" elevation="0"/>
+	<marker id="155561" place="VARNA" country="BULGARIA" lat="43.2" lng="27.917" elevation="41"/>
+	<marker id="155610" place="SHABLA" country="BULGARIA" lat="43.533" lng="28.533" elevation="28"/>
+	<marker id="155620" place="KALIAKPA" country="BULGARIA" lat="43.367" lng="28.467" elevation="64"/>
+	<marker id="156000" place="MOURGASH" country="BULGARIA" lat="42.833" lng="23.667" elevation="1692"/>
+	<marker id="156050" place="DRAGOMAN" country="BULGARIA" lat="42.933" lng="22.933" elevation="716"/>
+	<marker id="156090" place="DATSAV3 VIRT STATION (BULGARIA)" country="BULGARIA" lat="42.667" lng="26.317" elevation="0"/>
+	<marker id="156091" place="SOFIA (OBSERVATORY)" country="BULGARIA" lat="42.817" lng="23.383" elevation="595"/>
+	<marker id="156130" place="CHERNI VRAH (TOP/SO" country="BULGARIA" lat="42.583" lng="23.267" elevation="2292"/>
+	<marker id="156140" place="SOFIA (OBSERV.)" country="BULGARIA" lat="42.65" lng="23.383" elevation="591"/>
+	<marker id="156150" place="MUSSALA (TOP/SOMMET" country="BULGARIA" lat="42.183" lng="23.583" elevation="2927"/>
+	<marker id="156250" place="PLOVDIV" country="BULGARIA" lat="42.133" lng="24.75" elevation="185"/>
+	<marker id="156270" place="BOTEV VRAH (TOP/SOM" country="BULGARIA" lat="42.667" lng="24.833" elevation="2389"/>
+	<marker id="156350" place="CHIRPAN" country="BULGARIA" lat="42.2" lng="25.333" elevation="178"/>
+	<marker id="156400" place="SLIVEN" country="BULGARIA" lat="42.667" lng="26.317" elevation="257"/>
+	<marker id="156550" place="BURGAS" country="BULGARIA" lat="42.483" lng="27.483" elevation="28"/>
+	<marker id="156610" place="ACHTOPOL" country="BULGARIA" lat="42.1" lng="27.85" elevation="19"/>
+	<marker id="157120" place="SANDANSKI" country="BULGARIA" lat="41.517" lng="23.267" elevation="207"/>
+	<marker id="157250" place="SNEJANKA (TOP/SOMME" country="BULGARIA" lat="41.667" lng="24.683" elevation="1930"/>
+	<marker id="157260" place="ROJEN" country="BULGARIA" lat="41.883" lng="24.733" elevation="1750"/>
+	<marker id="260380" place="TALLINN" country="ESTONIA" lat="59.467" lng="24.817" elevation="34"/>
+	<marker id="260450" place="KUNDA" country="ESTONIA" lat="59.517" lng="26.533" elevation="3"/>
+	<marker id="260580" place="NARVA" country="ESTONIA" lat="59.367" lng="28.117" elevation="30"/>
+	<marker id="261350" place="TURI" country="ESTONIA" lat="58.817" lng="25.417" elevation="65"/>
+	<marker id="261410" place="VALKE-MAARJA" country="ESTONIA" lat="59.133" lng="26.233" elevation="123"/>
+	<marker id="262150" place="KURESSAARE" country="ESTONIA" lat="58.233" lng="22.5" elevation="4"/>
+	<marker id="262290" place="AINAZI" country="LATVIA" lat="57.867" lng="24.367" elevation="5"/>
+	<marker id="262310" place="PJARNU" country="ESTONIA" lat="58.367" lng="24.5" elevation="8"/>
+	<marker id="262420" place="TARTU" country="ESTONIA" lat="58.3" lng="26.733" elevation="68"/>
+	<marker id="262470" place="VALGA" country="LATVIA" lat="57.783" lng="26.033" elevation="66"/>
+	<marker id="263130" place="KOLKA" country="LATVIA" lat="57.75" lng="22.6" elevation="5"/>
+	<marker id="263140" place="VENTSPILS" country="LATVIA" lat="57.4" lng="21.533" elevation="3"/>
+	<marker id="263240" place="MERSRAGS" country="LATVIA" lat="57.35" lng="23.117" elevation="6"/>
+	<marker id="263460" place="ALUKSNE" country="LATVIA" lat="57.433" lng="27.033" elevation="193"/>
+	<marker id="263480" place="GULBENE" country="LATVIA" lat="57.133" lng="26.717" elevation="143"/>
+	<marker id="264050" place="VENTSPILS" country="LATVIA" lat="57.35" lng="21.533" elevation="6"/>
+	<marker id="264060" place="LIEPAJA" country="LATVIA" lat="56.483" lng="21.017" elevation="7"/>
+	<marker id="264160" place="SALDUS" country="LATVIA" lat="56.683" lng="22.5" elevation="112"/>
+	<marker id="264220" place="RIGA" country="LATVIA" lat="56.967" lng="24.05" elevation="26"/>
+	<marker id="264225" place="RIGA" country="LATVIA" lat="56.917" lng="23.967" elevation="11"/>
+	<marker id="264460" place="REZEKNE" country="LATVIA" lat="56.533" lng="27.267" elevation="157"/>
+	<marker id="265020" place="PALANGA" country="LITHUANIA" lat="55.967" lng="21.1" elevation="15"/>
+	<marker id="265021" place="SIAULIAI INTL" country="LITHUANIA" lat="55.883" lng="23.383" elevation="138"/>
+	<marker id="265090" place="KLAIPEDA" country="LITHUANIA" lat="55.733" lng="21.067" elevation="7"/>
+	<marker id="265180" place="LAUKUVA" country="LITHUANIA" lat="55.617" lng="22.233" elevation="166"/>
+	<marker id="265240" place="SIAULIAI" country="LITHUANIA" lat="55.933" lng="23.317" elevation="107"/>
+	<marker id="265290" place="PANEVEZYS" country="LITHUANIA" lat="55.75" lng="24.383" elevation="58"/>
+	<marker id="265310" place="BIRZAI" country="LITHUANIA" lat="56.2" lng="24.767" elevation="62"/>
+	<marker id="265440" place="DAUGAVPILS" country="LATVIA" lat="55.867" lng="26.617" elevation="122"/>
+	<marker id="266000" place="SILUTE" country="LITHUANIA" lat="55.35" lng="21.467" elevation="5"/>
+	<marker id="266210" place="RASEINIAI" country="LITHUANIA" lat="55.383" lng="23.117" elevation="111"/>
+	<marker id="266290" place="KAUNAS" country="LITHUANIA" lat="54.883" lng="23.833" elevation="770"/>
+	<marker id="266295" place="KAUNAS INTL" country="LITHUANIA" lat="54.967" lng="24.083" elevation="80"/>
+	<marker id="266330" place="UTENA" country="LITHUANIA" lat="55.533" lng="25.6" elevation="106"/>
+	<marker id="267130" place="KYBARTAI" country="LITHUANIA" lat="54.633" lng="22.783" elevation="59"/>
+	<marker id="267300" place="VILNIUS" country="LITHUANIA" lat="54.633" lng="25.283" elevation="156"/>
+	<marker id="267370" place="VARENA" country="LITHUANIA" lat="54.25" lng="24.55" elevation="111"/>
+	<marker id="330001" place="LUHANSK" country="UKRAINE" lat="48.417" lng="39.367" elevation="199"/>
+	<marker id="330002" place="DONETSK" country="UKRAINE" lat="48.067" lng="37.733" elevation="247"/>
+	<marker id="330003" place="LOZUVATKA" country="UKRAINE" lat="48.033" lng="33.2" elevation="128"/>
+	<marker id="330004" place="DNIPROPETROVSK" country="UKRAINE" lat="48.533" lng="34.667" elevation="150"/>
+	<marker id="330005" place="IVANO FRANKIVSK" country="UKRAINE" lat="48.883" lng="24.683" elevation="287"/>
+	<marker id="330490" place="SEMENOVKA" country="UKRAINE" lat="52.183" lng="32.583" elevation="161"/>
+	<marker id="330880" place="SARNY" country="UKRAINE" lat="51.283" lng="26.617" elevation="156"/>
+	<marker id="331350" place="CHERNIHIV" country="UKRAINE" lat="51.467" lng="31.25" elevation="141"/>
+	<marker id="331770" place="VOLODYMYR-VOLYNSKYI" country="UKRAINE" lat="50.833" lng="24.317" elevation="194"/>
+	<marker id="332460" place="NIZHYN" country="UKRAINE" lat="51.05" lng="31.9" elevation="126"/>
+	<marker id="332610" place="KONOTOP" country="UKRAINE" lat="51.233" lng="33.2" elevation="149"/>
+	<marker id="332750" place="SUMY" country="UKRAINE" lat="50.85" lng="34.667" elevation="181"/>
+	<marker id="333010" place="RIVNE" country="UKRAINE" lat="50.583" lng="26.133" elevation="231"/>
+	<marker id="333011" place="UZHHOROD" country="UKRAINE" lat="48.633" lng="22.267" elevation="120"/>
+	<marker id="333012" place="MYKOLAIV" country="UKRAINE" lat="47.05" lng="31.917" elevation="58"/>
+	<marker id="333170" place="SHEPETIVKA" country="UKRAINE" lat="50.167" lng="27.033" elevation="278"/>
+	<marker id="333250" place="ZHYTOMYR" country="UKRAINE" lat="50.233" lng="28.733" elevation="224"/>
+	<marker id="333450" place="KYIV" country="UKRAINE" lat="50.4" lng="30.567" elevation="167"/>
+	<marker id="333451" place="HOSTOMEL" country="UKRAINE" lat="50.6" lng="30.2" elevation="161"/>
+	<marker id="333460" place="KIEV/BORISPOL" country="UKRAINE" lat="50.35" lng="30.917" elevation="125"/>
+	<marker id="333470" place="BORYSPIL" country="UKRAINE" lat="50.333" lng="30.967" elevation="122"/>
+	<marker id="333560" place="YAHOTYN" country="UKRAINE" lat="50.217" lng="31.8" elevation="128"/>
+	<marker id="333770" place="LUBNY" country="UKRAINE" lat="50" lng="33.017" elevation="158"/>
+	<marker id="333930" place="LVIV" country="UKRAINE" lat="49.817" lng="23.95" elevation="323"/>
+	<marker id="333931" place="CHERNIVTSI" country="UKRAINE" lat="48.25" lng="25.983" elevation="258"/>
+	<marker id="334150" place="TERNOPIL" country="UKRAINE" lat="49.533" lng="25.667" elevation="329"/>
+	<marker id="334290" place="KHMELNYTSKYI" country="UKRAINE" lat="49.433" lng="26.983" elevation="350"/>
+	<marker id="334660" place="MYRONIVKA" country="UKRAINE" lat="49.667" lng="31" elevation="153"/>
+	<marker id="335060" place="POLTAVA" country="UKRAINE" lat="49.6" lng="34.55" elevation="160"/>
+	<marker id="335260" place="IVANO-FRANKIVSK" country="UKRAINE" lat="48.967" lng="24.7" elevation="280"/>
+	<marker id="335620" place="VINNYTSIA" country="UKRAINE" lat="49.233" lng="28.6" elevation="298"/>
+	<marker id="335870" place="UMAN" country="UKRAINE" lat="48.767" lng="30.233" elevation="216"/>
+	<marker id="336140" place="SVITLOVODSK" country="UKRAINE" lat="49.05" lng="33.25" elevation="84"/>
+	<marker id="336150" place="KREMENCUG" country="UKRAINE" lat="49.033" lng="33.433" elevation="80"/>
+	<marker id="336210" place="KOBELIAKY" country="UKRAINE" lat="49.15" lng="34.2" elevation="118"/>
+	<marker id="336310" place="UZHHOROD" country="UKRAINE" lat="48.633" lng="22.267" elevation="124"/>
+	<marker id="336580" place="CHERNIVTSI" country="UKRAINE" lat="48.367" lng="25.9" elevation="246"/>
+	<marker id="336630" place="MOHYLIV-PODILSKYI" country="UKRAINE" lat="48.45" lng="27.783" elevation="78"/>
+	<marker id="337110" place="KIROVOHRAD" country="UKRAINE" lat="48.517" lng="32.2" elevation="171"/>
+	<marker id="337450" place="BEL`CY" country="MOLDOVA" lat="47.783" lng="27.95" elevation="102"/>
+	<marker id="337610" place="LIUBASHIVKA" country="UKRAINE" lat="47.85" lng="30.267" elevation="183"/>
+	<marker id="337770" place="VOZNESENSK" country="UKRAINE" lat="47.567" lng="31.333" elevation="34"/>
+	<marker id="337910" place="KRYVYI RIH" country="UKRAINE" lat="48.033" lng="33.217" elevation="124"/>
+	<marker id="338150" place="KISINEV" country="MOLDOVA" lat="47.017" lng="28.983" elevation="173"/>
+	<marker id="338370" place="ODESA" country="UKRAINE" lat="46.433" lng="30.767" elevation="42"/>
+	<marker id="338387" place="CHISINAU" country="UKRAINE" lat="46.917" lng="28.933" elevation="125"/>
+	<marker id="338690" place="NOVA KAKHOVKA" country="UKRAINE" lat="46.783" lng="33.367" elevation="25"/>
+	<marker id="338830" place="KOMRAT" country="MOLDOVA" lat="46.3" lng="28.633" elevation="133"/>
+	<marker id="338890" place="IZMAIL" country="UKRAINE" lat="45.367" lng="28.85" elevation="30"/>
+	<marker id="339020" place="KHERSON" country="UKRAINE" lat="46.633" lng="32.567" elevation="54"/>
+	<marker id="339100" place="HENICHESK" country="UKRAINE" lat="46.167" lng="34.817" elevation="15"/>
+	<marker id="339240" place="CHORNOMORSKE" country="UKRAINE" lat="45.517" lng="32.7" elevation="10"/>
+	<marker id="339460" place="SIMFEROPOL" country="UKRAINE" lat="44.683" lng="34.133" elevation="181"/>
+	<marker id="339760" place="FEODOSIIA" country="UKRAINE" lat="45.033" lng="35.383" elevation="26"/>
+	<marker id="339830" place="KERCH" country="UKRAINE" lat="45.4" lng="36.417" elevation="49"/>
+	<marker id="339900" place="YALTA" country="UKRAINE" lat="44.483" lng="34.167" elevation="72"/>
+	<marker id="343000" place="KHARKIV" country="UKRAINE" lat="49.967" lng="36.133" elevation="155"/>
+	<marker id="343020" place="BOHODUKHIV" country="UKRAINE" lat="50.2" lng="35.533" elevation="203"/>
+	<marker id="344150" place="IZIUM" country="UKRAINE" lat="49.183" lng="37.3" elevation="78"/>
+	<marker id="345040" place="DNIPROPETROVSK" country="UKRAINE" lat="48.6" lng="34.967" elevation="143"/>
+	<marker id="345190" place="DONETSK" country="UKRAINE" lat="48.067" lng="37.767" elevation="225"/>
+	<marker id="345230" place="LUHANSK" country="UKRAINE" lat="48.567" lng="39.25" elevation="62"/>
+	<marker id="346010" place="ZAPORIZHZHIA" country="UKRAINE" lat="47.8" lng="35.017" elevation="112"/>
+	<marker id="346070" place="PRYSHYB" country="UKRAINE" lat="47.267" lng="35.333" elevation="88"/>
+	<marker id="346090" place="KYRYLIVKA" country="UKRAINE" lat="47.333" lng="36.333" elevation="221"/>
+	<marker id="347120" place="MARIUPOL" country="UKRAINE" lat="47.033" lng="37.5" elevation="70"/>
+	<marker id="347170" place="BERDYANSK" country="UKRAINE" lat="46.75" lng="36.783" elevation="2"/>
+	<marker id="130670" place="PALIC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="46.1" lng="19.767" elevation="105"/>
+	<marker id="131600" place="SOMBOR" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.767" lng="19.15" elevation="89"/>
+	<marker id="131680" place="NOVI SAD RIMSKI SAN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.333" lng="19.85" elevation="87"/>
+	<marker id="131730" place="ZRENJANIN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.367" lng="20.417" elevation="82"/>
+	<marker id="131740" place="KIKINDA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.85" lng="20.467" elevation="82"/>
+	<marker id="131800" place="BANATSKI KARLOVAC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.05" lng="21.03" elevation="91"/>
+	<marker id="131825" place="CAMP BONDSTEEL AHP" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.35" lng="21.25" elevation="595"/>
+	<marker id="131830" place="VRSAC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.15" lng="21.317" elevation="85"/>
+	<marker id="132660" place="SREMSKA MITROVICA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="45.1" lng="19.55" elevation="83"/>
+	<marker id="132690" place="VALJEVO" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.317" lng="19.917" elevation="177"/>
+	<marker id="132720" place="BEOGRAD/SURCIN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.817" lng="20.283" elevation="99"/>
+	<marker id="132740" place="BEOGRAD" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.8" lng="20.467" elevation="132"/>
+	<marker id="132790" place="SMEDEREVSKA PALANKA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.367" lng="20.95" elevation="122"/>
+	<marker id="132850" place="VELIKO GRADISTE" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.75" lng="21.517" elevation="84"/>
+	<marker id="132890" place="CRNI VRH" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.117" lng="21.95" elevation="1039"/>
+	<marker id="132950" place="NEGOTIN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="44.233" lng="22.55" elevation="44"/>
+	<marker id="133670" place="ZLATIBOR" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.733" lng="19.717" elevation="1029"/>
+	<marker id="133760" place="KRALJEVO" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.7" lng="20.7" elevation="217"/>
+	<marker id="133780" place="KOPAONIK" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.283" lng="20.8" elevation="1713"/>
+	<marker id="133840" place="CUPRIJA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.933" lng="21.383" elevation="125"/>
+	<marker id="133880" place="NIS" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.333" lng="21.9" elevation="202"/>
+	<marker id="133890" place="LESKOVAC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.983" lng="21.95" elevation="232"/>
+	<marker id="133970" place="DIMITROVGRAD" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="43.017" lng="22.75" elevation="450"/>
+	<marker id="134570" place="TIVAT" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.4" lng="18.733" elevation="5"/>
+	<marker id="134590" place="NIKSIC" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.767" lng="18.95" elevation="647"/>
+	<marker id="134620" place="PODGORICA/GOLUBOVCI" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.367" lng="19.25" elevation="33"/>
+	<marker id="134624" place="PODGORICA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.35" lng="19.25" elevation="44"/>
+	<marker id="134770" place="PRIZREN" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.217" lng="20.733" elevation="403"/>
+	<marker id="134810" place="PRISTINA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.65" lng="21.15" elevation="576"/>
+	<marker id="134811" place="PRISTINA" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.567" lng="21.033" elevation="559"/>
+	<marker id="134890" place="VRANJE" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="42.55" lng="21.917" elevation="434"/>
+	<marker id="135620" place="ULCINJ" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="41.917" lng="19.217" elevation="29"/>
+	<marker id="135790" place="OHRID-AERODROME" country="SERBIA AND MONTENEGRO, STATE UNION OF" lat="41.1" lng="20.817" elevation="700"/>
+</markers>

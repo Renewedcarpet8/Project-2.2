@@ -1,4 +1,4 @@
-<html>
+<html manifest="offlineAvailable.appcache">>
     <head>
         <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
