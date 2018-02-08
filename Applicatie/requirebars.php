@@ -77,8 +77,8 @@
         <div class="sidenav">
             <center>
                 <p class = "category">Query Select</p>
-                <a id="querySelector" href='query1.php'>Query 1</a>
-                <a id="querySelector" href='query2.php'>Query 2</a>
+                <a id="QuerySelector" href='query1.php'>Query 1</a>
+                <a id="QuerySelector" href='query2.php'>Query 2</a>
                 <br>
             </center>
             <center><p class = "category">Graph Select</p></center>

@@ -91,19 +91,24 @@ hr.divider {
     text-decoration: none;
 }
 
-#querySelector {
+#QuerySelector {
     font-size: 25px;
 }
 
-#querySelector:hover {
+#QuerySelector:hover {
+    transition: 0.5s;
+    color: white;
+    border: solid 1px;
+    border-color: #999;
     background-color: #777;
+    text-decoration: none;
 }
 
 .welcomeName{
   position: relative;
   height: 36%;
   bottom: 18%;
-  left: 6%;
+  left: 17%;
   color: white;
 }
 
