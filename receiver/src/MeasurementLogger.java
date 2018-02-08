@@ -26,7 +26,7 @@ import java.util.HashMap;
          * @param measurement Measurement to write to the log.
          */
         public synchronized void writeToLog(Measurement measurement) {
-            String location = "data/" + measurement.getYear() + "/" + measurement.getMonth() + "/" + measurement.getDay() + "/" + measurement.getHour() + "/" + measurement.getCountry() + ".csv";
+            String location = measurement.getYear() + "/" + measurement.getMonth() + "/" + measurement.getDay() + "/" + measurement.getHour() + "/" + measurement.getCountry() + ".csv";
             String country = measurement.getCountry();
             try {
                 if (writerHashMap.containsKey(country)) {
