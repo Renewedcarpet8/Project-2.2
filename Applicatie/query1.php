@@ -68,7 +68,7 @@ function getInfo($id) {
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
-    echo "<th style='text-align: center;'>Date </th>";
+    echo "<th style='text-align: center;'>Time </th>";
     echo "<th style='text-align: center;'> Humidity</th>";
     while (($line = fgetcsv($csv_data)) !== FALSE) {
         if ($line[2] == $id) {
@@ -146,11 +146,9 @@ function getValues($id) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
         <script type="text/javascript" src="js/graphcontrol.js"></script>
         <script type="text/javascript" src="js/graphs.js"></script>
         <script type="text/javascript" src="js/mapsquery1.js"></script>
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
 </head>
@@ -207,14 +205,14 @@ function getValues($id) {
 
     <script>
             Chart.defaults.global.defaultFontFamily = 'Lato';
-            Chart.defaults.global.defaultFontSize = 18;
+            Chart.defaults.global.defaultFontSize = 24;
             Chart.defaults.global.defaultFontColor = '#FFF';
             var config = {
                 type: 'line',
                 data: {
                     labels: [<?php getTitle($_GET['id']) ?>],
                     datasets: [{
-                            label: "Numbers per date",
+                            label: "Humidity per time",
                             data: [<?php getValues($_GET['id']) ?>],
                             fill: true,
                             borderColor: "purple",
@@ -236,7 +234,7 @@ function getValues($id) {
                 options: {
                     title: {
                         display: true,
-                        text: 'Random numbers',
+                        text: 'Humidity',
                         fontsize: 25
                     },
                     legend: {
