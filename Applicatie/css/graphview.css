@@ -35,6 +35,10 @@ h1.stayFront {
     height: 400px;
 }
 
+#table {
+	margin: auto;
+}
+
 #myChart.disabled {
     pointer-events: none;
     width: 200px;

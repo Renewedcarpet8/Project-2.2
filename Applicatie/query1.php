@@ -84,7 +84,7 @@ function getInfo($id) {
     }
 
   function getOverview() {
-      $stations = fopen("stations.csv", 'r');
+      $stations = fopen("stations2.csv", 'r');
       //$csv_data = fopen(date("G") . '.csv', 'r');
       $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
       echo "<tr class='values' style=''>";
