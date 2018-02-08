@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./css/sidenav.css" type="text/css"/>
     <link rel="stylesheet" href="./css/main.css" type="text/css"/>
     <link rel="stylesheet" href="./css/topnav.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/tableStyling.css" type="text/css"/>
     <link rel="stylesheet" href="./css/graphview.css" type="text/css"/>
     <script type="text/javascript" src="js/menumaker.js"></script>
     <title>Weather Pressure Application</title>
@@ -34,7 +35,7 @@
 
 <div id="dashboard-graph" method="POST">
     <H1 class="">Table</H1>
-    <table id="table">
+    <table id="tableQuery2GraphView">
         <?php getOverview(); ?>
     </table>
 </div>
@@ -64,8 +65,9 @@
                             <i class='fa fa-lock fa-stack-1x'</i>
                         </span>
               </p>
-              <table class ='values' style="margin: auto">
-                    The ID you selected is: <?php echo $_GET['id'] ?><br><br>
+              <table class ='values' style="margin: auto; width: 74%; left: 12%; overflow-y: hidden;">
+                <?php if (isset($_GET['id'])){?>
+                   The ID you selected is: <?php echo $_GET['id'] ?><br><br>
                   <th> Test </th>
                   <th> Value</th>
                   <tr>
@@ -88,9 +90,11 @@
                       <td>Max Windspeed</td>
                       <td><?php getMaxValue($_GET['id'], $_GET['country'], 8)?> KM/h</td>
                   </tr>
-                  <?php
-                  //echo readData("data1.csv");
-                  ?>
+                  
+               <?php } else {
+                echo "Geen ID geselecteerd";
+               }
+?>                   
           </div>
       </div>
         <?php

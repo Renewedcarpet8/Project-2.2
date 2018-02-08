@@ -7,7 +7,7 @@
             $stationData[$line[0]] = new StationData($line[0], $line[2], $line[1], 0);
         }
 
-        $csv_data = fopen("http://localhost/test3/" . date("Y/m/d/") . "19/MOLDOVA.csv", 'r');
+        $csv_data = fopen("http://localhost/weather/" . date("Y/m/d/") . "19/MOLDOVA.csv", 'r');
 
         while (($line = fgetcsv($csv_data)) !== FALSE) {
             if ($line[5] > $stationData[$line[2]]->getMaxhPa())
@@ -35,7 +35,7 @@
     function getMinValue($id, $country, $type){
         $minValue = array();
 
-        $csv_data = fopen("http://localhost/test3/" . date("Y/m/d/") . "19/$country.csv", 'r');
+        $csv_data = fopen("http://localhost/weather/" . date("Y/m/d/") . "19/$country.csv", 'r');
         $weekLength = 7*24*60*60;
         $currentDate = date('U');
 
@@ -59,7 +59,7 @@
     function getMaxValue($id, $country, $type){
         $maxValue = array();
 
-        $csv_data = fopen("http://localhost/test3/" . date("Y/m/d/") . "19/$country.csv", 'r');
+        $csv_data = fopen("http://localhost/weather/" . date("Y/m/d/") . "19/$country.csv", 'r');
         $weekLength = 7*24*60*60;
         $currentDate = date('U');
 
