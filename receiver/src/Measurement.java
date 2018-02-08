@@ -2,9 +2,18 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Measurement model that stores all measurement data and returns it in the correct way.
+ *
+ * @author Jan Hendrik Haanstra
+ * @version 1.1
+ * @since 2018-01-28
+ */
+
 public class Measurement {
     private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private String country;
     private LocalTime time;
     private LocalDate date;
     private int station;
@@ -52,7 +61,6 @@ public class Measurement {
     public Measurement(){}
 
     public String getDataString() {
-        //System.out.println(date);
         return date.format(dateFormatter) + ","
                 + time.format(timeFormatter) + ","
                 + station + ","
@@ -66,25 +74,44 @@ public class Measurement {
                 + snowfall + ","
                 + flags + ","
                 + cloud_cover + ","
-                + wind_direction;
+                + wind_direction + "\n";
+    }
+
+    public String getCountry() {
+        return country;
     }
 
     public int getYear() {
         return date.getYear();
     }
 
+    /**
+     * Returns the month in MM format
+     *
+     * @return month
+     */
     public String getMonth() {
         if (date.getMonthValue() < 10)
             return "0" + String.valueOf(date.getMonthValue());
         return "" + String.valueOf(date.getMonthValue());
     }
 
+    /**
+     * Returns the day in DD format
+     *
+     * @return day
+     */
     public String getDay() {
         if (date.getDayOfMonth() < 10)
             return "0" + String.valueOf(date.getDayOfMonth());
         return String.valueOf(date.getDayOfMonth());
     }
 
+    /**
+     * Returns the hour in HH format
+     *
+     * @return hour
+     */
     public String getHour() {
         if (time.getHour() < 10)
             return "0" + String.valueOf(time.getHour());
@@ -170,6 +197,10 @@ public class Measurement {
 
     public int getWind_direction() {
         return wind_direction;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public void setDate(LocalDate date) {
