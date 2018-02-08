@@ -70,8 +70,15 @@ function getInfo($id) {
     $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
     echo "<th style='text-align: center;'>Time </th>";
     echo "<th style='text-align: center;'> Humidity</th>";
+    $DAY_LENGTH = 60 * 60 * 24;
+    $currentDate = date('U');
+    var_dump(date('H-i'));
+
     while (($line = fgetcsv($csv_data)) !== FALSE) {
-        if ($line[2] == $id) {
+        $dateString = explode(":", $line[1]);
+        $date = date('U', strtotime($line[1]));
+        var_dump(strtotime($line[1]));
+        if (($currentDate - $date) < $DAY_LENGTH && $line[2] == $id) {
             $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
             echo "<tr class='values' style=''>";
             echo "<td style='text-align: center;'>" . $line[1] . "</td>";
@@ -79,9 +86,9 @@ function getInfo($id) {
             echo "</tr>";
         }
     }
-    fclose($stations);
-    fclose($csv_data);
-}
+        fclose($stations);
+        fclose($csv_data);
+    }
 
   function getOverview() {
       $stations = fopen("stations.csv", 'r');
@@ -219,7 +226,9 @@ function getValues($id) {
         <div id="test" style="width: 100%; text-align: center; color:white;">
             <?php
             if (isset($_GET['id'])) {
-                getTitle($_GET['id']);
+                //echo date("Y/m/d/h") . "/" . $_GET['country'] . ".csv";
+                getInfo($_GET['id']);
+                //echo date("i");
             }
             ?>
         </div>
