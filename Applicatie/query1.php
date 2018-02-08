@@ -369,6 +369,7 @@ function getValues($id) {
                         echo "<center> <p id='placeTitle'>Location data for <b>" . $place . ", " . $country . "</b><br></center>";
                         getInfo($_GET['id']);
                     } else {
+                        echo "<center> <p id='placeTitle'>Current Humidity for Moldova<br></center>";
                         getOverview();
                     }
                     ?>
