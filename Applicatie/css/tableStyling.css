@@ -38,6 +38,7 @@ tr {
 
 #errors {
     position: absolute;
+    transition: 1s;
     border: 1px solid;
     border-color: red;
     background-color: #533;

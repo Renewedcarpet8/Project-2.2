@@ -155,7 +155,12 @@ function getValues($id) {
     require 'requirebars.php';
     if (isset($_SESSION['username'])) {
         ?>
-        <img class="schoollogographmode" src="img/schoollogo-small.png">
+        <img id="goto" class="schoollogographmode" src="img/schoollogo-small.png">
+        <script>
+            document.getElementById("goto").onclick = function () {
+                window.location = "http://usm.md/";
+            }
+        </script>>
 
         <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
@@ -185,14 +190,12 @@ function getValues($id) {
                     label: 'B'
                 }
             };
-
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('googleMap'), {
                     center: new google.maps.LatLng(51.391423, 27.175312),
                     zoom: 5
                 });
                 var infoWindow = new google.maps.InfoWindow;
-
                 // Change this depending on the name of your PHP or XML file
                 downloadUrl('test2.xml', function (data) {
                     var xml = data.responseXML;
@@ -205,13 +208,11 @@ function getValues($id) {
                         var point = new google.maps.LatLng(
                                 parseFloat(markerElem.getAttribute('lat')),
                                 parseFloat(markerElem.getAttribute('lng')));
-
                         var infowincontent = document.createElement('div');
                         var strong = document.createElement('strong');
                         strong.textContent = id
                         infowincontent.appendChild(strong);
                         infowincontent.appendChild(document.createElement('br'));
-
                         var text = document.createElement('text');
                         text.textContent = place
                         infowincontent.appendChild(text);
@@ -226,9 +227,7 @@ function getValues($id) {
                             infoWindow.open(googleMap, marker);
                             window.location.href = "query1.php?id=" + id + "&country=" + country + "&place=" + place;
                         });
-
                     });
-
                 });
             }
 
@@ -238,14 +237,12 @@ function getValues($id) {
                 var request = window.ActiveXObject ?
                         new ActiveXObject('Microsoft.XMLHTTP') :
                         new XMLHttpRequest;
-
                 request.onreadystatechange = function () {
                     if (request.readyState == 4) {
                         request.onreadystatechange = doNothing;
                         callback(request, request.status);
                     }
                 };
-
                 request.open('GET', url, true);
                 request.send(null);
             }
@@ -326,15 +323,12 @@ function getValues($id) {
                     }
                 }
             };
-
             var myChart;
-
             $("#line").click(function () {
                 document.getElementById("googleMap").classList.add("disabled");
                 $("#myChart").addClass("enabled");
                 change('line');
             });
-
             $("#bar").click(function () {
                 document.getElementById("googleMap").classList.add("disabled");
                 $("#myChart").addClass("enabled");
@@ -346,17 +340,14 @@ function getValues($id) {
                 $("#myChart").addClass("enabled");
                 change('pie');
             });
-
             $("#map").click(function () {
                 document.getElementById("googleMap").classList.remove("disabled");
                 google.maps.event.trigger(map, 'resize');
                 change('');
             }
             );
-
             function change(newType) {
                 var ctx = document.getElementById("myChart").getContext("2d");
-
                 // Remove the old chart and all its event handles
                 if (myChart) {
                     myChart.destroy();
@@ -367,9 +358,7 @@ function getValues($id) {
                 temp.type = newType;
                 myChart = new Chart(ctx, temp);
             }
-            ;
-
-    </script>
+            ;</script>
     <div class ="container-control">
         <div class="dashboard-control" method="POST">
             <H1>Graph Control</br> </br></H1>
