@@ -83,6 +83,45 @@ function getInfo($id) {
     fclose($csv_data);
 }
 
+  function getOverview() {
+      $stations = fopen("stations.csv", 'r');
+      //$csv_data = fopen(date("G") . '.csv', 'r');
+      $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
+      //echo "<table>";
+      echo "<tr class='values' style=''>";
+      echo "<th style='text-align: center;'>ID </th>";
+      echo "<th style='text-align: center;'>Place </th>";
+      echo "<th style='text-align: center;'> Humidity</th>";
+      echo "</tr>";
+      echo "<br>";
+      $array1 = array();
+
+       while (($data = fgetcsv($csv_data)) !== FALSE) {
+          $humidity = round(100 * (EXP((17.625 * $data[4]) / (243.04 + $data[4])) / EXP((17.625 * $data[3]) / (243.04 + $data[3]))), 2);
+          if ($data[2] == 337450) {
+              array_push($array1, [$data[2], $humidity]);            
+          } elseif ($data[2] == 338150) {
+              array_push($array1, [$data[2], $humidity]); 
+            } elseif ($data[2] == 338830) {
+              array_push($array1, [$data[2], $humidity]); 
+            }         
+          }
+      
+          while (($line = fgetcsv($stations)) !== FALSE) {
+            $station =  explode("%", $line[0]);
+            foreach ($array1 as $pair) {
+              if ($pair[0] == $station[0]) {
+                echo "<tr>";
+                echo "<td>" . $pair[0] . "</td>";
+                echo "<td>" . $station[1] . "</td>";
+                echo "<td>" . $pair[1] . "</td>";
+                echo "</tr>";
+              }
+            }    
+          }
+//echo "</table>";
+}
+
 function getTitle($id) {
     $stations = fopen("stations.csv", 'r');
     //$csv_data = fopen(date("G") . '.csv', 'r');
@@ -330,7 +369,7 @@ function getValues($id) {
                         echo "<center> <p id='placeTitle'>Location data for <b>" . $place . ", " . $country . "</b><br></center>";
                         getInfo($_GET['id']);
                     } else {
-                        echo "<div></div>";
+                        getOverview();
                     }
                     ?>
             </div>
