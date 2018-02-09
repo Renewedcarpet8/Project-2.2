@@ -82,7 +82,7 @@
                            name="password"/>
                     <input type="submit" name="Login" value="Login" class="login-submit"/>
 
-                    <a href="mailto:service@ictopia.com" class="login-forgot-pass">forgot password?</a>
+                    <a href="mailto:recovery.udsm@ictopia.com?SUBJECT=Recover password&BODY=Please%20fill%20in%20the%20following%20information%3A%0D%0AName%3A%0D%0AEmail%20address%3A%0APersonal%20PIN%3A" class="login-forgot-pass">Forgot password?</a>
                 </form>
     <?php
     }
