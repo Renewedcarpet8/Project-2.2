@@ -50,7 +50,7 @@
                     <a href="index.php"><img id="SettingsIcon" src="img/logout.png"></a>
                 </div>
             </div>
-
+    </div>
 <div id="dashboard-graph" method="POST">
     <H1 class="">Table</H1>
     <table id="tableQuery2GraphView">
