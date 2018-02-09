@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" manifest="offlineAvailable.appcache">
     <head>
         <link rel="stylesheet" href="./css/main.css" type="text/css"/>
         <link rel="stylesheet" href="./css/graphview.css" type="text/css"/>

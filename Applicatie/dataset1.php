@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" manifest="offlineAvailable.appcache">
+<head> 
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
 <?php
     function getOverview() {
         $stationData = array();
@@ -79,4 +90,3 @@
         }
         echo $maxValue[0];
     }
-

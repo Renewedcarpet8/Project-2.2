@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" manifest="offlineAvailable.appcache">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 <?php
 $data = ["2018-02-07,01:02:29,30680,-0.2,-2.4,1007.9,1009.5,19.5,18.8,0.01,0.0,110000,50.4,115",
     "2018-02-07,01:02:29,723400,8.8,5.5,1008.0,1017.5,11.9,21.4,0.0,0.0,000000,88.3,341",
