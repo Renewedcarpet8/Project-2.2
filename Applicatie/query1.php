@@ -373,7 +373,7 @@ function getValues($id) {
                     <i class='fa fa-lock fa-stack-1x'</i>
                 </span>
                 </p>
-                <table class ='values'>
+                : <table class ='values' style="margin: auto; width: 74%; left: 12%; overflow-y: hidden;">
                     <?php
                     if (isset($_GET['id'])) {
                         $place = ucwords(strtolower($_GET['place']));
