@@ -32,6 +32,24 @@
 
     <div class="container-graph"><div class="menu-icon"><span></span></div></div>
 
+    div class="sidenav">
+                <center>
+                    <p class = "category">Query Select</p>
+                    <a id="QuerySelector" href='query1.php'>Query 1</a>
+                    <a id="QuerySelector" href='query2.php'>Query 2</a>
+                    <br>
+                </center>
+                <center><p class = "category">Graph Select</p></center>
+                
+                <div id="WelcomeSection2">
+                    <center> <p class ="category"> User Control</p> </center>
+                    <p class="welcomeName"><?php
+                        getUsername();
+                        ?>
+                    </p>
+                    <a href="index.php"><img id="SettingsIcon" src="img/logout.png"></a>
+                </div>
+            </div>
 
 <div id="dashboard-graph" method="POST">
     <H1 class="">Table</H1>
