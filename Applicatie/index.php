@@ -32,7 +32,7 @@
 
             $j = 0;
             while ($j < count($csv)) {
-                if ($username == $csv[$j][1] && $password == $csv[$j][2]) {
+                if ($username == $csv[$j][1] && sha1($password)== $csv[$j][2]) {
                     $succes = true;
                     $userNumber = $csv[$j];
                     $_SESSION['usernr'] = $userNumber;
