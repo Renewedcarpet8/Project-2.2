@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="offlineAvailable.appcache">
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/sidenav.css" type="text/css"/>
@@ -89,8 +89,7 @@
                   <tr>
                       <td>Max Windspeed</td>
                       <td><?php getMaxValue($_GET['id'], $_GET['country'], 8)?> KM/h</td>
-                  </tr>
-                  
+                  </tr>                  
                <?php } else {
                 echo "Geen ID geselecteerd";
                }

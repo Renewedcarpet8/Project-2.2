@@ -15,8 +15,7 @@
 
         $stations = fopen("stations.csv", 'r');
         while (($line = fgetcsv($stations, 0, "%")) !== FALSE) {
-            $stationData[$line[0]] = new StationData($line[0], $line[2], $line[1], 0);
-            
+            $stationData[$line[0]] = new StationData($line[0], $line[2], $line[1], 0);            
             $csv_data = fopen("/data/weather-data/" . date("Y/m/d/") . "2/" . $line[2] . ".csv", 'r');
             while (($dataLine = fgetcsv($csv_data)) !== FALSE) {
                 if ($dataLine[5] > $stationData[$dataLine[2]]->getMaxhPa()) {
@@ -52,7 +51,7 @@
 
         while (($line = fgetcsv($csv_data)) !== FALSE){
             $date = date('U', strtotime($line[1]));
-            if ($date >=  ($currentDate-$weekLength) &&$line[2] == $id){
+            if ($date >= ($currentDate-$weekLength) &&$line[2] == $id){
                 if (count($minValue) < 1){
                     array_push($minValue, $line[$type]);
                 } else {

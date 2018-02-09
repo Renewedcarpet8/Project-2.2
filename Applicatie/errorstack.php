@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="offlineAvailable.appcache">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>

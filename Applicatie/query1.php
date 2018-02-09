@@ -175,7 +175,7 @@ function getValues($id) {
 
 ?>
 <!DOCTYPE html >
-<html manifest="offlineAvailable.appcache">
+<html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/sidenav.css" type="text/css"/>
