@@ -193,38 +193,38 @@ public class MeasurementParser extends Thread {
             averageCloud_cover /= total;
             averageWind_direction /= total;
 
-            if (measurement.getTemperature() >= 10001 || measurement.getTemperature() > averageTemperature * 1.2 || measurement.getTemperature() < averageTemperature * 1.2)
-                measurement.setTemperature(last.getTemperature() + (first.getTemperature() - last.getTemperature() / total));
+            if (measurement.getTemperature() >= 10001 || measurement.getTemperature() <= -10000 || measurement.getTemperature() > averageTemperature * 1.2 || measurement.getTemperature() < averageTemperature * 1.2)
+                measurement.setTemperature(last.getTemperature() + (first.getTemperature() - last.getTemperature()) / total);
 
-            if (measurement.getDewpoint() >= 10001 || measurement.getDewpoint() > averageDewpoint * 1.2 || measurement.getDewpoint() < averageDewpoint * 1.2)
-                measurement.setDewpoint(last.getDewpoint() + (first.getDewpoint() - last.getDewpoint() / total));
+            if (measurement.getDewpoint() >= 10001 || measurement.getDewpoint() <= -10000 || measurement.getDewpoint() > averageDewpoint * 1.2 || measurement.getDewpoint() < averageDewpoint * 1.2)
+                measurement.setDewpoint(last.getDewpoint() + (first.getDewpoint() - last.getDewpoint()) / total);
 
-            if (measurement.getPressure_station() >= 10001 || measurement.getPressure_station() > averagePressure_station * 1.2 || measurement.getPressure_station() < averagePressure_station * 1.2)
-                measurement.setPressure_station(last.getPressure_station() + (first.getPressure_station() - last.getPressure_station() / total));
+            if (measurement.getPressure_station() >= 10001 || measurement.getPressure_station() < 0 || measurement.getPressure_station() > averagePressure_station * 1.2 || measurement.getPressure_station() < averagePressure_station * 1.2)
+                measurement.setPressure_station(last.getPressure_station() + (first.getPressure_station() - last.getPressure_station()) / total);
 
-            if (measurement.getPressure_sea() >= 10001 || measurement.getPressure_sea() > averagePressure_sea * 1.2 || measurement.getPressure_sea() < averagePressure_sea * 1.2)
-                measurement.setPressure_sea(last.getPressure_sea() + (first.getPressure_sea() - last.getPressure_sea() / total));
+            if (measurement.getPressure_sea() >= 10001 || measurement.getPressure_sea() < 0 || measurement.getPressure_sea() > averagePressure_sea * 1.2 || measurement.getPressure_sea() < averagePressure_sea * 1.2)
+                measurement.setPressure_sea(last.getPressure_sea() + (first.getPressure_sea() - last.getPressure_sea()) / total);
 
-            if (measurement.getVisibility() >= 1001 || measurement.getVisibility() > averageVisibility * 1.2 || measurement.getVisibility() < averageVisibility * 1.2)
-                measurement.setVisibility(last.getVisibility() + (first.getVisibility() - last.getVisibility() / total));
+            if (measurement.getVisibility() >= 1001 || measurement.getVisibility() < 0 || measurement.getVisibility() > averageVisibility * 1.2 || measurement.getVisibility() < averageVisibility * 1.2)
+                measurement.setVisibility(last.getVisibility() + (first.getVisibility() - last.getVisibility()) / total);
 
-            if (measurement.getWind() >= 1001 || measurement.getWind() > averageWind * 1.2 || measurement.getWind() < averageWind * 1.2)
-                measurement.setWind(last.getWind() + (first.getWind() - last.getWind() / total));
+            if (measurement.getWind() >= 1001 || measurement.getWind() < 0 || measurement.getWind() > averageWind * 1.2 || measurement.getWind() < averageWind * 1.2)
+                measurement.setWind(last.getWind() + (first.getWind() - last.getWind()) / total);
 
-            if (measurement.getRainfall() >= 1001 || measurement.getRainfall() > averageRainfall * 1.2 || measurement.getRainfall() < averageRainfall * 1.2)
-                measurement.setRainfall(last.getRainfall() + (first.getRainfall() - last.getRainfall() / total));
+            if (measurement.getRainfall() >= 1001 || measurement.getRainfall() < 0 || measurement.getRainfall() > averageRainfall * 1.2 || measurement.getRainfall() < averageRainfall * 1.2)
+                measurement.setRainfall(last.getRainfall() + (first.getRainfall() - last.getRainfall()) / total);
 
-            if (measurement.getSnowfall() >= 10001 || measurement.getSnowfall() > averageSnowfall * 1.2 || measurement.getSnowfall() < averageSnowfall * 1.2)
-                measurement.setSnowfall(last.getSnowfall() + (first.getSnowfall() - last.getSnowfall() / total));
+            if (measurement.getSnowfall() >= 10001 || measurement.getSnowfall() <= -10000 || measurement.getSnowfall() > averageSnowfall * 1.2 || measurement.getSnowfall() < averageSnowfall * 1.2)
+                measurement.setSnowfall(last.getSnowfall() + (first.getSnowfall() - last.getSnowfall()) / total);
 
             if (measurement.getFlags() == null)
                 measurement.setFlags(last.getFlags());
 
-            if (measurement.getCloud_cover() >= 101 || measurement.getCloud_cover() > averageCloud_cover * 1.2 || measurement.getCloud_cover() < averageCloud_cover * 1.2)
-                measurement.setCloud_cover(last.getCloud_cover() + (first.getCloud_cover() - last.getCloud_cover() / total));
+            if (measurement.getCloud_cover() >= 101 || measurement.getCloud_cover() < 0 || measurement.getCloud_cover() > averageCloud_cover * 1.2 || measurement.getCloud_cover() < averageCloud_cover * 1.2)
+                measurement.setCloud_cover(last.getCloud_cover() + (first.getCloud_cover() - last.getCloud_cover()) / total);
 
-            if (measurement.getWind_direction() >= 361 || measurement.getWind_direction() > averageWind_direction * 1.2 || measurement.getWind_direction() < averageWind_direction * 1.2)
-                measurement.setWind_direction(last.getWind_direction() + (first.getWind_direction() - last.getWind_direction() / total));
+            if (measurement.getWind_direction() >= 361 || measurement.getWind_direction() < 0 || measurement.getWind_direction() > averageWind_direction * 1.2 || measurement.getWind_direction() < averageWind_direction * 1.2)
+                measurement.setWind_direction(last.getWind_direction() + (first.getWind_direction() - last.getWind_direction()) / total);
 
             if (total == 30)
                 validity.get(measurement.getStation()).remove();
