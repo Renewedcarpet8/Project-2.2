@@ -1,32 +1,65 @@
 CACHE MANIFEST
-# 2018-02-05
+# 2018-02-09
 
 # Explicitly cached 'master entries'.
 CACHE:
-index.php
+16.csv
+17.csv
+2018/*
+README.md
+StationData.php
 dashboard.php
+data1.csv
+data2.csv
+dataset1.php
 errorstack.php
+index.php
 login-process.php
+login.html
+logout.php
+nbproject
+offlineAvailable.appcache
 query1.php
+query1.php-bak
 query2.php
 requirebars.php
-css/graphview.css
-css/main.css
-css/sidenav.css
-css/topnav.css
-img/bg-login.jpg
+stations.csv
+stations2.csv
+test.php
+test.xml
+test2.xml
+timetest.php
+users.csv
+img/Custom-Icon-Design-Flatastic-9-Line-chart.png
+img/Excel.png
 img/adobe-pdf-icon.png
+img/bg-graph.jpg
+img/bg-login.jpg
+img/forgetpw.png
 img/gear.gif
 img/graph.png
 img/hanzelogo.png
 img/lineChartIcon.png
 img/lockicon.png
+img/lockicon.psd
 img/logout.png
 img/map.png
 img/pieChartIcon.png
-img/schoollogo.png
+img/placeholdergraph.png
 img/schoollogo-small.png
+img/schoollogo.png
+img/schoollogo.psd
+img/settings.png
 img/tab_icon.png
+css/graphview.css
+css/main.css
+css/sidenav.css
+css/tableStyling.css
+css/topnav.css
+js/graphcontrol.js
+js/mapsquery1.js
+nbproject/project.properties
+nbproject/project.xml
 
 NETWORK:
 *

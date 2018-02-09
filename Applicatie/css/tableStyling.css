@@ -13,16 +13,35 @@
     width: 100%;
 }
 
+#tableQuery2GraphView {
+    position: absolute;
+    display: block;
+    text-align: left;
+    overflow-y: scroll;
+    width: 80%;
+    height: 80%;
+    border-color: #222;
+    font-size: 25px;
+    bottom: 6%;
+    left: 10%;
+    border: 1px solid;
+    font-family: 'calibri';
+      background-color: #283655;
+}
+
 table.values {
     position: absolute;
+    display: block;
     text-align: left;
-    width: 80%;
+    overflow-y: scroll;
+    width: 62%;
     height: 70%;
     background-color: #11l;
     border-color: #222;
-    font-size: 100%;
-    bottom: 4%;
-    left: 10%;
+    font-size: 20px;
+    bottom: 6%;
+    left: 20%;
+    border: 1px solid;
     font-family: 'calibri';
       background-color: #283655;
 }

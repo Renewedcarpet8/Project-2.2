@@ -84,7 +84,7 @@ function getInfo($id) {
     }
 
   function getOverview() {
-      $stations = fopen("stations2.csv", 'r');
+      $stations = fopen("stations.csv", 'r');
       //$csv_data = fopen(date("G") . '.csv', 'r');
       $csv_data = fopen('16.csv', 'r'); //fopen("/mnt/weather-data/" . date("Y/m/d/G") . ".csv", 'r');
       echo "<tr class='values' style=''>";
@@ -93,31 +93,34 @@ function getInfo($id) {
       echo "<th style='text-align: center;'> Humidity</th>";
       echo "</tr>";
       echo "<br>";
-      $array1 = array();
 
-       while (($data = fgetcsv($csv_data)) !== FALSE) {
-          $humidity = round(100 * (EXP((17.625 * $data[4]) / (243.04 + $data[4])) / EXP((17.625 * $data[3]) / (243.04 + $data[3]))), 2);
-          if ($data[2] == 337450) {
-              array_push($array1, [$data[2], $humidity]);            
-          } elseif ($data[2] == 338150) {
-              array_push($array1, [$data[2], $humidity]); 
-            } elseif ($data[2] == 338830) {
-              array_push($array1, [$data[2], $humidity]); 
-            }         
-          }
-      
-          while (($line = fgetcsv($stations)) !== FALSE) {
-            $station =  explode("%", $line[0]);
-            foreach ($array1 as $pair) {
-              if ($pair[0] == $station[0]) {
+      if ($_GET) {
+          $country = $_GET['country'];
+      } else {
+          $country = 'MOLDOVA';
+      }
+
+      $station_ids = array();
+
+      while (($line = fgetcsv($stations, 0, "%")) !== FALSE) {
+          if ($country == $line[2])
+              $station_ids[$line[0]] = [$line[1], 0];
+      }
+
+       while (($line = fgetcsv($csv_data)) !== FALSE) {
+           $humidity = round(100 * (EXP((17.625 * $line[4]) / (243.04 + $line[4])) / EXP((17.625 * $line[3]) / (243.04 + $line[3]))), 2);
+           if (array_key_exists($line[2], $station_ids)) {
+               $station_ids[$line[2]][1] = $humidity;
+           }
+       }
+
+        foreach ($station_ids as $key => $value) {
                 echo "<tr>";
-                echo "<td>" . $pair[0] . "</td>";
-                echo "<td>" . $station[1] . "</td>";
-                echo "<td>" . $pair[1] . "</td>";
+                    echo "<td>" . $key . "</td>";
+                    echo "<td>" . $value[0] . "</td>";
+                    echo "<td>" . $value[1] . "</td>";
                 echo "</tr>";
-              }
-            }    
-          }
+        }
 }
 
 function getTitle($id) {
@@ -370,12 +373,21 @@ function getValues($id) {
                     <i class='fa fa-lock fa-stack-1x'</i>
                 </span>
                 </p>
-                <table class ='values'>
+                : <table class ='values' style="margin: auto; width: 74%; left: 12%; overflow-y: hidden;">
                     <?php
                     if (isset($_GET['id'])) {
                         $place = ucwords(strtolower($_GET['place']));
                         $country = ucwords(strtolower($_GET['country']));
                         echo "<center> <p id='placeTitle'>Location data for <b>" . $place . ", " . $country . "</b><br></center>";
+                        ?>
+
+                        <script>
+                            setInterval(function() {
+                                window.location.reload();
+                            }, 60000);
+                        </script>
+
+                        <?php
                         getInfo($_GET['id']);
                     } else {
                         echo "<center> <p id='placeTitle'>Current Humidity for Moldova<br></center>";
