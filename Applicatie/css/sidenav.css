@@ -112,7 +112,8 @@ hr.divider {
   color: white;
 }
 
-#WelcomeSection {
+#WelcomeSection2 {
+    bottom:0;
 }
 
 /* The navigation menu links */
