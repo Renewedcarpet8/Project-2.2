@@ -215,7 +215,7 @@ function getValues($id) {
             }
         </script>>
     
-        div class="sidenav">
+        <div class="sidenav">
                 <center>
                     <p class = "category">Query Select</p>
                     <a id="QuerySelector" href='query1.php'>Query 1</a>

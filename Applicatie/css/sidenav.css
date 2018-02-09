@@ -115,6 +115,11 @@ hr.divider {
 #WelcomeSection {
 }
 
+
+#WelcomeSection2 {
+    margin-top:270%;
+}
+
 /* The navigation menu links */
 .sidenav a {
     padding: 6px 8px 6px 16px;
